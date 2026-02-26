@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>PMLE Practice Quiz</title>
+    <title>GCP Practice Quiz</title>
     <style>
         body { 
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; 
@@ -109,15 +109,38 @@
             margin-bottom: 25px;
             white-space: pre-wrap;
         }
+        .quiz-selector {
+            margin: 20px 0;
+            padding: 15px;
+            background: #eef2f5;
+            border-radius: 6px;
+        }
+        .quiz-selector select {
+            padding: 10px;
+            font-size: 16px;
+            border-radius: 4px;
+            border: 1px solid #ccc;
+            width: 100%;
+            margin-top: 10px;
+        }
     </style>
 </head>
 <body>
 
 <div class="container" id="app">
-    <h1>PMLE Adaptive Practice Quiz</h1>
+    <h1 id="main-title">GCP Practice Quiz</h1>
     
     <div id="start-screen">
         <p>This quiz adapts to your performance. Questions you get wrong will appear more frequently to help you learn, while questions you get right will appear less often.</p>
+        
+        <div class="quiz-selector">
+            <label for="quiz-type"><strong>Select Certification:</strong></label>
+            <select id="quiz-type">
+                <option value="pmle">Professional Machine Learning Engineer (PMLE)</option>
+                <option value="pde">Professional Data Engineer (PDE)</option>
+            </select>
+        </div>
+
         <div style="display: flex; gap: 10px; margin-top: 20px;">
             <button id="start-btn" disabled>Loading questions...</button>
             <button id="reset-stats-btn" class="btn-danger">Reset Statistics</button>
@@ -146,7 +169,7 @@
         <h2>Quiz Complete!</h2>
         <h3 id="final-score" style="font-size: 2em; color: #2980b9;"></h3>
         <p id="end-message"></p>
-        <button id="restart-btn">Start Another Quiz</button>
+        <button id="restart-btn">Back to Main Menu</button>
     </div>
 </div>
 
@@ -155,9 +178,8 @@
     let currentQuizQuestions = [];
     let currentQuestionIndex = 0;
     let score = 0;
-    
-    // Load stats from local storage
-    let stats = JSON.parse(localStorage.getItem('pmle_quiz_stats')) || {};
+    let currentQuizType = 'pmle';
+    let stats = {};
 
     const elements = {
         startScreen: document.getElementById('start-screen'),
@@ -176,8 +198,22 @@
         restartBtn: document.getElementById('restart-btn'),
         resetStatsBtn: document.getElementById('reset-stats-btn'),
         totalStats: document.getElementById('total-stats'),
-        endMessage: document.getElementById('end-message')
+        endMessage: document.getElementById('end-message'),
+        quizTypeSelect: document.getElementById('quiz-type'),
+        mainTitle: document.getElementById('main-title')
     };
+
+    function getStatsKey() {
+        return currentQuizType === 'pmle' ? 'pmle_quiz_stats' : 'pde_quiz_stats';
+    }
+
+    function loadStats() {
+        stats = JSON.parse(localStorage.getItem(getStatsKey())) || {};
+    }
+
+    function saveStats() {
+        localStorage.setItem(getStatsKey(), JSON.stringify(stats));
+    }
 
     function updateOverallStats() {
         let totalAnswered = 0;
@@ -190,44 +226,47 @@
         }
         totalAnswered = totalCorrect + totalWrong;
         
+        let quizName = currentQuizType === 'pmle' ? 'PMLE' : 'PDE';
+
         if (totalAnswered > 0) {
             let accuracy = ((totalCorrect / totalAnswered) * 100).toFixed(1);
-            elements.totalStats.innerHTML = `<strong>Overall Progress:</strong> ${totalAnswered} questions answered. ${accuracy}% accuracy.`;
+            elements.totalStats.innerHTML = `<strong>${quizName} Progress:</strong> ${totalAnswered} questions answered. ${accuracy}% accuracy.`;
         } else {
-            elements.totalStats.textContent = "No questions answered yet.";
+            elements.totalStats.textContent = `No ${quizName} questions answered yet.`;
         }
     }
 
     async function loadData() {
+        elements.startBtn.disabled = true;
+        elements.startBtn.textContent = 'Loading questions...';
+        
+        currentQuizType = elements.quizTypeSelect.value;
+        const jsonFile = currentQuizType === 'pmle' ? 'qa_parsed.json' : 'pde_parsed.json';
+        const titleText = currentQuizType === 'pmle' ? 'PMLE Practice Quiz' : 'PDE Practice Quiz';
+        
+        elements.mainTitle.textContent = titleText;
+        
         try {
-            // Because fetch relies on HTTP, opening the HTML file directly (file://) 
-            // will fail due to CORS. Using a local web server is required.
-            const response = await fetch('qa_parsed.json');
+            const response = await fetch(jsonFile);
             allQuestions = await response.json();
+            
+            loadStats();
+            updateOverallStats();
+            
             elements.startBtn.disabled = false;
             elements.startBtn.textContent = 'Start 50-Question Quiz';
-            updateOverallStats();
         } catch (error) {
             console.error('Error loading questions:', error);
-            elements.startBtn.textContent = 'Error loading data. Are you running a local server?';
-            elements.totalStats.textContent = "Please serve this directory using a local web server (e.g., 'python -m http.server 8000') to allow fetching the JSON file.";
+            elements.startBtn.textContent = 'Error loading data.';
         }
     }
 
-    function saveStats() {
-        localStorage.setItem('pmle_quiz_stats', JSON.stringify(stats));
-    }
+    elements.quizTypeSelect.addEventListener('change', loadData);
 
     function selectQuestions() {
-        // Calculate weights for each question
         let weightedQuestions = allQuestions.map(q => {
             let qStats = stats[q.question_id] || { correct: 0, wrong: 0 };
-            
-            // Base weight is 1.0.
-            // + 2.0 for every wrong answer.
-            // / (correct + 1) to drastically reduce appearance of correctly answered questions.
             let weight = (1.0 + (qStats.wrong * 2)) / (qStats.correct + 1);
-            
             return { question: q, weight: weight };
         });
 
@@ -250,7 +289,7 @@
 
             if (selectedIndex !== -1) {
                 currentQuizQuestions.push(weightedQuestions[selectedIndex].question);
-                weightedQuestions.splice(selectedIndex, 1); // Remove to avoid duplicates in the same session
+                weightedQuestions.splice(selectedIndex, 1);
             }
         }
     }
@@ -304,16 +343,12 @@
         const answer = selected.value;
         const q = currentQuizQuestions[currentQuestionIndex];
         
-        // Handling possible multiple choices like "A,B" or "A, B"
         const correctAnswers = q.correct_answer.split(',').map(s => s.trim());
         let isCorrect = false;
         
         if (correctAnswers.length === 1) {
             isCorrect = (answer === correctAnswers[0]);
         } else {
-            // If it's a multiple select question, we'd need checkboxes, but since it's radios, 
-            // if the user picks any of the valid ones, we count it, or we enforce strict if needed.
-            // For now, if the answer matches the single exact correct answer.
             isCorrect = (answer === q.correct_answer.trim());
         }
 
@@ -321,7 +356,6 @@
             stats[q.question_id] = { correct: 0, wrong: 0 };
         }
 
-        // Disable options
         document.querySelectorAll('input[name="option"]').forEach(radio => radio.disabled = true);
 
         if (isCorrect) {
@@ -374,17 +408,24 @@
     elements.startBtn.addEventListener('click', startQuiz);
     elements.submitBtn.addEventListener('click', submitAnswer);
     elements.nextBtn.addEventListener('click', nextQuestion);
-    elements.restartBtn.addEventListener('click', startQuiz);
+    
+    elements.restartBtn.addEventListener('click', () => {
+        elements.endScreen.classList.add('hidden');
+        elements.startScreen.classList.remove('hidden');
+        loadData();
+    });
     
     elements.resetStatsBtn.addEventListener('click', () => {
-        if (confirm('Are you sure you want to reset all your learning progress? This cannot be undone.')) {
+        let quizName = currentQuizType === 'pmle' ? 'PMLE' : 'PDE';
+        if (confirm(`Are you sure you want to reset all your learning progress for ${quizName}? This cannot be undone.`)) {
             stats = {};
             saveStats();
             updateOverallStats();
-            alert('Statistics have been reset.');
+            alert(`${quizName} statistics have been reset.`);
         }
     });
 
+    // Initial load
     loadData();
 
 </script>

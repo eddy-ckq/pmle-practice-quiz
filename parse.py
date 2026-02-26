@@ -1,13 +1,14 @@
 import re
 import json
+import sys
 
-def parse_dump(file_path):
+def parse_dump(file_path, title_pattern):
     with open(file_path, 'r', encoding='utf-8') as f:
         text = f.read()
 
     # Clean up page headers/footers
     text = re.sub(r'https://shop542998714.*?https://www\.goofish\.com.*?' + chr(10), '', text)
-    text = re.sub(r'Exam Professional Machine Learning Engineer.*?' + chr(10), '', text)
+    text = re.sub(title_pattern + r'.*?' + chr(10), '', text)
     text = re.sub(r'淘宝:.*?' + chr(10), '', text)
     text = re.sub(r'咸鱼:.*?' + chr(10), '', text)
     text = re.sub(r'微信:.*?' + chr(10), '', text)
@@ -80,6 +81,13 @@ def parse_dump(file_path):
     return questions
 
 if __name__ == "__main__":
-    qs = parse_dump("extracted.txt")
-    with open("qa_parsed.json", "w", encoding="utf-8") as f:
+    if len(sys.argv) < 4:
+        print("Usage: python parse.py <input.txt> <output.json> <title_pattern>")
+        sys.exit(1)
+    input_file = sys.argv[1]
+    output_file = sys.argv[2]
+    title_pattern = sys.argv[3]
+    
+    qs = parse_dump(input_file, title_pattern)
+    with open(output_file, "w", encoding="utf-8") as f:
         json.dump(qs, f, indent=2, ensure_ascii=False)
