@@ -1,0 +1,3 @@
+*.pdf
+extracted.txt
+__pycache__/

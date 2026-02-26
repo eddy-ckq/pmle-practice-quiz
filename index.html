@@ -1,0 +1,392 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PMLE Practice Quiz</title>
+    <style>
+        body { 
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; 
+            line-height: 1.6; 
+            padding: 20px; 
+            max-width: 800px; 
+            margin: auto; 
+            background-color: #f4f7f6; 
+            color: #333; 
+        }
+        .container { 
+            background: #fff; 
+            padding: 30px; 
+            border-radius: 8px; 
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1); 
+        }
+        h1 { color: #2c3e50; text-align: center; border-bottom: 2px solid #ecf0f1; padding-bottom: 10px;}
+        h2 { color: #34495e; }
+        .option { margin-bottom: 12px; }
+        .option label { 
+            display: flex; 
+            align-items: flex-start; 
+            cursor: pointer; 
+            padding: 12px; 
+            border: 2px solid #e0e0e0; 
+            border-radius: 6px; 
+            transition: all 0.2s; 
+        }
+        .option label:hover { 
+            background: #f8f9fa; 
+            border-color: #bdc3c7;
+        }
+        .option input { 
+            margin-right: 15px; 
+            margin-top: 5px;
+            transform: scale(1.2);
+        }
+        .option-text {
+            flex: 1;
+        }
+        button { 
+            background: #3498db; 
+            color: #fff; 
+            border: none; 
+            padding: 12px 24px; 
+            font-size: 16px; 
+            font-weight: bold;
+            border-radius: 6px; 
+            cursor: pointer; 
+            margin-top: 20px; 
+            transition: background 0.2s;
+        }
+        button:hover { background: #2980b9; }
+        button:disabled { background: #95a5a6; cursor: not-allowed; }
+        .btn-danger { background: #e74c3c; }
+        .btn-danger:hover { background: #c0392b; }
+        
+        .feedback { 
+            margin-top: 20px; 
+            padding: 15px; 
+            border-radius: 6px; 
+            display: none; 
+            font-size: 1.1em;
+        }
+        .feedback.correct { 
+            background: #d4edda; 
+            color: #155724; 
+            border: 1px solid #c3e6cb; 
+            display: block; 
+        }
+        .feedback.wrong { 
+            background: #f8d7da; 
+            color: #721c24; 
+            border: 1px solid #f5c6cb; 
+            display: block; 
+        }
+        .comments { 
+            margin-top: 20px; 
+            background: #fdfbf7; 
+            padding: 15px; 
+            border-left: 4px solid #f39c12;
+            border-radius: 4px; 
+            font-size: 0.95em; 
+            white-space: pre-wrap; 
+            display: none; 
+            color: #555;
+            max-height: 400px;
+            overflow-y: auto;
+        }
+        #stats-bar { 
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 20px; 
+            font-size: 0.9em; 
+            color: #7f8c8d; 
+            background: #ecf0f1;
+            padding: 10px 15px;
+            border-radius: 4px;
+        }
+        .hidden { display: none !important; }
+        #question-text {
+            font-size: 1.1em;
+            margin-bottom: 25px;
+            white-space: pre-wrap;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container" id="app">
+    <h1>PMLE Adaptive Practice Quiz</h1>
+    
+    <div id="start-screen">
+        <p>This quiz adapts to your performance. Questions you get wrong will appear more frequently to help you learn, while questions you get right will appear less often.</p>
+        <div style="display: flex; gap: 10px; margin-top: 20px;">
+            <button id="start-btn" disabled>Loading questions...</button>
+            <button id="reset-stats-btn" class="btn-danger">Reset Statistics</button>
+        </div>
+        <p id="total-stats" style="margin-top: 20px; color: #666; font-size: 0.9em;"></p>
+    </div>
+
+    <div id="quiz-screen" class="hidden">
+        <div id="stats-bar">
+            <span id="question-number">Question 1 / 50</span>
+            <span id="q-stats">Past Performance: Correct 0 | Wrong 0</span>
+        </div>
+        
+        <div id="question-text"></div>
+        <div id="options-container"></div>
+        
+        <button id="submit-btn">Submit Answer</button>
+        
+        <div id="feedback-container" class="feedback"></div>
+        <div id="comments-container" class="comments"></div>
+        
+        <button id="next-btn" class="hidden" style="width: 100%; margin-top: 15px; background: #2ecc71;">Next Question</button>
+    </div>
+
+    <div id="end-screen" class="hidden">
+        <h2>Quiz Complete!</h2>
+        <h3 id="final-score" style="font-size: 2em; color: #2980b9;"></h3>
+        <p id="end-message"></p>
+        <button id="restart-btn">Start Another Quiz</button>
+    </div>
+</div>
+
+<script>
+    let allQuestions = [];
+    let currentQuizQuestions = [];
+    let currentQuestionIndex = 0;
+    let score = 0;
+    
+    // Load stats from local storage
+    let stats = JSON.parse(localStorage.getItem('pmle_quiz_stats')) || {};
+
+    const elements = {
+        startScreen: document.getElementById('start-screen'),
+        quizScreen: document.getElementById('quiz-screen'),
+        endScreen: document.getElementById('end-screen'),
+        questionNumber: document.getElementById('question-number'),
+        qStats: document.getElementById('q-stats'),
+        questionText: document.getElementById('question-text'),
+        optionsContainer: document.getElementById('options-container'),
+        submitBtn: document.getElementById('submit-btn'),
+        nextBtn: document.getElementById('next-btn'),
+        feedbackContainer: document.getElementById('feedback-container'),
+        commentsContainer: document.getElementById('comments-container'),
+        finalScore: document.getElementById('final-score'),
+        startBtn: document.getElementById('start-btn'),
+        restartBtn: document.getElementById('restart-btn'),
+        resetStatsBtn: document.getElementById('reset-stats-btn'),
+        totalStats: document.getElementById('total-stats'),
+        endMessage: document.getElementById('end-message')
+    };
+
+    function updateOverallStats() {
+        let totalAnswered = 0;
+        let totalCorrect = 0;
+        let totalWrong = 0;
+        
+        for (const id in stats) {
+            totalCorrect += stats[id].correct;
+            totalWrong += stats[id].wrong;
+        }
+        totalAnswered = totalCorrect + totalWrong;
+        
+        if (totalAnswered > 0) {
+            let accuracy = ((totalCorrect / totalAnswered) * 100).toFixed(1);
+            elements.totalStats.innerHTML = `<strong>Overall Progress:</strong> ${totalAnswered} questions answered. ${accuracy}% accuracy.`;
+        } else {
+            elements.totalStats.textContent = "No questions answered yet.";
+        }
+    }
+
+    async function loadData() {
+        try {
+            // Because fetch relies on HTTP, opening the HTML file directly (file://) 
+            // will fail due to CORS. Using a local web server is required.
+            const response = await fetch('qa_parsed.json');
+            allQuestions = await response.json();
+            elements.startBtn.disabled = false;
+            elements.startBtn.textContent = 'Start 50-Question Quiz';
+            updateOverallStats();
+        } catch (error) {
+            console.error('Error loading questions:', error);
+            elements.startBtn.textContent = 'Error loading data. Are you running a local server?';
+            elements.totalStats.textContent = "Please serve this directory using a local web server (e.g., 'python -m http.server 8000') to allow fetching the JSON file.";
+        }
+    }
+
+    function saveStats() {
+        localStorage.setItem('pmle_quiz_stats', JSON.stringify(stats));
+    }
+
+    function selectQuestions() {
+        // Calculate weights for each question
+        let weightedQuestions = allQuestions.map(q => {
+            let qStats = stats[q.question_id] || { correct: 0, wrong: 0 };
+            
+            // Base weight is 1.0.
+            // + 2.0 for every wrong answer.
+            // / (correct + 1) to drastically reduce appearance of correctly answered questions.
+            let weight = (1.0 + (qStats.wrong * 2)) / (qStats.correct + 1);
+            
+            return { question: q, weight: weight };
+        });
+
+        currentQuizQuestions = [];
+        let questionsToSelect = Math.min(50, weightedQuestions.length);
+        
+        for (let i = 0; i < questionsToSelect && weightedQuestions.length > 0; i++) {
+            let totalWeight = weightedQuestions.reduce((sum, item) => sum + item.weight, 0);
+            let random = Math.random() * totalWeight;
+            let sum = 0;
+            let selectedIndex = -1;
+
+            for (let j = 0; j < weightedQuestions.length; j++) {
+                sum += weightedQuestions[j].weight;
+                if (random <= sum) {
+                    selectedIndex = j;
+                    break;
+                }
+            }
+
+            if (selectedIndex !== -1) {
+                currentQuizQuestions.push(weightedQuestions[selectedIndex].question);
+                weightedQuestions.splice(selectedIndex, 1); // Remove to avoid duplicates in the same session
+            }
+        }
+    }
+
+    function startQuiz() {
+        selectQuestions();
+        currentQuestionIndex = 0;
+        score = 0;
+        elements.startScreen.classList.add('hidden');
+        elements.endScreen.classList.add('hidden');
+        elements.quizScreen.classList.remove('hidden');
+        showQuestion();
+    }
+
+    function showQuestion() {
+        const q = currentQuizQuestions[currentQuestionIndex];
+        let qStats = stats[q.question_id] || { correct: 0, wrong: 0 };
+
+        elements.questionNumber.textContent = `Question ${currentQuestionIndex + 1} / ${currentQuizQuestions.length}`;
+        elements.qStats.innerHTML = `<strong>History for this Q:</strong> Correct <span style="color:#27ae60">${qStats.correct}</span> | Wrong <span style="color:#c0392b">${qStats.wrong}</span>`;
+        elements.questionText.textContent = q.question_text;
+        
+        elements.optionsContainer.innerHTML = '';
+        for (const [key, value] of Object.entries(q.options)) {
+            const div = document.createElement('div');
+            div.className = 'option';
+            div.innerHTML = `
+                <label>
+                    <input type="radio" name="option" value="${key}">
+                    <span class="option-text"><strong>${key}.</strong> ${value}</span>
+                </label>
+            `;
+            elements.optionsContainer.appendChild(div);
+        }
+
+        elements.submitBtn.classList.remove('hidden');
+        elements.nextBtn.classList.add('hidden');
+        elements.feedbackContainer.className = 'feedback';
+        elements.feedbackContainer.innerHTML = '';
+        elements.commentsContainer.style.display = 'none';
+        elements.commentsContainer.innerHTML = '';
+    }
+
+    function submitAnswer() {
+        const selected = document.querySelector('input[name="option"]:checked');
+        if (!selected) {
+            alert('Please select an option.');
+            return;
+        }
+
+        const answer = selected.value;
+        const q = currentQuizQuestions[currentQuestionIndex];
+        
+        // Handling possible multiple choices like "A,B" or "A, B"
+        const correctAnswers = q.correct_answer.split(',').map(s => s.trim());
+        let isCorrect = false;
+        
+        if (correctAnswers.length === 1) {
+            isCorrect = (answer === correctAnswers[0]);
+        } else {
+            // If it's a multiple select question, we'd need checkboxes, but since it's radios, 
+            // if the user picks any of the valid ones, we count it, or we enforce strict if needed.
+            // For now, if the answer matches the single exact correct answer.
+            isCorrect = (answer === q.correct_answer.trim());
+        }
+
+        if (!stats[q.question_id]) {
+            stats[q.question_id] = { correct: 0, wrong: 0 };
+        }
+
+        // Disable options
+        document.querySelectorAll('input[name="option"]').forEach(radio => radio.disabled = true);
+
+        if (isCorrect) {
+            stats[q.question_id].correct++;
+            score++;
+            elements.feedbackContainer.className = 'feedback correct';
+            elements.feedbackContainer.innerHTML = `<strong>Correct!</strong> The answer is ${q.correct_answer}.`;
+        } else {
+            stats[q.question_id].wrong++;
+            elements.feedbackContainer.className = 'feedback wrong';
+            elements.feedbackContainer.innerHTML = `<strong>Incorrect.</strong> Your answer: ${answer}. Correct answer: ${q.correct_answer}.`;
+        }
+
+        saveStats();
+
+        if (q.discussion_and_comments && q.discussion_and_comments.trim() !== "") {
+            elements.commentsContainer.style.display = 'block';
+            elements.commentsContainer.innerHTML = `<strong>Discussion & Comments:</strong><br><br>${q.discussion_and_comments}`;
+        }
+
+        elements.submitBtn.classList.add('hidden');
+        elements.nextBtn.classList.remove('hidden');
+    }
+
+    function nextQuestion() {
+        currentQuestionIndex++;
+        if (currentQuestionIndex < currentQuizQuestions.length) {
+            showQuestion();
+        } else {
+            endQuiz();
+        }
+    }
+
+    function endQuiz() {
+        elements.quizScreen.classList.add('hidden');
+        elements.endScreen.classList.remove('hidden');
+        
+        let percentage = Math.round((score / currentQuizQuestions.length) * 100);
+        elements.finalScore.innerHTML = `${score} / ${currentQuizQuestions.length} (${percentage}%)`;
+        
+        if (percentage >= 80) {
+            elements.endMessage.textContent = "Great job! You're making excellent progress.";
+        } else {
+            elements.endMessage.textContent = "Keep practicing! The system has noted the areas you need to focus on.";
+        }
+        
+        updateOverallStats();
+    }
+
+    elements.startBtn.addEventListener('click', startQuiz);
+    elements.submitBtn.addEventListener('click', submitAnswer);
+    elements.nextBtn.addEventListener('click', nextQuestion);
+    elements.restartBtn.addEventListener('click', startQuiz);
+    
+    elements.resetStatsBtn.addEventListener('click', () => {
+        if (confirm('Are you sure you want to reset all your learning progress? This cannot be undone.')) {
+            stats = {};
+            saveStats();
+            updateOverallStats();
+            alert('Statistics have been reset.');
+        }
+    });
+
+    loadData();
+
+</script>
+</body>
+</html>
