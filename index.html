@@ -312,13 +312,16 @@
         elements.qStats.innerHTML = `<strong>History for this Q:</strong> Correct <span style="color:#27ae60">${qStats.correct}</span> | Wrong <span style="color:#c0392b">${qStats.wrong}</span>`;
         elements.questionText.textContent = q.question_text;
         
+        const correctAnswersList = q.correct_answer.split(',').map(s => s.trim());
+        const isMulti = correctAnswersList.length > 1;
+
         elements.optionsContainer.innerHTML = '';
         for (const [key, value] of Object.entries(q.options)) {
             const div = document.createElement('div');
             div.className = 'option';
             div.innerHTML = `
                 <label>
-                    <input type="radio" name="option" value="${key}">
+                    <input type="${isMulti ? 'checkbox' : 'radio'}" name="option" value="${key}">
                     <span class="option-text"><strong>${key}.</strong> ${value}</span>
                 </label>
             `;
@@ -334,39 +337,40 @@
     }
 
     function submitAnswer() {
-        const selected = document.querySelector('input[name="option"]:checked');
-        if (!selected) {
+        const q = currentQuizQuestions[currentQuestionIndex];
+        const correctAnswers = q.correct_answer.split(',').map(s => s.trim());
+        const isMulti = correctAnswers.length > 1;
+        
+        const selectedElements = Array.from(document.querySelectorAll('input[name="option"]:checked'));
+        if (selectedElements.length === 0) {
             alert('Please select an option.');
             return;
         }
-
-        const answer = selected.value;
-        const q = currentQuizQuestions[currentQuestionIndex];
-        
-        const correctAnswers = q.correct_answer.split(',').map(s => s.trim());
-        let isCorrect = false;
-        
-        if (correctAnswers.length === 1) {
-            isCorrect = (answer === correctAnswers[0]);
-        } else {
-            isCorrect = (answer === q.correct_answer.trim());
+        if (isMulti && selectedElements.length !== correctAnswers.length) {
+            alert(`Please select exactly ${correctAnswers.length} options.`);
+            return;
         }
+
+        const answer = selectedElements.map(el => el.value).sort().join(', ');
+        const expectedAnswer = correctAnswers.sort().join(', ');
+        
+        let isCorrect = (answer === expectedAnswer);
 
         if (!stats[q.question_id]) {
             stats[q.question_id] = { correct: 0, wrong: 0 };
         }
 
-        document.querySelectorAll('input[name="option"]').forEach(radio => radio.disabled = true);
+        document.querySelectorAll('input[name="option"]').forEach(input => input.disabled = true);
 
         if (isCorrect) {
             stats[q.question_id].correct++;
             score++;
             elements.feedbackContainer.className = 'feedback correct';
-            elements.feedbackContainer.innerHTML = `<strong>Correct!</strong> The answer is ${q.correct_answer}.`;
+            elements.feedbackContainer.innerHTML = `<strong>Correct!</strong> The answer is ${expectedAnswer}.`;
         } else {
             stats[q.question_id].wrong++;
             elements.feedbackContainer.className = 'feedback wrong';
-            elements.feedbackContainer.innerHTML = `<strong>Incorrect.</strong> Your answer: ${answer}. Correct answer: ${q.correct_answer}.`;
+            elements.feedbackContainer.innerHTML = `<strong>Incorrect.</strong> Your answer: ${answer}. Correct answer: ${expectedAnswer}.`;
         }
 
         saveStats();
