@@ -83,16 +83,10 @@ def generate_explanation(q_text, correct_answer_text, correct_letter, discussion
                     ans_snippet = get_snippet(correct_answer_text, found_tech_str)
                     return f'💡 <b>AI Explanation:</b> The question highlights the phrase <b>"{kw["keyword"]}"</b>, which has a {kw["percentage"]}% correlation with <b>{tech}</b>. The correct answer maps to this via <b>"{ans_snippet}"</b>.' + community_html + f'<br><br><em>{data["explanation"]}</em>'
                     
-    q_words = [w for w in normalize(q_text).split() if w not in stopwords and len(w) > 4]
-    c_words = [w for w in normalize(correct_answer_text).split() if w not in stopwords and len(w) > 4]
-    
-    overlap = set(q_words).intersection(set(c_words))
-    if overlap:
-        best_words = list(overlap)[:2]
-        kw_str = '", "'.join(best_words)
-        return f'💡 <b>AI Explanation:</b> The question emphasizes <b>"{kw_str}"</b>, which directly maps to the keyword(s) <b>"{kw_str}"</b> found in the correct answer. This alignment indicates it is the correct architectural choice.' + community_html
+    if community_insight:
+        return '💡 <b>AI Explanation:</b> The correct answer accurately addresses the specific constraints and objectives described in the question.' + community_html
         
-    return '💡 <b>AI Explanation:</b> The correct answer accurately addresses the specific constraints and objectives described in the question.' + community_html
+    return '💡 <b>AI Explanation:</b> The correct answer accurately addresses the specific constraints and objectives described in the question.'
 
 def process(file_path):
     with open(file_path, 'r', encoding='utf-8') as f:
