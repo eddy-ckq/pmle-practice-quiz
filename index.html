@@ -419,17 +419,6 @@
 
         document.querySelectorAll('input[name="option"]').forEach(input => input.disabled = true);
 
-        if (isCorrect) {
-            stats[q.question_id].correct++;
-            score++;
-            elements.feedbackContainer.className = 'feedback correct';
-            elements.feedbackContainer.innerHTML = `<strong>Correct!</strong> The answer is ${expectedAnswer}.`;
-        } else {
-            stats[q.question_id].wrong++;
-            elements.feedbackContainer.className = 'feedback wrong';
-            elements.feedbackContainer.innerHTML = `<strong>Incorrect.</strong> Your answer: ${answer}. Correct answer: ${expectedAnswer}.`;
-        }
-
         saveStats();
 
         let aiInsight = '';
@@ -437,12 +426,22 @@
             aiInsight = `<div style="margin-top:15px; padding: 12px; background: #e8f4f8; border-left: 4px solid #3498db; border-radius: 4px; color: #2c3e50;">${q.ai_explanation}</div>`;
         }
 
+        if (isCorrect) {
+            stats[q.question_id].correct++;
+            score++;
+            elements.feedbackContainer.className = 'feedback correct';
+            elements.feedbackContainer.innerHTML = `<strong>Correct!</strong> The answer is ${expectedAnswer}.` + aiInsight;
+        } else {
+            stats[q.question_id].wrong++;
+            elements.feedbackContainer.className = 'feedback wrong';
+            elements.feedbackContainer.innerHTML = `<strong>Incorrect.</strong> Your answer: ${answer}. Correct answer: ${expectedAnswer}.` + aiInsight;
+        }
+
         if (q.discussion_and_comments && q.discussion_and_comments.trim() !== "") {
             elements.commentsContainer.style.display = 'block';
-            elements.commentsContainer.innerHTML = aiInsight + `<br><details><summary>View Community Discussion & Comments</summary>${q.discussion_and_comments}</details>`;
-        } else if (aiInsight) {
-            elements.commentsContainer.style.display = 'block';
-            elements.commentsContainer.innerHTML = aiInsight;
+            elements.commentsContainer.innerHTML = `<details><summary>View Community Discussion & Comments</summary>${q.discussion_and_comments}</details>`;
+        } else {
+            elements.commentsContainer.style.display = 'none';
         }
 
         elements.submitBtn.classList.add('hidden');
