@@ -61,7 +61,7 @@ def generate_explanation(q_text, correct_answer_text, correct_letter, discussion
     community_insight = extract_community_reasoning(discussion, correct_letter)
     community_html = f"<br><br><strong>Key Insight:</strong> <em>\"{community_insight}\"</em>" if community_insight else ""
     
-    # 1. Look for technical patterns
+    # 1. Look for technical patterns FIRST
     for tech, data in correlations.items():
         tech_variants = [tech, tech.lower(), tech.replace(' ', '').lower()]
         found_tech = False
@@ -75,11 +75,26 @@ def generate_explanation(q_text, correct_answer_text, correct_letter, discussion
                 kw = kw_obj['keyword'].lower()
                 if kw in q_lower:
                     reason = tech_reasoning.get(tech, data['explanation'])
-                    return f"💡 <b>AI Reasoning:</b> This question focuses on <b>{kw}</b>. For this requirement, <b>{tech}</b> is the ideal solution. {reason}" + community_html
+                    return f"💡 <b>AI Reasoning:</b> The question specifically asks about <b>\"{kw}\"</b>. In Google Cloud, this requirement strongly points toward using <b>{tech}</b>. {reason}" + community_html
                     
-    # 2. Generic fallback with community insight
+    # 2. Extract meaningful word overlap as secondary fallback (exclude generic words)
+    q_words = [w for w in normalize(q_text).split() if w not in stopwords and len(w) > 4]
+    c_words = [w for w in normalize(correct_answer_text).split() if w not in stopwords and len(w) > 4]
+    
+    overlap = set(q_words).intersection(set(c_words))
+    # Filter out generic exam jargon
+    generic_exam_words = {'data', 'model', 'cloud', 'google', 'using', 'service', 'which', 'process', 'project', 'training', 'learning', 'machine', 'models', 'dataset', 'datasets'}
+    overlap = overlap - generic_exam_words
+    
+    if overlap:
+        # Sort by length to get more specific architectural terms
+        best_words = sorted(list(overlap), key=len, reverse=True)[:2]
+        kw_str = '", "'.join(best_words)
+        return f"💡 <b>AI Reasoning:</b> The correct answer aligns with the architectural needs described in the question, specifically addressing the requirements for <b>\"{kw_str}\"</b>." + community_html
+
+    # 3. Generic fallback
     if community_insight:
-        return f"💡 <b>AI Reasoning:</b> The correct answer aligns with Google Cloud best practices for this scenario. {community_insight}"
+        return f"💡 <b>AI Reasoning:</b> The correct answer follows Google Cloud best practices for this specific use case. Refer to the community insight for detailed analysis." + community_html
         
     return "💡 <b>AI Reasoning:</b> This solution is the most architecturally sound choice for the constraints described in the question."
 
