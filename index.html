@@ -123,6 +123,39 @@
             width: 100%;
             margin-top: 10px;
         }
+        .modal {
+            display: none;
+            position: fixed;
+            z-index: 1000;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0,0,0,0.5);
+        }
+        .modal-content {
+            background-color: #fefefe;
+            margin: 5% auto;
+            padding: 20px;
+            border: 1px solid #888;
+            width: 80%;
+            max-width: 800px;
+            max-height: 80vh;
+            overflow-y: auto;
+            border-radius: 8px;
+            white-space: pre-wrap;
+            font-size: 0.95em;
+        }
+        .close-btn {
+            color: #aaa;
+            float: right;
+            font-size: 28px;
+            font-weight: bold;
+            cursor: pointer;
+        }
+        .close-btn:hover {
+            color: black;
+        }
     </style>
 </head>
 <body>
@@ -142,9 +175,10 @@
             </select>
         </div>
 
-        <div style="display: flex; gap: 10px; margin-top: 20px;">
+        <div style="display: flex; gap: 10px; margin-top: 20px; flex-wrap: wrap;">
             <button id="start-btn" disabled>Loading questions...</button>
             <button id="reset-stats-btn" class="btn-danger">Reset Statistics</button>
+            <button id="view-correlations-btn" style="background: #9b59b6;">View GCP Tech Correlations</button>
         </div>
         <p id="total-stats" style="margin-top: 20px; color: #666; font-size: 0.9em;"></p>
     </div>
@@ -171,6 +205,14 @@
         <h3 id="final-score" style="font-size: 2em; color: #2980b9;"></h3>
         <p id="end-message"></p>
         <button id="restart-btn">Back to Main Menu</button>
+    </div>
+</div>
+
+<div id="correlations-modal" class="modal">
+    <div class="modal-content">
+        <span class="close-btn" id="close-modal-btn">&times;</span>
+        <h2>Keyword -> Tech Correlations</h2>
+        <div id="correlations-content" style="font-family: monospace;">Loading...</div>
     </div>
 </div>
 
@@ -427,6 +469,38 @@
             saveStats();
             updateOverallStats();
             alert(`${quizName} statistics have been reset.`);
+        }
+    });
+
+    const correlationsModal = document.getElementById('correlations-modal');
+    const viewCorrelationsBtn = document.getElementById('view-correlations-btn');
+    const closeModalBtn = document.getElementById('close-modal-btn');
+    const correlationsContent = document.getElementById('correlations-content');
+
+    viewCorrelationsBtn.addEventListener('click', async () => {
+        correlationsModal.style.display = 'block';
+        try {
+            const response = await fetch('correlations.txt');
+            if (response.ok) {
+                const text = await response.text();
+                // Remove the first few lines of description since we have a title
+                const cleanText = text.replace(/^---.*?---\n\n.*?\n\n/, '');
+                correlationsContent.textContent = cleanText || text;
+            } else {
+                correlationsContent.textContent = 'Failed to load correlations data. Please ensure correlations.txt is available on the server.';
+            }
+        } catch (e) {
+            correlationsContent.textContent = 'Error loading correlations data.';
+        }
+    });
+
+    closeModalBtn.addEventListener('click', () => {
+        correlationsModal.style.display = 'none';
+    });
+
+    window.addEventListener('click', (event) => {
+        if (event.target == correlationsModal) {
+            correlationsModal.style.display = 'none';
         }
     });
 

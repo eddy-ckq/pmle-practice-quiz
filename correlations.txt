@@ -1,0 +1,156 @@
+--- Question Keywords -> Correct Answer Tech/Service Correlations ---
+
+This shows how specific words/phrases in a question strongly correlate with a specific technology/service being the correct answer.
+
+=== BIGQUERY === (Correct answer in 131 questions)
+Strongly correlated question keywords:
+  - 'millions records': 100% correlation (In 4 out of 4 questions with this keyword)
+  - 'activity': 100% correlation (In 4 out of 4 questions with this keyword)
+  - 'daily data': 100% correlation (In 3 out of 3 questions with this keyword)
+  - 'analytics data': 100% correlation (In 3 out of 3 questions with this keyword)
+  - 'large retailer': 100% correlation (In 3 out of 3 questions with this keyword)
+  - 'chum': 100% correlation (In 3 out of 3 questions with this keyword)
+  - 'customer chum': 100% correlation (In 3 out of 3 questions with this keyword)
+  - 'batch inference': 100% correlation (In 3 out of 3 questions with this keyword)
+  - 'transformations data': 100% correlation (In 3 out of 3 questions with this keyword)
+  - 'storage processing': 100% correlation (In 3 out of 3 questions with this keyword)
+  - 'perform analysis': 100% correlation (In 3 out of 3 questions with this keyword)
+  - 'adopt': 100% correlation (In 3 out of 3 questions with this keyword)
+  - 'storage solution': 100% correlation (In 3 out of 3 questions with this keyword)
+  - 'data assets': 100% correlation (In 3 out of 3 questions with this keyword)
+  - 'structured data': 83% correlation (In 5 out of 6 questions with this keyword)
+
+=== VERTEX === (Correct answer in 109 questions)
+Strongly correlated question keywords:
+  - 'productionize': 100% correlation (In 4 out of 4 questions with this keyword)
+  - 'model deployment': 100% correlation (In 4 out of 4 questions with this keyword)
+  - 'recently used': 100% correlation (In 3 out of 3 questions with this keyword)
+  - 'model serving': 100% correlation (In 3 out of 3 questions with this keyword)
+  - 'automates': 100% correlation (In 3 out of 3 questions with this keyword)
+  - 'frequency': 100% correlation (In 3 out of 3 questions with this keyword)
+  - 'lineage model': 100% correlation (In 3 out of 3 questions with this keyword)
+  - 'compare performance': 100% correlation (In 3 out of 3 questions with this keyword)
+  - 'trains model': 100% correlation (In 3 out of 3 questions with this keyword)
+  - 'splits': 100% correlation (In 3 out of 3 questions with this keyword)
+  - 'trained xgboost': 100% correlation (In 3 out of 3 questions with this keyword)
+  - 'preprocessing model': 100% correlation (In 3 out of 3 questions with this keyword)
+  - 'compare models': 100% correlation (In 3 out of 3 questions with this keyword)
+  - 'model tabular': 100% correlation (In 3 out of 3 questions with this keyword)
+  - 'track artifacts': 100% correlation (In 3 out of 3 questions with this keyword)
+
+=== CLOUD STORAGE === (Correct answer in 72 questions)
+Strongly correlated question keywords:
+  - 'gcp products': 100% correlation (In 3 out of 3 questions with this keyword)
+  - 'premises hadoop': 100% correlation (In 3 out of 3 questions with this keyword)
+  - 'case regional': 100% correlation (In 3 out of 3 questions with this keyword)
+  - 'premises apache': 83% correlation (In 5 out of 6 questions with this keyword)
+  - 'hdfs': 80% correlation (In 4 out of 5 questions with this keyword)
+  - 'ansi sql': 75% correlation (In 3 out of 4 questions with this keyword)
+  - 'text files': 75% correlation (In 3 out of 4 questions with this keyword)
+  - 'keeping costs': 75% correlation (In 3 out of 4 questions with this keyword)
+  - 'system hdfs': 75% correlation (In 3 out of 4 questions with this keyword)
+  - 'hadoop distributed': 75% correlation (In 3 out of 4 questions with this keyword)
+  - 'distributed file': 75% correlation (In 3 out of 4 questions with this keyword)
+  - 'file system': 75% correlation (In 3 out of 4 questions with this keyword)
+  - 'objective rpo': 75% correlation (In 3 out of 4 questions with this keyword)
+  - 'point objective': 75% correlation (In 3 out of 4 questions with this keyword)
+  - 'recovery point': 75% correlation (In 3 out of 4 questions with this keyword)
+
+=== DATAFLOW === (Correct answer in 60 questions)
+Strongly correlated question keywords:
+  - 'ingest data': 100% correlation (In 4 out of 4 questions with this keyword)
+  - 'data volume': 80% correlation (In 4 out of 5 questions with this keyword)
+  - 'pipeline ingest': 75% correlation (In 3 out of 4 questions with this keyword)
+  - 'configure pipeline': 60% correlation (In 3 out of 5 questions with this keyword)
+  - 'kafka cluster': 60% correlation (In 3 out of 5 questions with this keyword)
+  - 'iot': 60% correlation (In 3 out of 5 questions with this keyword)
+  - 'processing pipeline': 60% correlation (In 3 out of 5 questions with this keyword)
+  - 'apache kafka': 50% correlation (In 5 out of 10 questions with this keyword)
+  - 'aggregation': 50% correlation (In 4 out of 8 questions with this keyword)
+  - 'sub topic': 50% correlation (In 4 out of 8 questions with this keyword)
+  - 'receives': 50% correlation (In 3 out of 6 questions with this keyword)
+  - 'results bigquery': 50% correlation (In 3 out of 6 questions with this keyword)
+  - 'hosts': 50% correlation (In 3 out of 6 questions with this keyword)
+  - 'globally': 50% correlation (In 3 out of 6 questions with this keyword)
+  - 'supply': 50% correlation (In 3 out of 6 questions with this keyword)
+
+=== PUB SUB === (Correct answer in 33 questions)
+Strongly correlated question keywords:
+  - 'application servers': 67% correlation (In 4 out of 6 questions with this keyword)
+  - 'devices': 60% correlation (In 3 out of 5 questions with this keyword)
+  - 'invested': 60% correlation (In 3 out of 5 questions with this keyword)
+  - 'storage area': 60% correlation (In 3 out of 5 questions with this keyword)
+  - 'logistics market': 60% correlation (In 3 out of 5 questions with this keyword)
+  - 'company started': 60% correlation (In 3 out of 5 questions with this keyword)
+  - 'knowing shipments': 60% correlation (In 3 out of 5 questions with this keyword)
+  - 'logs contain': 60% correlation (In 3 out of 5 questions with this keyword)
+  - 'business agility': 60% correlation (In 3 out of 5 questions with this keyword)
+  - 'resources markets': 60% correlation (In 3 out of 5 questions with this keyword)
+  - 'resources transport': 60% correlation (In 3 out of 5 questions with this keyword)
+  - 'businesses throughout': 60% correlation (In 3 out of 5 questions with this keyword)
+  - 'track every': 60% correlation (In 3 out of 5 questions with this keyword)
+  - 'existing hadoop': 60% correlation (In 3 out of 5 questions with this keyword)
+  - 'deliveries': 60% correlation (In 3 out of 5 questions with this keyword)
+
+=== AUTOML === (Correct answer in 23 questions)
+Strongly correlated question keywords:
+  - 'without writing': 100% correlation (In 4 out of 4 questions with this keyword)
+  - 'several times': 100% correlation (In 3 out of 3 questions with this keyword)
+  - 'structured datasets': 100% correlation (In 3 out of 3 questions with this keyword)
+  - 'steps without': 100% correlation (In 3 out of 3 questions with this keyword)
+  - 'tuning serving': 100% correlation (In 3 out of 3 questions with this keyword)
+  - 'selection': 100% correlation (In 3 out of 3 questions with this keyword)
+  - 'workflows several': 100% correlation (In 3 out of 3 questions with this keyword)
+  - 'code exploratory': 100% correlation (In 3 out of 3 questions with this keyword)
+  - 'analysis feature': 100% correlation (In 3 out of 3 questions with this keyword)
+  - 'datasets currently': 100% correlation (In 3 out of 3 questions with this keyword)
+  - 'selection model': 100% correlation (In 3 out of 3 questions with this keyword)
+  - 'classification several': 100% correlation (In 3 out of 3 questions with this keyword)
+  - 'building training': 100% correlation (In 3 out of 3 questions with this keyword)
+  - 'times complete': 100% correlation (In 3 out of 3 questions with this keyword)
+  - 'build classification': 100% correlation (In 3 out of 3 questions with this keyword)
+
+=== DATAPROC === (Correct answer in 18 questions)
+Strongly correlated question keywords:
+  - 'pyspark': 67% correlation (In 4 out of 6 questions with this keyword)
+  - 'hadoop cluster': 60% correlation (In 3 out of 5 questions with this keyword)
+  - 'jobs run': 60% correlation (In 3 out of 5 questions with this keyword)
+  - 'apache spark': 57% correlation (In 4 out of 7 questions with this keyword)
+  - 'hive': 50% correlation (In 3 out of 6 questions with this keyword)
+  - 'parquet': 50% correlation (In 3 out of 6 questions with this keyword)
+  - 'premises apache': 50% correlation (In 3 out of 6 questions with this keyword)
+
+=== AI PLATFORM === (Correct answer in 15 questions)
+Strongly correlated question keywords:
+  - 'advertising': 50% correlation (In 3 out of 6 questions with this keyword)
+
+=== GPU === (Correct answer in 14 questions)
+Strongly correlated question keywords:
+  - 'nvidia': 75% correlation (In 3 out of 4 questions with this keyword)
+  - 'custom tensorflow': 43% correlation (In 3 out of 7 questions with this keyword)
+
+=== BIGTABLE === (Correct answer in 12 questions)
+Strongly correlated question keywords:
+  - 'time series': 50% correlation (In 4 out of 8 questions with this keyword)
+
+=== COMPOSER === (Correct answer in 12 questions)
+Strongly correlated question keywords:
+  - 'schedule': 56% correlation (In 5 out of 9 questions with this keyword)
+
+=== CLOUD SQL === (Correct answer in 10 questions)
+Strongly correlated question keywords:
+  - 'mysql': 60% correlation (In 3 out of 5 questions with this keyword)
+
+=== KUBEFLOW === (Correct answer in 9 questions)
+Strongly correlated question keywords:
+  - 'end end': 43% correlation (In 3 out of 7 questions with this keyword)
+
+=== DATAPREP === (Correct answer in 7 questions)
+Strongly correlated question keywords:
+  - 'prepare data': 43% correlation (In 3 out of 7 questions with this keyword)
+
+=== DATAPLEX === (Correct answer in 6 questions)
+Strongly correlated question keywords:
+  - 'data mesh': 60% correlation (In 3 out of 5 questions with this keyword)
+  - 'mesh': 60% correlation (In 3 out of 5 questions with this keyword)
+

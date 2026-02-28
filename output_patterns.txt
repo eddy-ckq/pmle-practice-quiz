@@ -1,0 +1,2041 @@
+--- File: qa_parsed.json ---
+Question 1:
+  Answer Pattern: Single Choice
+  Options Pattern: Mapping/Association
+Question 2:
+  Answer Pattern: Single Choice
+  Options Pattern: Sequential Steps
+Question 3:
+  Answer Pattern: Single Choice
+  Options Pattern: Explanatory/Scenario
+Question 4:
+  Answer Pattern: Single Choice
+  Options Pattern: Sequential Steps
+Question 5:
+  Answer Pattern: Single Choice
+  Options Pattern: Explanatory/Scenario
+Question 6:
+  Answer Pattern: Single Choice
+  Options Pattern: Explanatory/Scenario
+Question 7:
+  Answer Pattern: Single Choice
+  Options Pattern: Explanatory/Scenario
+Question 8:
+  Answer Pattern: Single Choice
+  Options Pattern: Explanatory/Scenario
+Question 9:
+  Answer Pattern: Single Choice
+  Options Pattern: Code/Command
+Question 10:
+  Answer Pattern: Single Choice
+  Options Pattern: Short Answer/Term
+Question 11:
+  Answer Pattern: Single Choice
+  Options Pattern: Code/Command
+Question 12:
+  Answer Pattern: Single Choice
+  Options Pattern: Mapping/Association
+Question 13:
+  Answer Pattern: Single Choice
+  Options Pattern: Explanatory/Scenario
+Question 14:
+  Answer Pattern: Single Choice
+  Options Pattern: Explanatory/Scenario
+Question 15:
+  Answer Pattern: Single Choice
+  Options Pattern: Sequential Steps
+Question 16:
+  Answer Pattern: Single Choice
+  Options Pattern: Short Answer/Term
+Question 17:
+  Answer Pattern: Single Choice
+  Options Pattern: Sequential Steps
+Question 18:
+  Answer Pattern: Single Choice
+  Options Pattern: Explanatory/Scenario
+Question 19:
+  Answer Pattern: Single Choice
+  Options Pattern: Explanatory/Scenario
+Question 20:
+  Answer Pattern: Single Choice
+  Options Pattern: Short Answer/Term
+Question 21:
+  Answer Pattern: Single Choice
+  Options Pattern: Explanatory/Scenario
+Question 22:
+  Answer Pattern: Single Choice
+  Options Pattern: Explanatory/Scenario
+Question 23:
+  Answer Pattern: Single Choice
+  Options Pattern: Mapping/Association
+Question 24:
+  Answer Pattern: Single Choice
+  Options Pattern: Explanatory/Scenario
+Question 25:
+  Answer Pattern: Single Choice
+  Options Pattern: Short Answer/Term
+Question 26:
+  Answer Pattern: Single Choice
+  Options Pattern: Short Answer/Term
+Question 27:
+  Answer Pattern: Single Choice
+  Options Pattern: Short Answer/Term
+Question 28:
+  Answer Pattern: Multiple Choice (2 answers)
+  Options Pattern: Explanatory/Scenario
+Question 29:
+  Answer Pattern: Single Choice
+  Options Pattern: Explanatory/Scenario
+Question 30:
+  Answer Pattern: Single Choice
+  Options Pattern: Explanatory/Scenario
+Question 31:
+  Answer Pattern: Single Choice
+  Options Pattern: Short Answer/Term
+Question 32:
+  Answer Pattern: Single Choice
+  Options Pattern: Explanatory/Scenario
+Question 33:
+  Answer Pattern: Single Choice
+  Options Pattern: Explanatory/Scenario
+Question 34:
+  Answer Pattern: Single Choice
+  Options Pattern: Explanatory/Scenario
+Question 35:
+  Answer Pattern: Single Choice
+  Options Pattern: Sequential Steps
+Question 36:
+  Answer Pattern: Single Choice
+  Options Pattern: Explanatory/Scenario
+Question 37:
+  Answer Pattern: Single Choice
+  Options Pattern: Explanatory/Scenario
+Question 38:
+  Answer Pattern: Single Choice
+  Options Pattern: Explanatory/Scenario
+Question 39:
+  Answer Pattern: Single Choice
+  Options Pattern: Explanatory/Scenario
+Question 40:
+  Answer Pattern: Multiple Choice (2 answers)
+  Options Pattern: Explanatory/Scenario
+Question 41:
+  Answer Pattern: Single Choice
+  Options Pattern: Sequential Steps
+Question 42:
+  Answer Pattern: Single Choice
+  Options Pattern: Sequential Steps
+Question 43:
+  Answer Pattern: Single Choice
+  Options Pattern: Mapping/Association
+Question 44:
+  Answer Pattern: Single Choice
+  Options Pattern: Sequential Steps
+Question 45:
+  Answer Pattern: Single Choice
+  Options Pattern: Explanatory/Scenario
+Question 46:
+  Answer Pattern: Single Choice
+  Options Pattern: Explanatory/Scenario
+Question 47:
+  Answer Pattern: Single Choice
+  Options Pattern: Explanatory/Scenario
+Question 48:
+  Answer Pattern: Single Choice
+  Options Pattern: Explanatory/Scenario
+Question 49:
+  Answer Pattern: Single Choice
+  Options Pattern: Sequential Steps
+Question 50:
+  Answer Pattern: Single Choice
+  Options Pattern: Explanatory/Scenario
+Question 51:
+  Answer Pattern: Single Choice
+  Options Pattern: Explanatory/Scenario
+Question 52:
+  Answer Pattern: Single Choice
+  Options Pattern: Explanatory/Scenario
+Question 53:
+  Answer Pattern: Single Choice
+  Options Pattern: Mapping/Association
+Question 54:
+  Answer Pattern: Single Choice
+  Options Pattern: Explanatory/Scenario
+Question 55:
+  Answer Pattern: Single Choice
+  Options Pattern: Explanatory/Scenario
+Question 56:
+  Answer Pattern: Single Choice
+  Options Pattern: Explanatory/Scenario
+Question 57:
+  Answer Pattern: Single Choice
+  Options Pattern: Explanatory/Scenario
+Question 58:
+  Answer Pattern: Single Choice
+  Options Pattern: Explanatory/Scenario
+Question 59:
+  Answer Pattern: Single Choice
+  Options Pattern: Explanatory/Scenario
+Question 60:
+  Answer Pattern: Single Choice
+  Options Pattern: Short Answer/Term
+Question 61:
+  Answer Pattern: Single Choice
+  Options Pattern: Explanatory/Scenario
+Question 62:
+  Answer Pattern: Single Choice
+  Options Pattern: Sequential Steps
+Question 63:
+  Answer Pattern: Single Choice
+  Options Pattern: Explanatory/Scenario
+Question 64:
+  Answer Pattern: Single Choice
+  Options Pattern: Explanatory/Scenario
+Question 65:
+  Answer Pattern: Single Choice
+  Options Pattern: Short Answer/Term
+Question 66:
+  Answer Pattern: Single Choice
+  Options Pattern: Explanatory/Scenario
+Question 67:
+  Answer Pattern: Single Choice
+  Options Pattern: Explanatory/Scenario
+Question 68:
+  Answer Pattern: Single Choice
+  Options Pattern: Short Answer/Term
+Question 69:
+  Answer Pattern: Single Choice
+  Options Pattern: Explanatory/Scenario
+Question 70:
+  Answer Pattern: Single Choice
+  Options Pattern: Explanatory/Scenario
+Question 71:
+  Answer Pattern: Single Choice
+  Options Pattern: Explanatory/Scenario
+Question 72:
+  Answer Pattern: Single Choice
+  Options Pattern: Explanatory/Scenario
+Question 73:
+  Answer Pattern: Single Choice
+  Options Pattern: Sequential Steps
+Question 74:
+  Answer Pattern: Single Choice
+  Options Pattern: Explanatory/Scenario
+Question 75:
+  Answer Pattern: Single Choice
+  Options Pattern: Explanatory/Scenario
+Question 76:
+  Answer Pattern: Single Choice
+  Options Pattern: Explanatory/Scenario
+Question 77:
+  Answer Pattern: Single Choice
+  Options Pattern: Code/Command
+Question 78:
+  Answer Pattern: Single Choice
+  Options Pattern: Explanatory/Scenario
+Question 79:
+  Answer Pattern: Single Choice
+  Options Pattern: Explanatory/Scenario
+Question 80:
+  Answer Pattern: Single Choice
+  Options Pattern: Sequential Steps
+Question 81:
+  Answer Pattern: Single Choice
+  Options Pattern: Explanatory/Scenario
+Question 82:
+  Answer Pattern: Single Choice
+  Options Pattern: Explanatory/Scenario
+Question 83:
+  Answer Pattern: Single Choice
+  Options Pattern: Code/Command
+Question 84:
+  Answer Pattern: Single Choice
+  Options Pattern: Sequential Steps
+Question 85:
+  Answer Pattern: Single Choice
+  Options Pattern: Explanatory/Scenario
+Question 86:
+  Answer Pattern: Single Choice
+  Options Pattern: Explanatory/Scenario
+Question 87:
+  Answer Pattern: Single Choice
+  Options Pattern: Explanatory/Scenario
+Question 88:
+  Answer Pattern: Single Choice
+  Options Pattern: Explanatory/Scenario
+Question 89:
+  Answer Pattern: Single Choice
+  Options Pattern: Explanatory/Scenario
+Question 90:
+  Answer Pattern: Single Choice
+  Options Pattern: Explanatory/Scenario
+Question 91:
+  Answer Pattern: Single Choice
+  Options Pattern: Explanatory/Scenario
+Question 92:
+  Answer Pattern: Single Choice
+  Options Pattern: Explanatory/Scenario
+Question 93:
+  Answer Pattern: Single Choice
+  Options Pattern: Explanatory/Scenario
+Question 94:
+  Answer Pattern: Single Choice
+  Options Pattern: Explanatory/Scenario
+Question 95:
+  Answer Pattern: Single Choice
+  Options Pattern: Explanatory/Scenario
+Question 96:
+  Answer Pattern: Single Choice
+  Options Pattern: Explanatory/Scenario
+Question 97:
+  Answer Pattern: Single Choice
+  Options Pattern: Explanatory/Scenario
+Question 98:
+  Answer Pattern: Single Choice
+  Options Pattern: Explanatory/Scenario
+Question 99:
+  Answer Pattern: Single Choice
+  Options Pattern: Explanatory/Scenario
+Question 100:
+  Answer Pattern: Single Choice
+  Options Pattern: Short Answer/Term
+Question 101:
+  Answer Pattern: Single Choice
+  Options Pattern: Explanatory/Scenario
+Question 102:
+  Answer Pattern: Single Choice
+  Options Pattern: Explanatory/Scenario
+Question 103:
+  Answer Pattern: Single Choice
+  Options Pattern: Short Answer/Term
+Question 104:
+  Answer Pattern: Single Choice
+  Options Pattern: Explanatory/Scenario
+Question 105:
+  Answer Pattern: Single Choice
+  Options Pattern: Code/Command
+Question 106:
+  Answer Pattern: Single Choice
+  Options Pattern: Sequential Steps
+Question 107:
+  Answer Pattern: Single Choice
+  Options Pattern: Short Answer/Term
+Question 108:
+  Answer Pattern: Single Choice
+  Options Pattern: Explanatory/Scenario
+Question 109:
+  Answer Pattern: Single Choice
+  Options Pattern: Short Answer/Term
+Question 110:
+  Answer Pattern: Single Choice
+  Options Pattern: Short Answer/Term
+Question 111:
+  Answer Pattern: Single Choice
+  Options Pattern: Explanatory/Scenario
+Question 112:
+  Answer Pattern: Single Choice
+  Options Pattern: Explanatory/Scenario
+Question 113:
+  Answer Pattern: Single Choice
+  Options Pattern: Explanatory/Scenario
+Question 114:
+  Answer Pattern: Single Choice
+  Options Pattern: Explanatory/Scenario
+Question 115:
+  Answer Pattern: Single Choice
+  Options Pattern: Explanatory/Scenario
+Question 116:
+  Answer Pattern: Single Choice
+  Options Pattern: Explanatory/Scenario
+Question 117:
+  Answer Pattern: Single Choice
+  Options Pattern: Explanatory/Scenario
+Question 118:
+  Answer Pattern: Single Choice
+  Options Pattern: Explanatory/Scenario
+Question 119:
+  Answer Pattern: Single Choice
+  Options Pattern: Explanatory/Scenario
+Question 120:
+  Answer Pattern: Single Choice
+  Options Pattern: Explanatory/Scenario
+Question 121:
+  Answer Pattern: Single Choice
+  Options Pattern: Sequential Steps
+Question 122:
+  Answer Pattern: Single Choice
+  Options Pattern: Explanatory/Scenario
+Question 123:
+  Answer Pattern: Single Choice
+  Options Pattern: Explanatory/Scenario
+Question 124:
+  Answer Pattern: Single Choice
+  Options Pattern: Explanatory/Scenario
+Question 125:
+  Answer Pattern: Single Choice
+  Options Pattern: Explanatory/Scenario
+Question 126:
+  Answer Pattern: Single Choice
+  Options Pattern: Explanatory/Scenario
+Question 127:
+  Answer Pattern: Single Choice
+  Options Pattern: Explanatory/Scenario
+Question 128:
+  Answer Pattern: Single Choice
+  Options Pattern: Explanatory/Scenario
+Question 129:
+  Answer Pattern: Single Choice
+  Options Pattern: Explanatory/Scenario
+Question 130:
+  Answer Pattern: Single Choice
+  Options Pattern: Explanatory/Scenario
+Question 131:
+  Answer Pattern: Single Choice
+  Options Pattern: Short Answer/Term
+Question 132:
+  Answer Pattern: Single Choice
+  Options Pattern: Explanatory/Scenario
+Question 133:
+  Answer Pattern: Single Choice
+  Options Pattern: Explanatory/Scenario
+Question 134:
+  Answer Pattern: Single Choice
+  Options Pattern: Code/Command
+Question 135:
+  Answer Pattern: Single Choice
+  Options Pattern: Explanatory/Scenario
+Question 136:
+  Answer Pattern: Single Choice
+  Options Pattern: Explanatory/Scenario
+Question 137:
+  Answer Pattern: Single Choice
+  Options Pattern: Explanatory/Scenario
+Question 138:
+  Answer Pattern: Single Choice
+  Options Pattern: Explanatory/Scenario
+Question 139:
+  Answer Pattern: Single Choice
+  Options Pattern: Explanatory/Scenario
+Question 140:
+  Answer Pattern: Single Choice
+  Options Pattern: Explanatory/Scenario
+Question 141:
+  Answer Pattern: Single Choice
+  Options Pattern: Explanatory/Scenario
+Question 142:
+  Answer Pattern: Single Choice
+  Options Pattern: Sequential Steps
+Question 143:
+  Answer Pattern: Single Choice
+  Options Pattern: Explanatory/Scenario
+Question 144:
+  Answer Pattern: Single Choice
+  Options Pattern: Explanatory/Scenario
+Question 145:
+  Answer Pattern: Single Choice
+  Options Pattern: Explanatory/Scenario
+Question 146:
+  Answer Pattern: Single Choice
+  Options Pattern: Code/Command
+Question 147:
+  Answer Pattern: Single Choice
+  Options Pattern: Explanatory/Scenario
+Question 148:
+  Answer Pattern: Single Choice
+  Options Pattern: Sequential Steps
+Question 149:
+  Answer Pattern: Multiple Choice (2 answers)
+  Options Pattern: Explanatory/Scenario
+Question 150:
+  Answer Pattern: Single Choice
+  Options Pattern: Short Answer/Term
+Question 151:
+  Answer Pattern: Single Choice
+  Options Pattern: Explanatory/Scenario
+Question 152:
+  Answer Pattern: Single Choice
+  Options Pattern: Explanatory/Scenario
+Question 153:
+  Answer Pattern: Single Choice
+  Options Pattern: Explanatory/Scenario
+Question 154:
+  Answer Pattern: Single Choice
+  Options Pattern: Short Answer/Term
+Question 155:
+  Answer Pattern: Single Choice
+  Options Pattern: Explanatory/Scenario
+Question 156:
+  Answer Pattern: Single Choice
+  Options Pattern: Explanatory/Scenario
+Question 157:
+  Answer Pattern: Single Choice
+  Options Pattern: Explanatory/Scenario
+Question 158:
+  Answer Pattern: Single Choice
+  Options Pattern: Explanatory/Scenario
+Question 159:
+  Answer Pattern: Single Choice
+  Options Pattern: Explanatory/Scenario
+Question 160:
+  Answer Pattern: Single Choice
+  Options Pattern: Explanatory/Scenario
+Question 161:
+  Answer Pattern: Single Choice
+  Options Pattern: Explanatory/Scenario
+Question 162:
+  Answer Pattern: Single Choice
+  Options Pattern: Explanatory/Scenario
+Question 163:
+  Answer Pattern: Single Choice
+  Options Pattern: Explanatory/Scenario
+Question 164:
+  Answer Pattern: Single Choice
+  Options Pattern: Sequential Steps
+Question 165:
+  Answer Pattern: Single Choice
+  Options Pattern: Explanatory/Scenario
+Question 166:
+  Answer Pattern: Single Choice
+  Options Pattern: Explanatory/Scenario
+Question 167:
+  Answer Pattern: Single Choice
+  Options Pattern: Explanatory/Scenario
+Question 168:
+  Answer Pattern: Single Choice
+  Options Pattern: Code/Command
+Question 169:
+  Answer Pattern: Single Choice
+  Options Pattern: Explanatory/Scenario
+Question 170:
+  Answer Pattern: Single Choice
+  Options Pattern: Explanatory/Scenario
+Question 171:
+  Answer Pattern: Single Choice
+  Options Pattern: Explanatory/Scenario
+Question 172:
+  Answer Pattern: Single Choice
+  Options Pattern: Sequential Steps
+Question 173:
+  Answer Pattern: Single Choice
+  Options Pattern: Explanatory/Scenario
+Question 174:
+  Answer Pattern: Single Choice
+  Options Pattern: Explanatory/Scenario
+Question 175:
+  Answer Pattern: Single Choice
+  Options Pattern: Sequential Steps
+Question 176:
+  Answer Pattern: Single Choice
+  Options Pattern: Explanatory/Scenario
+Question 177:
+  Answer Pattern: Single Choice
+  Options Pattern: Explanatory/Scenario
+Question 178:
+  Answer Pattern: Single Choice
+  Options Pattern: Explanatory/Scenario
+Question 179:
+  Answer Pattern: Single Choice
+  Options Pattern: Explanatory/Scenario
+Question 180:
+  Answer Pattern: Single Choice
+  Options Pattern: Sequential Steps
+Question 181:
+  Answer Pattern: Single Choice
+  Options Pattern: Explanatory/Scenario
+Question 182:
+  Answer Pattern: Single Choice
+  Options Pattern: Sequential Steps
+Question 183:
+  Answer Pattern: Single Choice
+  Options Pattern: Short Answer/Term
+Question 184:
+  Answer Pattern: Single Choice
+  Options Pattern: Explanatory/Scenario
+Question 185:
+  Answer Pattern: Single Choice
+  Options Pattern: Sequential Steps
+Question 186:
+  Answer Pattern: Single Choice
+  Options Pattern: Explanatory/Scenario
+Question 187:
+  Answer Pattern: Single Choice
+  Options Pattern: Explanatory/Scenario
+Question 188:
+  Answer Pattern: Single Choice
+  Options Pattern: Sequential Steps
+Question 189:
+  Answer Pattern: Single Choice
+  Options Pattern: Code/Command
+Question 190:
+  Answer Pattern: Single Choice
+  Options Pattern: Explanatory/Scenario
+Question 191:
+  Answer Pattern: Single Choice
+  Options Pattern: Explanatory/Scenario
+Question 192:
+  Answer Pattern: Single Choice
+  Options Pattern: Explanatory/Scenario
+Question 193:
+  Answer Pattern: Single Choice
+  Options Pattern: Sequential Steps
+Question 194:
+  Answer Pattern: Single Choice
+  Options Pattern: Explanatory/Scenario
+Question 195:
+  Answer Pattern: Single Choice
+  Options Pattern: Explanatory/Scenario
+Question 196:
+  Answer Pattern: Single Choice
+  Options Pattern: Explanatory/Scenario
+Question 197:
+  Answer Pattern: Single Choice
+  Options Pattern: Explanatory/Scenario
+Question 198:
+  Answer Pattern: Single Choice
+  Options Pattern: Explanatory/Scenario
+Question 199:
+  Answer Pattern: Single Choice
+  Options Pattern: Sequential Steps
+Question 200:
+  Answer Pattern: Single Choice
+  Options Pattern: Explanatory/Scenario
+Question 201:
+  Answer Pattern: Single Choice
+  Options Pattern: Explanatory/Scenario
+Question 202:
+  Answer Pattern: Single Choice
+  Options Pattern: Explanatory/Scenario
+Question 203:
+  Answer Pattern: Single Choice
+  Options Pattern: Explanatory/Scenario
+Question 204:
+  Answer Pattern: Single Choice
+  Options Pattern: Explanatory/Scenario
+Question 205:
+  Answer Pattern: Single Choice
+  Options Pattern: Explanatory/Scenario
+Question 206:
+  Answer Pattern: Single Choice
+  Options Pattern: Explanatory/Scenario
+Question 207:
+  Answer Pattern: Single Choice
+  Options Pattern: Explanatory/Scenario
+Question 208:
+  Answer Pattern: Single Choice
+  Options Pattern: Explanatory/Scenario
+Question 209:
+  Answer Pattern: Single Choice
+  Options Pattern: Explanatory/Scenario
+Question 210:
+  Answer Pattern: Single Choice
+  Options Pattern: Sequential Steps
+Question 211:
+  Answer Pattern: Single Choice
+  Options Pattern: Explanatory/Scenario
+Question 212:
+  Answer Pattern: Single Choice
+  Options Pattern: Explanatory/Scenario
+Question 213:
+  Answer Pattern: Single Choice
+  Options Pattern: Explanatory/Scenario
+Question 214:
+  Answer Pattern: Single Choice
+  Options Pattern: Explanatory/Scenario
+Question 215:
+  Answer Pattern: Single Choice
+  Options Pattern: Explanatory/Scenario
+Question 216:
+  Answer Pattern: Single Choice
+  Options Pattern: Short Answer/Term
+Question 217:
+  Answer Pattern: Single Choice
+  Options Pattern: Explanatory/Scenario
+Question 218:
+  Answer Pattern: Single Choice
+  Options Pattern: Explanatory/Scenario
+Question 219:
+  Answer Pattern: Single Choice
+  Options Pattern: Explanatory/Scenario
+Question 220:
+  Answer Pattern: Single Choice
+  Options Pattern: Sequential Steps
+Question 221:
+  Answer Pattern: Single Choice
+  Options Pattern: Explanatory/Scenario
+Question 222:
+  Answer Pattern: Single Choice
+  Options Pattern: Explanatory/Scenario
+Question 223:
+  Answer Pattern: Single Choice
+  Options Pattern: Explanatory/Scenario
+Question 224:
+  Answer Pattern: Single Choice
+  Options Pattern: Explanatory/Scenario
+Question 225:
+  Answer Pattern: Single Choice
+  Options Pattern: Explanatory/Scenario
+Question 226:
+  Answer Pattern: Single Choice
+  Options Pattern: Explanatory/Scenario
+Question 227:
+  Answer Pattern: Single Choice
+  Options Pattern: Explanatory/Scenario
+Question 228:
+  Answer Pattern: Single Choice
+  Options Pattern: Explanatory/Scenario
+Question 229:
+  Answer Pattern: Single Choice
+  Options Pattern: Explanatory/Scenario
+Question 230:
+  Answer Pattern: Single Choice
+  Options Pattern: Explanatory/Scenario
+Question 231:
+  Answer Pattern: Single Choice
+  Options Pattern: Explanatory/Scenario
+Question 232:
+  Answer Pattern: Single Choice
+  Options Pattern: Sequential Steps
+Question 233:
+  Answer Pattern: Single Choice
+  Options Pattern: Short Answer/Term
+Question 234:
+  Answer Pattern: Single Choice
+  Options Pattern: Code/Command
+Question 235:
+  Answer Pattern: Single Choice
+  Options Pattern: Sequential Steps
+Question 236:
+  Answer Pattern: Single Choice
+  Options Pattern: Explanatory/Scenario
+Question 237:
+  Answer Pattern: Single Choice
+  Options Pattern: Explanatory/Scenario
+Question 238:
+  Answer Pattern: Single Choice
+  Options Pattern: Explanatory/Scenario
+Question 239:
+  Answer Pattern: Single Choice
+  Options Pattern: Explanatory/Scenario
+Question 240:
+  Answer Pattern: Single Choice
+  Options Pattern: Code/Command
+Question 241:
+  Answer Pattern: Single Choice
+  Options Pattern: Explanatory/Scenario
+Question 242:
+  Answer Pattern: Single Choice
+  Options Pattern: Explanatory/Scenario
+Question 243:
+  Answer Pattern: Single Choice
+  Options Pattern: Explanatory/Scenario
+Question 244:
+  Answer Pattern: Single Choice
+  Options Pattern: Explanatory/Scenario
+Question 245:
+  Answer Pattern: Single Choice
+  Options Pattern: Explanatory/Scenario
+Question 246:
+  Answer Pattern: Single Choice
+  Options Pattern: Code/Command
+Question 247:
+  Answer Pattern: Single Choice
+  Options Pattern: Explanatory/Scenario
+Question 248:
+  Answer Pattern: Single Choice
+  Options Pattern: Explanatory/Scenario
+Question 249:
+  Answer Pattern: Single Choice
+  Options Pattern: Explanatory/Scenario
+Question 250:
+  Answer Pattern: Single Choice
+  Options Pattern: Explanatory/Scenario
+Question 251:
+  Answer Pattern: Single Choice
+  Options Pattern: Sequential Steps
+Question 252:
+  Answer Pattern: Single Choice
+  Options Pattern: Code/Command
+Question 253:
+  Answer Pattern: Single Choice
+  Options Pattern: Explanatory/Scenario
+Question 254:
+  Answer Pattern: Single Choice
+  Options Pattern: Explanatory/Scenario
+Question 255:
+  Answer Pattern: Single Choice
+  Options Pattern: Code/Command
+Question 256:
+  Answer Pattern: Single Choice
+  Options Pattern: Sequential Steps
+Question 257:
+  Answer Pattern: Single Choice
+  Options Pattern: Explanatory/Scenario
+Question 258:
+  Answer Pattern: Single Choice
+  Options Pattern: Explanatory/Scenario
+Question 259:
+  Answer Pattern: Single Choice
+  Options Pattern: Explanatory/Scenario
+Question 260:
+  Answer Pattern: Single Choice
+  Options Pattern: Sequential Steps
+Question 261:
+  Answer Pattern: Single Choice
+  Options Pattern: Explanatory/Scenario
+Question 262:
+  Answer Pattern: Single Choice
+  Options Pattern: Explanatory/Scenario
+Question 263:
+  Answer Pattern: Single Choice
+  Options Pattern: Sequential Steps
+Question 264:
+  Answer Pattern: Single Choice
+  Options Pattern: Explanatory/Scenario
+Question 265:
+  Answer Pattern: Single Choice
+  Options Pattern: Explanatory/Scenario
+Question 266:
+  Answer Pattern: Single Choice
+  Options Pattern: Explanatory/Scenario
+Question 267:
+  Answer Pattern: Single Choice
+  Options Pattern: Explanatory/Scenario
+Question 268:
+  Answer Pattern: Single Choice
+  Options Pattern: Mapping/Association
+Question 269:
+  Answer Pattern: Single Choice
+  Options Pattern: Explanatory/Scenario
+Question 270:
+  Answer Pattern: Single Choice
+  Options Pattern: Sequential Steps
+Question 271:
+  Answer Pattern: Single Choice
+  Options Pattern: Explanatory/Scenario
+Question 272:
+  Answer Pattern: Single Choice
+  Options Pattern: Code/Command
+Question 273:
+  Answer Pattern: Single Choice
+  Options Pattern: Explanatory/Scenario
+Question 274:
+  Answer Pattern: Single Choice
+  Options Pattern: Explanatory/Scenario
+Question 275:
+  Answer Pattern: Single Choice
+  Options Pattern: Sequential Steps
+Question 276:
+  Answer Pattern: Single Choice
+  Options Pattern: Explanatory/Scenario
+Question 277:
+  Answer Pattern: Single Choice
+  Options Pattern: Explanatory/Scenario
+Question 278:
+  Answer Pattern: Single Choice
+  Options Pattern: Explanatory/Scenario
+Question 279:
+  Answer Pattern: Single Choice
+  Options Pattern: Explanatory/Scenario
+Question 280:
+  Answer Pattern: Single Choice
+  Options Pattern: Explanatory/Scenario
+Question 281:
+  Answer Pattern: Single Choice
+  Options Pattern: Explanatory/Scenario
+Question 282:
+  Answer Pattern: Single Choice
+  Options Pattern: Explanatory/Scenario
+Question 283:
+  Answer Pattern: Single Choice
+  Options Pattern: Explanatory/Scenario
+Question 284:
+  Answer Pattern: Single Choice
+  Options Pattern: Explanatory/Scenario
+Question 285:
+  Answer Pattern: Single Choice
+  Options Pattern: Explanatory/Scenario
+Question 286:
+  Answer Pattern: Single Choice
+  Options Pattern: Explanatory/Scenario
+Question 287:
+  Answer Pattern: Single Choice
+  Options Pattern: Explanatory/Scenario
+Question 288:
+  Answer Pattern: Single Choice
+  Options Pattern: Explanatory/Scenario
+Question 289:
+  Answer Pattern: Single Choice
+  Options Pattern: Explanatory/Scenario
+Question 290:
+  Answer Pattern: Single Choice
+  Options Pattern: Explanatory/Scenario
+Question 291:
+  Answer Pattern: Single Choice
+  Options Pattern: Explanatory/Scenario
+Question 292:
+  Answer Pattern: Single Choice
+  Options Pattern: Explanatory/Scenario
+Question 293:
+  Answer Pattern: Single Choice
+  Options Pattern: Sequential Steps
+Question 294:
+  Answer Pattern: Single Choice
+  Options Pattern: Explanatory/Scenario
+Question 295:
+  Answer Pattern: Single Choice
+  Options Pattern: Explanatory/Scenario
+Question 296:
+  Answer Pattern: Single Choice
+  Options Pattern: Explanatory/Scenario
+Question 297:
+  Answer Pattern: Single Choice
+  Options Pattern: Explanatory/Scenario
+Question 298:
+  Answer Pattern: Single Choice
+  Options Pattern: Explanatory/Scenario
+Question 299:
+  Answer Pattern: Single Choice
+  Options Pattern: Explanatory/Scenario
+Question 300:
+  Answer Pattern: Single Choice
+  Options Pattern: Explanatory/Scenario
+Question 301:
+  Answer Pattern: Single Choice
+  Options Pattern: Explanatory/Scenario
+Question 302:
+  Answer Pattern: Single Choice
+  Options Pattern: Explanatory/Scenario
+Question 303:
+  Answer Pattern: Single Choice
+  Options Pattern: Explanatory/Scenario
+Question 304:
+  Answer Pattern: Single Choice
+  Options Pattern: Explanatory/Scenario
+Question 305:
+  Answer Pattern: Single Choice
+  Options Pattern: Explanatory/Scenario
+Question 306:
+  Answer Pattern: Single Choice
+  Options Pattern: Explanatory/Scenario
+Question 307:
+  Answer Pattern: Single Choice
+  Options Pattern: Explanatory/Scenario
+Question 308:
+  Answer Pattern: Single Choice
+  Options Pattern: Code/Command
+Question 309:
+  Answer Pattern: Single Choice
+  Options Pattern: Explanatory/Scenario
+Question 310:
+  Answer Pattern: Single Choice
+  Options Pattern: Explanatory/Scenario
+Question 311:
+  Answer Pattern: Single Choice
+  Options Pattern: Explanatory/Scenario
+Question 312:
+  Answer Pattern: Single Choice
+  Options Pattern: Explanatory/Scenario
+Question 313:
+  Answer Pattern: Single Choice
+  Options Pattern: Explanatory/Scenario
+Question 314:
+  Answer Pattern: Single Choice
+  Options Pattern: Explanatory/Scenario
+Question 315:
+  Answer Pattern: Single Choice
+  Options Pattern: Explanatory/Scenario
+Question 316:
+  Answer Pattern: Single Choice
+  Options Pattern: Explanatory/Scenario
+Question 317:
+  Answer Pattern: Single Choice
+  Options Pattern: Explanatory/Scenario
+Question 318:
+  Answer Pattern: Single Choice
+  Options Pattern: Explanatory/Scenario
+Question 319:
+  Answer Pattern: Single Choice
+  Options Pattern: Explanatory/Scenario
+Question 320:
+  Answer Pattern: Single Choice
+  Options Pattern: Explanatory/Scenario
+Question 321:
+  Answer Pattern: Single Choice
+  Options Pattern: Explanatory/Scenario
+Question 322:
+  Answer Pattern: Single Choice
+  Options Pattern: Explanatory/Scenario
+Question 323:
+  Answer Pattern: Single Choice
+  Options Pattern: Explanatory/Scenario
+Question 324:
+  Answer Pattern: Single Choice
+  Options Pattern: Explanatory/Scenario
+Question 325:
+  Answer Pattern: Single Choice
+  Options Pattern: Explanatory/Scenario
+Question 326:
+  Answer Pattern: Single Choice
+  Options Pattern: Explanatory/Scenario
+Question 327:
+  Answer Pattern: Single Choice
+  Options Pattern: Explanatory/Scenario
+Question 328:
+  Answer Pattern: Single Choice
+  Options Pattern: Explanatory/Scenario
+Question 329:
+  Answer Pattern: Single Choice
+  Options Pattern: Explanatory/Scenario
+Question 330:
+  Answer Pattern: Single Choice
+  Options Pattern: Explanatory/Scenario
+Question 331:
+  Answer Pattern: Single Choice
+  Options Pattern: Explanatory/Scenario
+Question 332:
+  Answer Pattern: Single Choice
+  Options Pattern: Mapping/Association
+Question 333:
+  Answer Pattern: Single Choice
+  Options Pattern: Explanatory/Scenario
+Question 334:
+  Answer Pattern: Single Choice
+  Options Pattern: Explanatory/Scenario
+Question 335:
+  Answer Pattern: Single Choice
+  Options Pattern: Sequential Steps
+Question 336:
+  Answer Pattern: Single Choice
+  Options Pattern: Explanatory/Scenario
+Question 337:
+  Answer Pattern: Single Choice
+  Options Pattern: Explanatory/Scenario
+Question 338:
+  Answer Pattern: Single Choice
+  Options Pattern: Explanatory/Scenario
+Question 339:
+  Answer Pattern: Single Choice
+  Options Pattern: Code/Command
+
+--- File: pde_parsed.json ---
+Question 1:
+  Answer Pattern: Single Choice
+  Options Pattern: Short Answer/Term
+Question 2:
+  Answer Pattern: Single Choice
+  Options Pattern: Explanatory/Scenario
+Question 3:
+  Answer Pattern: Single Choice
+  Options Pattern: Explanatory/Scenario
+Question 4:
+  Answer Pattern: Single Choice
+  Options Pattern: Sequential Steps
+Question 5:
+  Answer Pattern: Single Choice
+  Options Pattern: Code/Command
+Question 6:
+  Answer Pattern: Single Choice
+  Options Pattern: Explanatory/Scenario
+Question 7:
+  Answer Pattern: Single Choice
+  Options Pattern: Short Answer/Term
+Question 8:
+  Answer Pattern: Single Choice
+  Options Pattern: Explanatory/Scenario
+Question 9:
+  Answer Pattern: Single Choice
+  Options Pattern: Short Answer/Term
+Question 10:
+  Answer Pattern: Multiple Choice (3 answers)
+  Options Pattern: Explanatory/Scenario
+Question 11:
+  Answer Pattern: Single Choice
+  Options Pattern: Explanatory/Scenario
+Question 12:
+  Answer Pattern: Multiple Choice (3 answers)
+  Options Pattern: Explanatory/Scenario
+Question 13:
+  Answer Pattern: Single Choice
+  Options Pattern: Short Answer/Term
+Question 14:
+  Answer Pattern: Multiple Choice (2 answers)
+  Options Pattern: Explanatory/Scenario
+Question 15:
+  Answer Pattern: Single Choice
+  Options Pattern: Explanatory/Scenario
+Question 16:
+  Answer Pattern: Single Choice
+  Options Pattern: Explanatory/Scenario
+Question 17:
+  Answer Pattern: Single Choice
+  Options Pattern: Explanatory/Scenario
+Question 18:
+  Answer Pattern: Multiple Choice (3 answers)
+  Options Pattern: Explanatory/Scenario
+Question 19:
+  Answer Pattern: Single Choice
+  Options Pattern: Explanatory/Scenario
+Question 20:
+  Answer Pattern: Single Choice
+  Options Pattern: Explanatory/Scenario
+Question 21:
+  Answer Pattern: Single Choice
+  Options Pattern: Explanatory/Scenario
+Question 22:
+  Answer Pattern: Single Choice
+  Options Pattern: Explanatory/Scenario
+Question 23:
+  Answer Pattern: Single Choice
+  Options Pattern: Code/Command
+Question 24:
+  Answer Pattern: Single Choice
+  Options Pattern: Sequential Steps
+Question 25:
+  Answer Pattern: Single Choice
+  Options Pattern: Explanatory/Scenario
+Question 26:
+  Answer Pattern: Single Choice
+  Options Pattern: Explanatory/Scenario
+Question 27:
+  Answer Pattern: Single Choice
+  Options Pattern: Explanatory/Scenario
+Question 28:
+  Answer Pattern: Single Choice
+  Options Pattern: Explanatory/Scenario
+Question 29:
+  Answer Pattern: Single Choice
+  Options Pattern: Explanatory/Scenario
+Question 30:
+  Answer Pattern: Single Choice
+  Options Pattern: Sequential Steps
+Question 31:
+  Answer Pattern: Single Choice
+  Options Pattern: Explanatory/Scenario
+Question 32:
+  Answer Pattern: Single Choice
+  Options Pattern: Explanatory/Scenario
+Question 33:
+  Answer Pattern: Single Choice
+  Options Pattern: Explanatory/Scenario
+Question 34:
+  Answer Pattern: Single Choice
+  Options Pattern: Explanatory/Scenario
+Question 35:
+  Answer Pattern: Single Choice
+  Options Pattern: Explanatory/Scenario
+Question 36:
+  Answer Pattern: Single Choice
+  Options Pattern: Explanatory/Scenario
+Question 37:
+  Answer Pattern: Single Choice
+  Options Pattern: Explanatory/Scenario
+Question 38:
+  Answer Pattern: Single Choice
+  Options Pattern: Short Answer/Term
+Question 39:
+  Answer Pattern: Single Choice
+  Options Pattern: Sequential Steps
+Question 40:
+  Answer Pattern: Single Choice
+  Options Pattern: Unknown
+Question 40:
+  Answer Pattern: Multiple Choice (2 answers)
+  Options Pattern: Explanatory/Scenario
+Question 41:
+  Answer Pattern: Single Choice
+  Options Pattern: Mapping/Association
+Question 42:
+  Answer Pattern: Single Choice
+  Options Pattern: Explanatory/Scenario
+Question 43:
+  Answer Pattern: Single Choice
+  Options Pattern: Explanatory/Scenario
+Question 44:
+  Answer Pattern: Single Choice
+  Options Pattern: Mapping/Association
+Question 45:
+  Answer Pattern: Single Choice
+  Options Pattern: Explanatory/Scenario
+Question 46:
+  Answer Pattern: Single Choice
+  Options Pattern: Explanatory/Scenario
+Question 47:
+  Answer Pattern: Single Choice
+  Options Pattern: Short Answer/Term
+Question 48:
+  Answer Pattern: Single Choice
+  Options Pattern: Explanatory/Scenario
+Question 49:
+  Answer Pattern: Multiple Choice (2 answers)
+  Options Pattern: Explanatory/Scenario
+Question 50:
+  Answer Pattern: Multiple Choice (3 answers)
+  Options Pattern: Short Answer/Term
+Question 51:
+  Answer Pattern: Multiple Choice (3 answers)
+  Options Pattern: Short Answer/Term
+Question 52:
+  Answer Pattern: Single Choice
+  Options Pattern: Explanatory/Scenario
+Question 53:
+  Answer Pattern: Single Choice
+  Options Pattern: Mapping/Association
+Question 54:
+  Answer Pattern: Single Choice
+  Options Pattern: Explanatory/Scenario
+Question 55:
+  Answer Pattern: Multiple Choice (2 answers)
+  Options Pattern: Explanatory/Scenario
+Question 56:
+  Answer Pattern: Single Choice
+  Options Pattern: Explanatory/Scenario
+Question 57:
+  Answer Pattern: Single Choice
+  Options Pattern: Explanatory/Scenario
+Question 58:
+  Answer Pattern: Single Choice
+  Options Pattern: Explanatory/Scenario
+Question 59:
+  Answer Pattern: Single Choice
+  Options Pattern: Short Answer/Term
+Question 60:
+  Answer Pattern: Single Choice
+  Options Pattern: Explanatory/Scenario
+Question 61:
+  Answer Pattern: Single Choice
+  Options Pattern: Explanatory/Scenario
+Question 62:
+  Answer Pattern: Single Choice
+  Options Pattern: Explanatory/Scenario
+Question 63:
+  Answer Pattern: Single Choice
+  Options Pattern: Short Answer/Term
+Question 64:
+  Answer Pattern: Single Choice
+  Options Pattern: Explanatory/Scenario
+Question 65:
+  Answer Pattern: Single Choice
+  Options Pattern: Explanatory/Scenario
+Question 66:
+  Answer Pattern: Single Choice
+  Options Pattern: Explanatory/Scenario
+Question 67:
+  Answer Pattern: Single Choice
+  Options Pattern: Explanatory/Scenario
+Question 68:
+  Answer Pattern: Single Choice
+  Options Pattern: Explanatory/Scenario
+Question 69:
+  Answer Pattern: Single Choice
+  Options Pattern: Explanatory/Scenario
+Question 70:
+  Answer Pattern: Single Choice
+  Options Pattern: Code/Command
+Question 71:
+  Answer Pattern: Single Choice
+  Options Pattern: Explanatory/Scenario
+Question 72:
+  Answer Pattern: Single Choice
+  Options Pattern: Explanatory/Scenario
+Question 73:
+  Answer Pattern: Single Choice
+  Options Pattern: Explanatory/Scenario
+Question 74:
+  Answer Pattern: Single Choice
+  Options Pattern: Short Answer/Term
+Question 75:
+  Answer Pattern: Single Choice
+  Options Pattern: Explanatory/Scenario
+Question 76:
+  Answer Pattern: Single Choice
+  Options Pattern: Explanatory/Scenario
+Question 77:
+  Answer Pattern: Single Choice
+  Options Pattern: Explanatory/Scenario
+Question 78:
+  Answer Pattern: Single Choice
+  Options Pattern: Short Answer/Term
+Question 79:
+  Answer Pattern: Single Choice
+  Options Pattern: Explanatory/Scenario
+Question 80:
+  Answer Pattern: Single Choice
+  Options Pattern: Short Answer/Term
+Question 81:
+  Answer Pattern: Single Choice
+  Options Pattern: Sequential Steps
+Question 82:
+  Answer Pattern: Single Choice
+  Options Pattern: Explanatory/Scenario
+Question 83:
+  Answer Pattern: Single Choice
+  Options Pattern: Explanatory/Scenario
+Question 84:
+  Answer Pattern: Single Choice
+  Options Pattern: Code/Command
+Question 85:
+  Answer Pattern: Single Choice
+  Options Pattern: Explanatory/Scenario
+Question 86:
+  Answer Pattern: Single Choice
+  Options Pattern: Explanatory/Scenario
+Question 87:
+  Answer Pattern: Single Choice
+  Options Pattern: Explanatory/Scenario
+Question 88:
+  Answer Pattern: Single Choice
+  Options Pattern: Explanatory/Scenario
+Question 89:
+  Answer Pattern: Single Choice
+  Options Pattern: Explanatory/Scenario
+Question 90:
+  Answer Pattern: Single Choice
+  Options Pattern: Explanatory/Scenario
+Question 91:
+  Answer Pattern: Single Choice
+  Options Pattern: Explanatory/Scenario
+Question 92:
+  Answer Pattern: Single Choice
+  Options Pattern: Short Answer/Term
+Question 93:
+  Answer Pattern: Single Choice
+  Options Pattern: Explanatory/Scenario
+Question 94:
+  Answer Pattern: Single Choice
+  Options Pattern: Short Answer/Term
+Question 95:
+  Answer Pattern: Multiple Choice (2 answers)
+  Options Pattern: Explanatory/Scenario
+Question 96:
+  Answer Pattern: Single Choice
+  Options Pattern: Explanatory/Scenario
+Question 97:
+  Answer Pattern: Single Choice
+  Options Pattern: Explanatory/Scenario
+Question 98:
+  Answer Pattern: Single Choice
+  Options Pattern: Explanatory/Scenario
+Question 99:
+  Answer Pattern: Single Choice
+  Options Pattern: Explanatory/Scenario
+Question 100:
+  Answer Pattern: Single Choice
+  Options Pattern: Explanatory/Scenario
+Question 101:
+  Answer Pattern: Single Choice
+  Options Pattern: Sequential Steps
+Question 102:
+  Answer Pattern: Single Choice
+  Options Pattern: Explanatory/Scenario
+Question 103:
+  Answer Pattern: Single Choice
+  Options Pattern: Explanatory/Scenario
+Question 104:
+  Answer Pattern: Single Choice
+  Options Pattern: Explanatory/Scenario
+Question 105:
+  Answer Pattern: Single Choice
+  Options Pattern: Short Answer/Term
+Question 106:
+  Answer Pattern: Single Choice
+  Options Pattern: Explanatory/Scenario
+Question 107:
+  Answer Pattern: Single Choice
+  Options Pattern: Explanatory/Scenario
+Question 108:
+  Answer Pattern: Single Choice
+  Options Pattern: Explanatory/Scenario
+Question 109:
+  Answer Pattern: Multiple Choice (2 answers)
+  Options Pattern: Explanatory/Scenario
+Question 110:
+  Answer Pattern: Single Choice
+  Options Pattern: Explanatory/Scenario
+Question 111:
+  Answer Pattern: Single Choice
+  Options Pattern: Explanatory/Scenario
+Question 112:
+  Answer Pattern: Single Choice
+  Options Pattern: Explanatory/Scenario
+Question 113:
+  Answer Pattern: Single Choice
+  Options Pattern: Short Answer/Term
+Question 114:
+  Answer Pattern: Single Choice
+  Options Pattern: Short Answer/Term
+Question 115:
+  Answer Pattern: Single Choice
+  Options Pattern: Explanatory/Scenario
+Question 116:
+  Answer Pattern: Multiple Choice (2 answers)
+  Options Pattern: Explanatory/Scenario
+Question 117:
+  Answer Pattern: Single Choice
+  Options Pattern: Explanatory/Scenario
+Question 118:
+  Answer Pattern: Single Choice
+  Options Pattern: Explanatory/Scenario
+Question 119:
+  Answer Pattern: Single Choice
+  Options Pattern: Explanatory/Scenario
+Question 120:
+  Answer Pattern: Single Choice
+  Options Pattern: Explanatory/Scenario
+Question 121:
+  Answer Pattern: Single Choice
+  Options Pattern: Explanatory/Scenario
+Question 122:
+  Answer Pattern: Multiple Choice (2 answers)
+  Options Pattern: Code/Command
+Question 123:
+  Answer Pattern: Multiple Choice (2 answers)
+  Options Pattern: Explanatory/Scenario
+Question 124:
+  Answer Pattern: Single Choice
+  Options Pattern: Explanatory/Scenario
+Question 125:
+  Answer Pattern: Single Choice
+  Options Pattern: Explanatory/Scenario
+Question 126:
+  Answer Pattern: Single Choice
+  Options Pattern: Explanatory/Scenario
+Question 127:
+  Answer Pattern: Single Choice
+  Options Pattern: Explanatory/Scenario
+Question 128:
+  Answer Pattern: Single Choice
+  Options Pattern: Explanatory/Scenario
+Question 129:
+  Answer Pattern: Single Choice
+  Options Pattern: Explanatory/Scenario
+Question 130:
+  Answer Pattern: Single Choice
+  Options Pattern: Code/Command
+Question 131:
+  Answer Pattern: Multiple Choice (2 answers)
+  Options Pattern: Explanatory/Scenario
+Question 132:
+  Answer Pattern: Single Choice
+  Options Pattern: Explanatory/Scenario
+Question 133:
+  Answer Pattern: Single Choice
+  Options Pattern: Explanatory/Scenario
+Question 134:
+  Answer Pattern: Single Choice
+  Options Pattern: Short Answer/Term
+Question 135:
+  Answer Pattern: Single Choice
+  Options Pattern: Explanatory/Scenario
+Question 136:
+  Answer Pattern: Multiple Choice (2 answers)
+  Options Pattern: Sequential Steps
+Question 137:
+  Answer Pattern: Multiple Choice (2 answers)
+  Options Pattern: Explanatory/Scenario
+Question 138:
+  Answer Pattern: Single Choice
+  Options Pattern: Sequential Steps
+Question 139:
+  Answer Pattern: Single Choice
+  Options Pattern: Explanatory/Scenario
+Question 140:
+  Answer Pattern: Single Choice
+  Options Pattern: Explanatory/Scenario
+Question 141:
+  Answer Pattern: Single Choice
+  Options Pattern: Explanatory/Scenario
+Question 142:
+  Answer Pattern: Single Choice
+  Options Pattern: Explanatory/Scenario
+Question 143:
+  Answer Pattern: Single Choice
+  Options Pattern: Explanatory/Scenario
+Question 144:
+  Answer Pattern: Single Choice
+  Options Pattern: Sequential Steps
+Question 145:
+  Answer Pattern: Single Choice
+  Options Pattern: Sequential Steps
+Question 146:
+  Answer Pattern: Multiple Choice (2 answers)
+  Options Pattern: Sequential Steps
+Question 147:
+  Answer Pattern: Single Choice
+  Options Pattern: Short Answer/Term
+Question 148:
+  Answer Pattern: Single Choice
+  Options Pattern: Explanatory/Scenario
+Question 149:
+  Answer Pattern: Single Choice
+  Options Pattern: Explanatory/Scenario
+Question 150:
+  Answer Pattern: Single Choice
+  Options Pattern: Explanatory/Scenario
+Question 151:
+  Answer Pattern: Single Choice
+  Options Pattern: Explanatory/Scenario
+Question 152:
+  Answer Pattern: Single Choice
+  Options Pattern: Short Answer/Term
+Question 153:
+  Answer Pattern: Single Choice
+  Options Pattern: Explanatory/Scenario
+Question 154:
+  Answer Pattern: Single Choice
+  Options Pattern: Explanatory/Scenario
+Question 155:
+  Answer Pattern: Single Choice
+  Options Pattern: Short Answer/Term
+Question 156:
+  Answer Pattern: Single Choice
+  Options Pattern: Explanatory/Scenario
+Question 157:
+  Answer Pattern: Single Choice
+  Options Pattern: Explanatory/Scenario
+Question 158:
+  Answer Pattern: Single Choice
+  Options Pattern: Explanatory/Scenario
+Question 159:
+  Answer Pattern: Single Choice
+  Options Pattern: Short Answer/Term
+Question 160:
+  Answer Pattern: Single Choice
+  Options Pattern: Short Answer/Term
+Question 161:
+  Answer Pattern: Single Choice
+  Options Pattern: Explanatory/Scenario
+Question 162:
+  Answer Pattern: Single Choice
+  Options Pattern: Code/Command
+Question 163:
+  Answer Pattern: Single Choice
+  Options Pattern: Explanatory/Scenario
+Question 164:
+  Answer Pattern: Single Choice
+  Options Pattern: Sequential Steps
+Question 165:
+  Answer Pattern: Single Choice
+  Options Pattern: Explanatory/Scenario
+Question 166:
+  Answer Pattern: Single Choice
+  Options Pattern: Explanatory/Scenario
+Question 167:
+  Answer Pattern: Single Choice
+  Options Pattern: Explanatory/Scenario
+Question 168:
+  Answer Pattern: Single Choice
+  Options Pattern: Explanatory/Scenario
+Question 169:
+  Answer Pattern: Single Choice
+  Options Pattern: Sequential Steps
+Question 170:
+  Answer Pattern: Single Choice
+  Options Pattern: Explanatory/Scenario
+Question 171:
+  Answer Pattern: Single Choice
+  Options Pattern: Sequential Steps
+Question 172:
+  Answer Pattern: Single Choice
+  Options Pattern: Mapping/Association
+Question 173:
+  Answer Pattern: Single Choice
+  Options Pattern: Explanatory/Scenario
+Question 174:
+  Answer Pattern: Single Choice
+  Options Pattern: Explanatory/Scenario
+Question 175:
+  Answer Pattern: Single Choice
+  Options Pattern: Short Answer/Term
+Question 176:
+  Answer Pattern: Single Choice
+  Options Pattern: Code/Command
+Question 177:
+  Answer Pattern: Single Choice
+  Options Pattern: Sequential Steps
+Question 178:
+  Answer Pattern: Single Choice
+  Options Pattern: Short Answer/Term
+Question 179:
+  Answer Pattern: Single Choice
+  Options Pattern: Explanatory/Scenario
+Question 180:
+  Answer Pattern: Single Choice
+  Options Pattern: Explanatory/Scenario
+Question 181:
+  Answer Pattern: Single Choice
+  Options Pattern: Explanatory/Scenario
+Question 182:
+  Answer Pattern: Single Choice
+  Options Pattern: Explanatory/Scenario
+Question 183:
+  Answer Pattern: Single Choice
+  Options Pattern: Sequential Steps
+Question 184:
+  Answer Pattern: Single Choice
+  Options Pattern: Sequential Steps
+Question 185:
+  Answer Pattern: Single Choice
+  Options Pattern: Short Answer/Term
+Question 186:
+  Answer Pattern: Single Choice
+  Options Pattern: Code/Command
+Question 187:
+  Answer Pattern: Single Choice
+  Options Pattern: Explanatory/Scenario
+Question 188:
+  Answer Pattern: Single Choice
+  Options Pattern: Sequential Steps
+Question 189:
+  Answer Pattern: Single Choice
+  Options Pattern: Code/Command
+Question 190:
+  Answer Pattern: Single Choice
+  Options Pattern: Sequential Steps
+Question 191:
+  Answer Pattern: Single Choice
+  Options Pattern: Explanatory/Scenario
+Question 192:
+  Answer Pattern: Single Choice
+  Options Pattern: Explanatory/Scenario
+Question 193:
+  Answer Pattern: Single Choice
+  Options Pattern: Sequential Steps
+Question 194:
+  Answer Pattern: Single Choice
+  Options Pattern: Explanatory/Scenario
+Question 195:
+  Answer Pattern: Single Choice
+  Options Pattern: Explanatory/Scenario
+Question 196:
+  Answer Pattern: Single Choice
+  Options Pattern: Sequential Steps
+Question 197:
+  Answer Pattern: Single Choice
+  Options Pattern: Explanatory/Scenario
+Question 198:
+  Answer Pattern: Single Choice
+  Options Pattern: Explanatory/Scenario
+Question 199:
+  Answer Pattern: Single Choice
+  Options Pattern: Short Answer/Term
+Question 200:
+  Answer Pattern: Single Choice
+  Options Pattern: Explanatory/Scenario
+Question 201:
+  Answer Pattern: Single Choice
+  Options Pattern: Code/Command
+Question 202:
+  Answer Pattern: Single Choice
+  Options Pattern: Code/Command
+Question 203:
+  Answer Pattern: Single Choice
+  Options Pattern: Explanatory/Scenario
+Question 204:
+  Answer Pattern: Single Choice
+  Options Pattern: Explanatory/Scenario
+Question 205:
+  Answer Pattern: Single Choice
+  Options Pattern: Code/Command
+Question 206:
+  Answer Pattern: Single Choice
+  Options Pattern: Sequential Steps
+Question 207:
+  Answer Pattern: Single Choice
+  Options Pattern: Explanatory/Scenario
+Question 208:
+  Answer Pattern: Single Choice
+  Options Pattern: Explanatory/Scenario
+Question 209:
+  Answer Pattern: Single Choice
+  Options Pattern: Explanatory/Scenario
+Question 166:
+  Answer Pattern: Single Choice
+  Options Pattern: Unknown
+Question 210:
+  Answer Pattern: Single Choice
+  Options Pattern: Sequential Steps
+Question 211:
+  Answer Pattern: Single Choice
+  Options Pattern: Explanatory/Scenario
+Question 212:
+  Answer Pattern: Single Choice
+  Options Pattern: Explanatory/Scenario
+Question 213:
+  Answer Pattern: Single Choice
+  Options Pattern: Explanatory/Scenario
+Question 214:
+  Answer Pattern: Single Choice
+  Options Pattern: Explanatory/Scenario
+Question 215:
+  Answer Pattern: Single Choice
+  Options Pattern: Explanatory/Scenario
+Question 216:
+  Answer Pattern: Single Choice
+  Options Pattern: Explanatory/Scenario
+Question 217:
+  Answer Pattern: Single Choice
+  Options Pattern: Explanatory/Scenario
+Question 218:
+  Answer Pattern: Single Choice
+  Options Pattern: Explanatory/Scenario
+Question 219:
+  Answer Pattern: Single Choice
+  Options Pattern: Explanatory/Scenario
+Question 220:
+  Answer Pattern: Single Choice
+  Options Pattern: Explanatory/Scenario
+Question 221:
+  Answer Pattern: Single Choice
+  Options Pattern: Explanatory/Scenario
+Question 222:
+  Answer Pattern: Single Choice
+  Options Pattern: Explanatory/Scenario
+Question 223:
+  Answer Pattern: Single Choice
+  Options Pattern: Short Answer/Term
+Question 224:
+  Answer Pattern: Single Choice
+  Options Pattern: Explanatory/Scenario
+Question 225:
+  Answer Pattern: Single Choice
+  Options Pattern: Explanatory/Scenario
+Question 226:
+  Answer Pattern: Single Choice
+  Options Pattern: Explanatory/Scenario
+Question 227:
+  Answer Pattern: Single Choice
+  Options Pattern: Explanatory/Scenario
+Question 228:
+  Answer Pattern: Single Choice
+  Options Pattern: Explanatory/Scenario
+Question 229:
+  Answer Pattern: Single Choice
+  Options Pattern: Explanatory/Scenario
+Question 230:
+  Answer Pattern: Single Choice
+  Options Pattern: Explanatory/Scenario
+Question 231:
+  Answer Pattern: Single Choice
+  Options Pattern: Explanatory/Scenario
+Question 232:
+  Answer Pattern: Single Choice
+  Options Pattern: Mapping/Association
+Question 233:
+  Answer Pattern: Single Choice
+  Options Pattern: Explanatory/Scenario
+Question 234:
+  Answer Pattern: Single Choice
+  Options Pattern: Sequential Steps
+Question 235:
+  Answer Pattern: Single Choice
+  Options Pattern: Sequential Steps
+Question 236:
+  Answer Pattern: Single Choice
+  Options Pattern: Explanatory/Scenario
+Question 237:
+  Answer Pattern: Single Choice
+  Options Pattern: Sequential Steps
+Question 238:
+  Answer Pattern: Single Choice
+  Options Pattern: Explanatory/Scenario
+Question 239:
+  Answer Pattern: Single Choice
+  Options Pattern: Explanatory/Scenario
+Question 240:
+  Answer Pattern: Single Choice
+  Options Pattern: Sequential Steps
+Question 241:
+  Answer Pattern: Single Choice
+  Options Pattern: Explanatory/Scenario
+Question 242:
+  Answer Pattern: Single Choice
+  Options Pattern: Sequential Steps
+Question 243:
+  Answer Pattern: Single Choice
+  Options Pattern: Short Answer/Term
+Question 244:
+  Answer Pattern: Single Choice
+  Options Pattern: Explanatory/Scenario
+Question 245:
+  Answer Pattern: Single Choice
+  Options Pattern: Explanatory/Scenario
+Question 246:
+  Answer Pattern: Single Choice
+  Options Pattern: Explanatory/Scenario
+Question 247:
+  Answer Pattern: Single Choice
+  Options Pattern: Sequential Steps
+Question 248:
+  Answer Pattern: Single Choice
+  Options Pattern: Explanatory/Scenario
+Question 249:
+  Answer Pattern: Single Choice
+  Options Pattern: Explanatory/Scenario
+Question 250:
+  Answer Pattern: Single Choice
+  Options Pattern: Sequential Steps
+Question 251:
+  Answer Pattern: Single Choice
+  Options Pattern: Explanatory/Scenario
+Question 252:
+  Answer Pattern: Single Choice
+  Options Pattern: Explanatory/Scenario
+Question 253:
+  Answer Pattern: Single Choice
+  Options Pattern: Explanatory/Scenario
+Question 254:
+  Answer Pattern: Single Choice
+  Options Pattern: Explanatory/Scenario
+Question 255:
+  Answer Pattern: Single Choice
+  Options Pattern: Explanatory/Scenario
+Question 256:
+  Answer Pattern: Single Choice
+  Options Pattern: Sequential Steps
+Question 257:
+  Answer Pattern: Single Choice
+  Options Pattern: Explanatory/Scenario
+Question 258:
+  Answer Pattern: Single Choice
+  Options Pattern: Explanatory/Scenario
+Question 259:
+  Answer Pattern: Single Choice
+  Options Pattern: Explanatory/Scenario
+Question 260:
+  Answer Pattern: Single Choice
+  Options Pattern: Explanatory/Scenario
+Question 261:
+  Answer Pattern: Single Choice
+  Options Pattern: Code/Command
+Question 262:
+  Answer Pattern: Single Choice
+  Options Pattern: Code/Command
+Question 263:
+  Answer Pattern: Single Choice
+  Options Pattern: Explanatory/Scenario
+Question 264:
+  Answer Pattern: Single Choice
+  Options Pattern: Explanatory/Scenario
+Question 265:
+  Answer Pattern: Single Choice
+  Options Pattern: Explanatory/Scenario
+Question 266:
+  Answer Pattern: Single Choice
+  Options Pattern: Explanatory/Scenario
+Question 267:
+  Answer Pattern: Single Choice
+  Options Pattern: Explanatory/Scenario
+Question 268:
+  Answer Pattern: Single Choice
+  Options Pattern: Sequential Steps
+Question 269:
+  Answer Pattern: Single Choice
+  Options Pattern: Explanatory/Scenario
+Question 270:
+  Answer Pattern: Single Choice
+  Options Pattern: Explanatory/Scenario
+Question 271:
+  Answer Pattern: Single Choice
+  Options Pattern: Sequential Steps
+Question 272:
+  Answer Pattern: Single Choice
+  Options Pattern: Explanatory/Scenario
+Question 273:
+  Answer Pattern: Single Choice
+  Options Pattern: Sequential Steps
+Question 274:
+  Answer Pattern: Single Choice
+  Options Pattern: Explanatory/Scenario
+Question 275:
+  Answer Pattern: Single Choice
+  Options Pattern: Code/Command
+Question 276:
+  Answer Pattern: Single Choice
+  Options Pattern: Explanatory/Scenario
+Question 277:
+  Answer Pattern: Single Choice
+  Options Pattern: Explanatory/Scenario
+Question 278:
+  Answer Pattern: Single Choice
+  Options Pattern: Explanatory/Scenario
+Question 279:
+  Answer Pattern: Single Choice
+  Options Pattern: Explanatory/Scenario
+Question 280:
+  Answer Pattern: Single Choice
+  Options Pattern: Explanatory/Scenario
+Question 281:
+  Answer Pattern: Single Choice
+  Options Pattern: Explanatory/Scenario
+Question 282:
+  Answer Pattern: Single Choice
+  Options Pattern: Explanatory/Scenario
+Question 283:
+  Answer Pattern: Single Choice
+  Options Pattern: Explanatory/Scenario
+Question 284:
+  Answer Pattern: Single Choice
+  Options Pattern: Explanatory/Scenario
+Question 285:
+  Answer Pattern: Single Choice
+  Options Pattern: Sequential Steps
+Question 286:
+  Answer Pattern: Single Choice
+  Options Pattern: Explanatory/Scenario
+Question 287:
+  Answer Pattern: Single Choice
+  Options Pattern: Explanatory/Scenario
+Question 288:
+  Answer Pattern: Single Choice
+  Options Pattern: Explanatory/Scenario
+Question 289:
+  Answer Pattern: Single Choice
+  Options Pattern: Explanatory/Scenario
+Question 290:
+  Answer Pattern: Single Choice
+  Options Pattern: Explanatory/Scenario
+Question 291:
+  Answer Pattern: Single Choice
+  Options Pattern: Explanatory/Scenario
+Question 292:
+  Answer Pattern: Single Choice
+  Options Pattern: Explanatory/Scenario
+Question 293:
+  Answer Pattern: Single Choice
+  Options Pattern: Sequential Steps
+Question 294:
+  Answer Pattern: Single Choice
+  Options Pattern: Explanatory/Scenario
+Question 295:
+  Answer Pattern: Single Choice
+  Options Pattern: Explanatory/Scenario
+Question 296:
+  Answer Pattern: Single Choice
+  Options Pattern: Explanatory/Scenario
+Question 297:
+  Answer Pattern: Single Choice
+  Options Pattern: Sequential Steps
+Question 298:
+  Answer Pattern: Single Choice
+  Options Pattern: Explanatory/Scenario
+Question 299:
+  Answer Pattern: Single Choice
+  Options Pattern: Sequential Steps
+Question 300:
+  Answer Pattern: Single Choice
+  Options Pattern: Explanatory/Scenario
+Question 301:
+  Answer Pattern: Single Choice
+  Options Pattern: Explanatory/Scenario
+Question 302:
+  Answer Pattern: Single Choice
+  Options Pattern: Sequential Steps
+Question 303:
+  Answer Pattern: Single Choice
+  Options Pattern: Explanatory/Scenario
+Question 304:
+  Answer Pattern: Single Choice
+  Options Pattern: Explanatory/Scenario
+Question 305:
+  Answer Pattern: Single Choice
+  Options Pattern: Explanatory/Scenario
+Question 306:
+  Answer Pattern: Single Choice
+  Options Pattern: Explanatory/Scenario
+Question 307:
+  Answer Pattern: Single Choice
+  Options Pattern: Explanatory/Scenario
+Question 308:
+  Answer Pattern: Single Choice
+  Options Pattern: Explanatory/Scenario
+Question 309:
+  Answer Pattern: Single Choice
+  Options Pattern: Explanatory/Scenario
+Question 310:
+  Answer Pattern: Single Choice
+  Options Pattern: Explanatory/Scenario
+Question 311:
+  Answer Pattern: Single Choice
+  Options Pattern: Explanatory/Scenario
+Question 312:
+  Answer Pattern: Single Choice
+  Options Pattern: Explanatory/Scenario
+Question 313:
+  Answer Pattern: Single Choice
+  Options Pattern: Explanatory/Scenario
+Question 314:
+  Answer Pattern: Single Choice
+  Options Pattern: Explanatory/Scenario
+Question 315:
+  Answer Pattern: Single Choice
+  Options Pattern: Explanatory/Scenario
+Question 316:
+  Answer Pattern: Single Choice
+  Options Pattern: Explanatory/Scenario
+Question 317:
+  Answer Pattern: Single Choice
+  Options Pattern: Explanatory/Scenario
+Question 318:
+  Answer Pattern: Single Choice
+  Options Pattern: Explanatory/Scenario
+Question 319:
+  Answer Pattern: Single Choice
+  Options Pattern: Explanatory/Scenario
+Question 320:
+  Answer Pattern: Multiple Choice (2 answers)
+  Options Pattern: Explanatory/Scenario
+Question 321:
+  Answer Pattern: Single Choice
+  Options Pattern: Sequential Steps
+Question 322:
+  Answer Pattern: Single Choice
+  Options Pattern: Sequential Steps
+Question 323:
+  Answer Pattern: Single Choice
+  Options Pattern: Explanatory/Scenario
+Question 324:
+  Answer Pattern: Single Choice
+  Options Pattern: Sequential Steps
+Question 325:
+  Answer Pattern: Single Choice
+  Options Pattern: Explanatory/Scenario
+Question 326:
+  Answer Pattern: Single Choice
+  Options Pattern: Short Answer/Term
+Question 327:
+  Answer Pattern: Single Choice
+  Options Pattern: Explanatory/Scenario
+Question 328:
+  Answer Pattern: Single Choice
+  Options Pattern: Code/Command
+Question 329:
+  Answer Pattern: Single Choice
+  Options Pattern: Explanatory/Scenario
+Question 330:
+  Answer Pattern: Single Choice
+  Options Pattern: Explanatory/Scenario
+Question 331:
+  Answer Pattern: Single Choice
+  Options Pattern: Explanatory/Scenario
+Question 332:
+  Answer Pattern: Single Choice
+  Options Pattern: Explanatory/Scenario
+Question 333:
+  Answer Pattern: Single Choice
+  Options Pattern: Explanatory/Scenario
+Question 334:
+  Answer Pattern: Single Choice
+  Options Pattern: Short Answer/Term
+Question 335:
+  Answer Pattern: Single Choice
+  Options Pattern: Explanatory/Scenario
+Question 336:
+  Answer Pattern: Single Choice
+  Options Pattern: Explanatory/Scenario
+Question 337:
+  Answer Pattern: Single Choice
+  Options Pattern: Explanatory/Scenario
+Question 338:
+  Answer Pattern: Single Choice
+  Options Pattern: Explanatory/Scenario
+

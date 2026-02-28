@@ -1,0 +1,957 @@
+Found 54 questions related to BigQuery ML.
+
+================================================================================
+
+Question #7
+You need to build classification workflows over several structured datasets currently stored in BigQuery. Because you will
+be performing the classification several times, you want to complete the following steps without writing code: exploratory
+data analysis, feature selection, model building, training, and hyperparameter tuning and serving. What should you do?
+
+A. Configure AutoML Tables to perform the classification task.
+B. Run a BigQuery ML task to perform logistic regression for the classification.
+C. Use AI Platform Notebooks to run the classification model with pandas library.
+D. Use AI Platform to run the classification model job configured for hyperparameter tuning.
+
+Correct Answer: A
+--------------------------------------------------------------------------------
+
+Question #8
+You work for a public transportation company and need to build a model to estimate delay times for multiple
+transportation routes. Predictions are served directly to users in an app in real time. Because different seasons and
+population increases impact the data relevance, you will retrain the model every month. You want to follow Google-
+recommended best practices. How should you configure the end-to-end architecture of the predictive model?
+
+A. Configure Kubeflow Pipelines to schedule your multi-step workflow from training to deploying your model.
+B. Use a model trained and deployed on BigQuery ML, and trigger retraining with the scheduled query feature in
+BigQuery.
+C. Write a Cloud Functions script that launches a training and deploying job on AI Platform that is triggered by Cloud
+Scheduler.
+D. Use Cloud Composer to programmatically schedule a Dataflow job that executes the workflow from training to
+deploying your model.
+
+Correct Answer: A
+--------------------------------------------------------------------------------
+
+Question #38
+You have trained a text classification model in TensorFlow using AI Platform. You want to use the trained model for batch
+predictions on text data stored in 
+BigQuery while minimizing computational overhead. What should you do?
+
+A. Export the model to BigQuery ML.
+B. Deploy and version the model on AI Platform.
+C. Use Dataflow with the SavedModel to read the data from BigQuery.
+D. Submit a batch prediction job on AI Platform that points to the model location in Cloud Storage.
+
+Correct Answer: A
+--------------------------------------------------------------------------------
+
+Question #47
+You recently joined an enterprise-scale company that has thousands of datasets. You know that there are accurate
+descriptions for each table in BigQuery, and you are searching for the proper BigQuery table to use for a model you are
+building on AI Platform. How should you find the data that you need?
+
+A. Use Data Catalog to search the BigQuery datasets by using keywords in the table description.
+B. Tag each of your model and version resources on AI Platform with the name of the BigQuery table that was used
+for training.
+C. Maintain a lookup table in BigQuery that maps the table descriptions to the table ID. Query the lookup table to find
+the correct table ID for the data that you need.
+D. Execute a query in BigQuery to retrieve all the existing table names in your project using the
+INFORMATION_SCHEMA metadata tables that are native to BigQuery. Use the result o find the table that you need.
+
+Correct Answer: A
+--------------------------------------------------------------------------------
+
+Question #63
+You work for a large retailer and have been asked to segment your customers by their purchasing habits. The purchase
+history of all customers has been uploaded to BigQuery. You suspect that there may be several distinct customer
+segments, however you are unsure of how many, and you don’t yet understand the commonalities in their behavior. You
+want to find the most efficient solution. What should you do?
+
+A. Create a k-means clustering model using BigQuery ML. Allow BigQuery to automatically optimize the number of
+clusters.
+B. Create a new dataset in Dataprep that references your BigQuery table. Use Dataprep to identify similarities within
+each column.
+C. Use the Data Labeling Service to label each customer record in BigQuery. Train a model on your labeled data
+using AutoML Tables. Review the evaluation metrics to understand whether there is an underlying pattern in the data.
+D. Get a list of the customer segments from your company’s Marketing team. Use the Data Labeling Service to label
+each customer record in BigQuery according to the list. Analyze the distribution of labels in your dataset using Data
+Studio.
+
+Correct Answer: A
+--------------------------------------------------------------------------------
+
+Question #67
+You have a large corpus of written support cases that can be classified into 3 separate categories: Technical Support,
+Billing Support, or Other Issues. You need to quickly build, test, and deploy a service that will automatically classify future
+written requests into one of the categories. How should you configure the pipeline?
+
+A. Use the Cloud Natural Language API to obtain metadata to classify the incoming cases.
+B. Use AutoML Natural Language to build and test a classifier. Deploy the model as a REST API.
+C. Use BigQuery ML to build and test a logistic regression model to classify incoming requests. Use BigQuery ML to
+perform inference.
+D. Create a TensorFlow model using Google’s BERT pre-trained model. Build and test a classifier, and deploy the
+model using Vertex AI.
+
+Correct Answer: B
+--------------------------------------------------------------------------------
+
+Question #71
+You need to train a regression model based on a dataset containing 50,000 records that is stored in BigQuery. The data
+includes a total of 20 categorical and numerical features with a target variable that can include negative values. You
+need to minimize effort and training time while maximizing model performance. What approach should you take to train
+this regression model?
+
+A. Create a custom TensorFlow DNN model
+B. Use BQML XGBoost regression to train the model.
+C. Use AutoML Tables to train the model without early stopping.
+D. Use AutoML Tables to train the model with RMSLE as the optimization objective.
+
+Correct Answer: B
+--------------------------------------------------------------------------------
+
+Question #77
+You need to execute a batch prediction on 100 million records in a BigQuery table with a custom TensorFlow DNN
+regressor model, and then store the predicted results in a BigQuery table. You want to minimize the effort required to
+build this inference pipeline. What should you do?
+
+A. Import the TensorFlow model with BigQuery ML, and run the ml.predict function.
+B. Use the TensorFlow BigQuery reader to load the data, and use the BigQuery API to write the results to BigQuery.
+C. Create a Dataflow pipeline to convert the data in BigQuery to TFRecords. Run a batch inference on Vertex AI
+Prediction, and write the results to BigQuery.
+D. Load the TensorFlow SavedModel in a Dataflow pipeline. Use the BigQuery I/O connector with a custom function
+to perform the inference within the pipeline, and write the results to BigQuery.
+
+Correct Answer: A
+--------------------------------------------------------------------------------
+
+Question #81
+Your data science team has requested a system that supports scheduled model retraining, Docker containers, and a
+service that supports autoscaling and monitoring for online prediction requests. Which platform components should you
+choose for this system?
+
+A. Vertex AI Pipelines and App Engine
+B. Vertex AI Pipelines, Vertex AI Prediction, and Vertex AI Model Monitoring
+C. Cloud Composer, BigQuery ML, and Vertex AI Prediction
+D. Cloud Composer, Vertex AI Training with custom containers, and App Engine
+
+Correct Answer: B
+--------------------------------------------------------------------------------
+
+Question #87
+You have been given a dataset with sales predictions based on your company’s marketing activities. The data is
+structured and stored in BigQuery, and has been carefully managed by a team of data analysts. You need to prepare a
+report providing insights into the predictive capabilities of the data. You were asked to run several ML models with
+different levels of sophistication, including simple models and multilayered neural networks. You only have a few hours to
+gather the results of your experiments. Which Google Cloud tools should you use to complete this task in the most
+efficient and self-serviced way?
+
+A. Use BigQuery ML to run several regression models, and analyze their performance.
+B. Read the data from BigQuery using Dataproc, and run several models using SparkML.
+C. Use Vertex AI Workbench user-managed notebooks with scikit-learn code for a variety of ML algorithms and
+performance metrics.
+D. Train a custom TensorFlow model with Vertex AI, reading the data from BigQuery featuring a variety of ML
+algorithms.
+
+Correct Answer: A
+--------------------------------------------------------------------------------
+
+Question #97
+You are a data scientist at an industrial equipment manufacturing company. You are developing a regression model to
+estimate the power consumption in the company’s manufacturing plants based on sensor data collected from all of the
+plants. The sensors collect tens of millions of records every day. You need to schedule daily training runs for your model
+that use all the data collected up to the current date. You want your model to scale smoothly and require minimal
+development work. What should you do?
+
+A. Train a regression model using AutoML Tables.
+B. Develop a custom TensorFlow regression model, and optimize it using Vertex AI Training.
+C. Develop a custom scikit-learn regression model, and optimize it using Vertex AI Training.
+D. Develop a regression model using BigQuery ML.
+
+Correct Answer: D
+--------------------------------------------------------------------------------
+
+Question #105
+You work for a gaming company that develops massively multiplayer online (MMO) games. You built a TensorFlow
+model that predicts whether players will make in-app purchases of more than $10 in the next two weeks. The model’s
+predictions will be used to adapt each user’s game experience. User data is stored in BigQuery. How should you serve
+your model while optimizing cost, user experience, and ease of management?
+
+A. Import the model into BigQuery ML. Make predictions using batch reading data from BigQuery, and push the data
+to Cloud SQL
+B. Deploy the model to Vertex AI Prediction. Make predictions using batch reading data from Cloud Bigtable, and
+push the data to Cloud SQL.
+C. Embed the model in the mobile application. Make predictions after every in-app purchase event is published in
+Pub/Sub, and push the data to Cloud SQL.
+D. Embed the model in the streaming Dataflow pipeline. Make predictions after every in-app purchase event is
+published in Pub/Sub, and push the data to Cloud SQL.
+
+Correct Answer: A
+--------------------------------------------------------------------------------
+
+Question #106
+You are building a linear regression model on BigQuery ML to predict a customer’s likelihood of purchasing your
+company’s products. Your model uses a city name variable as a key predictive component. In order to train and serve
+the model, your data must be organized in columns. You want to prepare your data using the least amount of coding
+while maintaining the predictable variables. What should you do?
+
+A. Use TensorFlow to create a categorical variable with a vocabulary list. Create the vocabulary file, and upload it as
+part of your model to BigQuery ML.
+B. Create a new view with BigQuery that does not include a column with city information
+C. Use Cloud Data Fusion to assign each city to a region labeled as 1, 2, 3, 4, or 5, and then use that number to
+represent the city in the model.
+D. Use Dataprep to transform the state column using a one-hot encoding method, and make each city a column with
+binary values.
+
+Correct Answer: D
+--------------------------------------------------------------------------------
+
+Question #111
+You need to build classification workflows over several structured datasets currently stored in BigQuery. Because you
+will be performing the classification several times, you want to complete the following steps without writing code:
+exploratory data analysis, feature selection, model building, training, and hyperparameter tuning and serving. What
+should you do?
+
+A. Train a TensorFlow model on Vertex AI.
+B. Train a classification Vertex AutoML model.
+C. Run a logistic regression job on BigQuery ML.
+D. Use scikit-learn in Notebooks with pandas library.
+
+Correct Answer: B
+--------------------------------------------------------------------------------
+
+Question #136
+You work for an online publisher that delivers news articles to over 50 million readers. You have built an AI model that
+recommends content for the company’s weekly newsletter. A recommendation is considered successful if the article is
+opened within two days of the newsletter’s published date and the user remains on the page for at least one minute. 
+All the information needed to compute the success metric is available in BigQuery and is updated hourly. The model is
+trained on eight weeks of data, on average its performance degrades below the acceptable baseline after five weeks,
+and training time is 12 hours. You want to ensure that the model’s performance is above the acceptable baseline while
+minimizing cost. How should you monitor the model to determine when retraining is necessary?
+
+A. Use Vertex AI Model Monitoring to detect skew of the input features with a sample rate of 100% and a monitoring
+frequency of two days.
+B. Schedule a cron job in Cloud Tasks to retrain the model every week before the newsletter is created.
+C. Schedule a weekly query in BigQuery to compute the success metric.
+D. Schedule a daily Dataflow job in Cloud Composer to compute the success metric.
+
+Correct Answer: C
+--------------------------------------------------------------------------------
+
+Question #138
+You work for a company that manages a ticketing platform for a large chain of cinemas. Customers use a mobile app to
+search for movies they’re interested in and purchase tickets in the app. Ticket purchase requests are sent to Pub/Sub
+and are processed with a Dataflow streaming pipeline configured to conduct the following steps: 
+1. Check for availability of the movie tickets at the selected cinema. 
+2. Assign the ticket price and accept payment. 
+3. Reserve the tickets at the selected cinema. 
+4. Send successful purchases to your database. 
+Each step in this process has low latency requirements (less than 50 milliseconds). You have developed a logistic
+regression model with BigQuery ML that predicts whether offering a promo code for free popcorn increases the chance
+of a ticket purchase, and this prediction should be added to the ticket purchase process. You want to identify the
+simplest way to deploy this model to production while adding minimal latency. What should you do?
+
+A. Run batch inference with BigQuery ML every five minutes on each new set of tickets issued.
+B. Export your model in TensorFlow format, and add a tfx_bsl.public.beam.RunInference step to the Dataflow
+pipeline.
+C. Export your model in TensorFlow format, deploy it on Vertex AI, and query the prediction endpoint from your
+streaming pipeline.
+D. Convert your model with TensorFlow Lite (TFLite), and add it to the mobile app so that the promo code and the
+incoming request arrive together in Pub/Sub.
+
+Correct Answer: D
+--------------------------------------------------------------------------------
+
+Question #156
+You need to build classification workflows over several structured datasets currently stored in BigQuery. Because you
+will be performing the classification several times, you want to complete the following steps without writing code:
+exploratory data analysis, feature selection, model building, training, and hyperparameter tuning and serving. What
+should you do?
+
+A. Train a TensorFlow model on Vertex AI.
+B. Train a classification Vertex AutoML model.
+C. Run a logistic regression job on BigQuery ML.
+D. Use scikit-learn in Vertex AI Workbench user-managed notebooks with pandas library.
+
+Correct Answer: B
+--------------------------------------------------------------------------------
+
+Question #158
+You are a data scientist at an industrial equipment manufacturing company. You are developing a regression model to
+estimate the power consumption in the company’s manufacturing plants based on sensor data collected from all of the
+plants. The sensors collect tens of millions of records every day. You need to schedule daily training runs for your model
+that use all the data collected up to the current date. You want your model to scale smoothly and require minimal
+development work. What should you do?
+
+A. Develop a custom TensorFlow regression model, and optimize it using Vertex AI Training.
+B. Develop a regression model using BigQuery ML.
+C. Develop a custom scikit-learn regression model, and optimize it using Vertex AI Training.
+D. Develop a custom PyTorch regression model, and optimize it using Vertex AI Training.
+
+Correct Answer: B
+--------------------------------------------------------------------------------
+
+Question #164
+You work for a small company that has deployed an ML model with autoscaling on Vertex AI to serve online predictions
+in a production environment. The current model receives about 20 prediction requests per hour with an average
+response time of one second. You have retrained the same model on a new batch of data, and now you are canary
+testing it, sending ~10% of production traffic to the new model. During this canary test, you notice that prediction
+requests for your new model are taking between 30 and 180 seconds to complete. What should you do?
+
+A. Submit a request to raise your project quota to ensure that multiple prediction services can run concurrently.
+B. Turn off auto-scaling for the online prediction service of your new model. Use manual scaling with one node
+always available.
+C. Remove your new model from the production environment. Compare the new model and existing model codes to
+identify the cause of the performance bottleneck.
+D. Remove your new model from the production environment. For a short trial period, send all incoming prediction
+requests to BigQuery. Request batch predictions from your new model, and then use the Data Labeling Service to
+validate your model’s performance before promoting it to production.
+
+Correct Answer: C
+--------------------------------------------------------------------------------
+
+Question #167
+You are working with a dataset that contains customer transactions. You need to build an ML model to predict customer
+purchase behavior. You plan to develop the model in BigQuery ML, and export it to Cloud Storage for online prediction.
+You notice that the input data contains a few categorical features, including product category and payment method. You
+want to deploy the model as quickly as possible. What should you do?
+
+A. Use the TRANSFORM clause with the ML.ONE_HOT_ENCODER function on the categorical features at model
+creation and select the categorical and non-categorical features.
+B. Use the ML.ONE_HOT_ENCODER function on the categorical features and select the encoded categorical
+features and non-categorical features as inputs to create your model.
+C. Use the CREATE MODEL statement and select the categorical and non-categorical features.
+D. Use the ML.MULTI_HOT_ENCODER function on the categorical features, and select the encoded categorical
+features and non-categorical features as inputs to create your model.
+
+Correct Answer: C
+--------------------------------------------------------------------------------
+
+Question #168
+You need to develop an image classification model by using a large dataset that contains labeled images in a Cloud
+Storage bucket. What should you do?
+
+A. Use Vertex AI Pipelines with the Kubeflow Pipelines SDK to create a pipeline that reads the images from Cloud
+Storage and trains the model.
+B. Use Vertex AI Pipelines with TensorFlow Extended (TFX) to create a pipeline that reads the images from Cloud
+Storage and trains the model.
+C. Import the labeled images as a managed dataset in Vertex AI and use AutoML to train the model.
+D. Convert the image dataset to a tabular format using Dataflow Load the data into BigQuery and use BigQuery ML
+to train the model.
+
+Correct Answer: B
+--------------------------------------------------------------------------------
+
+Question #176
+You work for a food product company. Your company’s historical sales data is stored in BigQuery.You need to use
+Vertex AI’s custom training service to train multiple TensorFlow models that read the data from BigQuery and predict
+future sales. You plan to implement a data preprocessing algorithm that performs mm-max scaling and bucketing on a
+large number of features before you start experimenting with the models. You want to minimize preprocessing time, cost,
+and development effort. How should you configure this workflow?
+
+A. Write the transformations into Spark that uses the spark-bigquery-connector, and use Dataproc to preprocess the
+data.
+B. Write SQL queries to transform the data in-place in BigQuery.
+C. Add the transformations as a preprocessing layer in the TensorFlow models.
+D. Create a Dataflow pipeline that uses the BigQuerylO connector to ingest the data, process it, and write it back to
+BigQuery.
+
+Correct Answer: B
+--------------------------------------------------------------------------------
+
+Question #178
+You work for a bank. You have created a custom model to predict whether a loan application should be flagged for
+human review. The input features are stored in a BigQuery table. The model is performing well, and you plan to deploy it
+to production. Due to compliance requirements the model must provide explanations for each prediction. You want to
+add this functionality to your model code with minimal effort and provide explanations that are as accurate as possible.
+What should you do?
+
+A. Create an AutoML tabular model by using the BigQuery data with integrated Vertex Explainable AI.
+B. Create a BigQuery ML deep neural network model and use the ML.EXPLAIN_PREDICT method with the
+num_integral_steps parameter.
+C. Upload the custom model to Vertex AI Model Registry and configure feature-based attribution by using sampled
+Shapley with input baselines.
+D. Update the custom serving container to include sampled Shapley-based explanations in the prediction outputs.
+
+Correct Answer: C
+--------------------------------------------------------------------------------
+
+Question #185
+You have developed a BigQuery ML model that predicts customer chum, and deployed the model to Vertex AI
+Endpoints. You want to automate the retraining of your model by using minimal additional code when model feature
+values change. You also want to minimize the number of times that your model is retrained to reduce training costs.
+What should you do?
+
+A. 1 Enable request-response logging on Vertex AI Endpoints
+2. Schedule a TensorFlow Data Validation job to monitor prediction drift 
+3. Execute model retraining if there is significant distance between the distributions
+B. 1. Enable request-response logging on Vertex AI Endpoints
+2. Schedule a TensorFlow Data Validation job to monitor training/serving skew 
+3. Execute model retraining if there is significant distance between the distributions
+C. 1. Create a Vertex AI Model Monitoring job configured to monitor prediction drift
+2. Configure alert monitoring to publish a message to a Pub/Sub queue when a monitoring alert is detected 
+3. Use a Cloud Function to monitor the Pub/Sub queue, and trigger retraining in BigQuery
+D. 1. Create a Vertex AI Model Monitoring job configured to monitor training/serving skew
+2. Configure alert monitoring to publish a message to a Pub/Sub queue when a monitoring alert is detected 
+3. Use a Cloud Function to monitor the Pub/Sub queue, and trigger retraining in BigQuery
+
+Correct Answer: C
+--------------------------------------------------------------------------------
+
+Question #189
+You are implementing a batch inference ML pipeline in Google Cloud. The model was developed using TensorFlow and
+is stored in SavedModel format in Cloud Storage. You need to apply the model to a historical dataset containing 10 TB
+of data that is stored in a BigQuery table. How should you perform the inference?
+
+A. Export the historical data to Cloud Storage in Avro format. Configure a Vertex AI batch prediction job to generate
+predictions for the exported data
+B. Import the TensorFlow model by using the CREATE MODEL statement in BigQuery ML. Apply the historical data
+to the TensorFlow model
+C. Export the historical data to Cloud Storage in CSV format. Configure a Vertex AI batch prediction job to generate
+predictions for the exported data
+D. Configure a Vertex AI batch prediction job to apply the model to the historical data in BigQuery
+
+Correct Answer: B
+--------------------------------------------------------------------------------
+
+Question #195
+You work for a retail company. You have been asked to develop a model to predict whether a customer will purchase a
+product on a given day. Your team has processed the company’s sales data, and created a table with the following rows:
+• Customer_id 
+• Product_id 
+• Date 
+• Days_since_last_purchase (measured in days) 
+• Average_purchase_frequency (measured in 1/days) 
+• Purchase (binary class, if customer purchased product on the Date) 
+You need to interpret your model’s results for each individual prediction. What should you do?
+
+A. Create a BigQuery table. Use BigQuery ML to build a boosted tree classifier. Inspect the partition rules of the
+trees to understand how each prediction flows through the trees.
+B. Create a Vertex AI tabular dataset. Train an AutoML model to predict customer purchases. Deploy the model to a
+Vertex AI endpoint and enable feature attributions. Use the “explain” method to get feature attribution values for each
+individual prediction.
+C. Create a BigQuery table. Use BigQuery ML to build a logistic regression classification model. Use the values of
+the coefficients of the model to interpret the feature importance, with higher values corresponding to more
+importance
+D. Create a Vertex AI tabular dataset. Train an AutoML model to predict customer purchases. Deploy the model to a
+Vertex AI endpoint. At each prediction, enable L1 regularization to detect non-informative features.
+
+Correct Answer: B
+--------------------------------------------------------------------------------
+
+Question #207
+You work for a hospital that wants to optimize how it schedules operations. You need to create a model that uses the
+relationship between the number of surgeries scheduled and beds used. You want to predict how many beds will be
+needed for patients each day in advance based on the scheduled surgeries. You have one year of data for the hospital
+organized in 365 rows. 
+The data includes the following variables for each day: 
+• Number of scheduled surgeries 
+• Number of beds occupied 
+• Date 
+You want to maximize the speed of model development and testing. What should you do?
+
+A. Create a BigQuery table. Use BigQuery ML to build a regression model, with number of beds as the target
+variable, and number of scheduled surgeries and date features (such as day of week) as the predictors.
+B. Create a BigQuery table. Use BigQuery ML to build an ARIMA model, with number of beds as the target variable,
+and date as the time variable.
+C. Create a Vertex AI tabular dataset. Train an AutoML regression model, with number of beds as the target
+variable, and number of scheduled minor surgeries and date features (such as day of the week) as the predictors.
+D. Create a Vertex AI tabular dataset. Train a Vertex AI AutoML Forecasting model, with number of beds as the
+target variable, number of scheduled surgeries as a covariate and date as the time variable.
+
+Correct Answer: D
+--------------------------------------------------------------------------------
+
+Question #211
+You need to develop a custom TensorFlow model that will be used for online predictions. The training data is stored in
+BigQuery You need to apply instance-level data transformations to the data for model training and serving. You want to
+use the same preprocessing routine during model training and serving. How should you configure the preprocessing
+routine?
+
+A. Create a BigQuery script to preprocess the data, and write the result to another BigQuery table.
+B. Create a pipeline in Vertex AI Pipelines to read the data from BigQuery and preprocess it using a custom
+preprocessing component.
+C. Create a preprocessing function that reads and transforms the data from BigQuery. Create a Vertex AI custom
+prediction routine that calls the preprocessing function at serving time.
+D. Create an Apache Beam pipeline to read the data from BigQuery and preprocess it by using TensorFlow
+Transform and Dataflow.
+
+Correct Answer: D
+--------------------------------------------------------------------------------
+
+Question #215
+You work for an online retailer. Your company has a few thousand short lifecycle products. Your company has five years
+of sales data stored in BigQuery. You have been asked to build a model that will make monthly sales predictions for
+each product. You want to use a solution that can be implemented quickly with minimal effort. What should you do?
+
+A. Use Prophet on Vertex AI Training to build a custom model.
+B. Use Vertex AI Forecast to build a NN-based model.
+C. Use BigQuery ML to build a statistical ARIMA_PLUS model.
+D. Use TensorFlow on Vertex AI Training to build a custom model.
+
+Correct Answer: C
+--------------------------------------------------------------------------------
+
+Question #223
+You work for a pharmaceutical company based in Canada. Your team developed a BigQuery ML model to predict the
+number of flu infections for the next month in Canada. Weather data is published weekly, and flu infection statistics are
+published monthly. You need to configure a model retraining policy that minimizes cost. What should you do?
+
+A. Download the weather and flu data each week. Configure Cloud Scheduler to execute a Vertex AI pipeline to
+retrain the model weekly.
+B. Download the weather and flu data each month. Configure Cloud Scheduler to execute a Vertex AI pipeline to
+retrain the model monthly.
+C. Download the weather and flu data each week. Configure Cloud Scheduler to execute a Vertex AI pipeline to
+retrain the model every month.
+D. Download the weather data each week, and download the flu data each month. Deploy the model to a Vertex AI
+endpoint with feature drift monitoring, and retrain the model if a monitoring alert is detected.
+
+Correct Answer: D
+--------------------------------------------------------------------------------
+
+Question #225
+You work for a telecommunications company. You’re building a model to predict which customers may fail to pay their
+next phone bill. The purpose of this model is to proactively offer at-risk customers assistance such as service discounts
+and bill deadline extensions. The data is stored in BigQuery and the predictive features that are available for model
+training include: 
+- Customer_id 
+- Age 
+- Salary (measured in local currency) 
+- Sex 
+- Average bill value (measured in local currency) 
+- Number of phone calls in the last month (integer) 
+- Average duration of phone calls (measured in minutes) 
+You need to investigate and mitigate potential bias against disadvantaged groups, while preserving model accuracy. 
+What should you do?
+
+A. Determine whether there is a meaningful correlation between the sensitive features and the other features. Train a
+BigQuery ML boosted trees classification model and exclude the sensitive features and any meaningfully correlated
+features.
+B. Train a BigQuery ML boosted trees classification model with all features. Use the ML.GLOBAL_EXPLAIN
+method to calculate the global attribution values for each feature of the model. If the feature importance value for any
+of the sensitive features exceeds a threshold, discard the model and tram without this feature.
+C. Train a BigQuery ML boosted trees classification model with all features. Use the ML.EXPLAIN_PREDICT
+method to calculate the attribution values for each feature for each customer in a test set. If for any individual
+customer, the importance value for any feature exceeds a predefined threshold, discard the model and train the
+model again without this feature.
+D. Define a fairness metric that is represented by accuracy across the sensitive features. Train a BigQuery ML
+boosted trees classification model with all features. Use the trained model to make predictions on a test set. Join the
+data back with the sensitive features, and calculate a fairness metric to investigate whether it meets your
+requirements.
+
+Correct Answer: D
+--------------------------------------------------------------------------------
+
+Question #234
+You work for a retail company that is using a regression model built with BigQuery ML to predict product sales. This
+model is being used to serve online predictions. Recently you developed a new version of the model that uses a different
+architecture (custom model). Initial analysis revealed that both models are performing as expected. You want to deploy
+the new version of the model to production and monitor the performance over the next two months. You need to minimize
+the impact to the existing and future model users. How should you deploy the model?
+
+A. Import the new model to the same Vertex AI Model Registry as a different version of the existing model. Deploy
+the new model to the same Vertex AI endpoint as the existing model, and use traffic splitting to route 95% of
+production traffic to the BigQuery ML model and 5% of production traffic to the new model.
+B. Import the new model to the same Vertex AI Model Registry as the existing model. Deploy the models to one
+Vertex AI endpoint. Route 95% of production traffic to the BigQuery ML model and 5% of production traffic to the new
+model.
+C. Import the new model to the same Vertex AI Model Registry as the existing model. Deploy each model to a
+separate Vertex AI endpoint.
+D. Deploy the new model to a separate Vertex AI endpoint. Create a Cloud Run service that routes the prediction
+requests to the corresponding endpoints based on the input feature values.
+
+Correct Answer: A
+--------------------------------------------------------------------------------
+
+Question #236
+You work for a large retailer, and you need to build a model to predict customer chum. The company has a dataset of
+historical customer data, including customer demographics purchase history, and website activity. You need to create
+the model in BigQuery ML and thoroughly evaluate its performance. What should you do?
+
+A. Create a linear regression model in BigQuery ML, and register the model in Vertex AI Model Registry. Evaluate
+the model performance in Vertex AI .
+B. Create a logistic regression model in BigQuery ML and register the model in Vertex AI Model Registry. Evaluate
+the model performance in Vertex AI .
+C. Create a linear regression model in BigQuery ML. Use the ML.EVALUATE function to evaluate the model
+performance.
+D. Create a logistic regression model in BigQuery ML. Use the ML.CONFUSION_MATRIX function to evaluate the
+model performance.
+
+Correct Answer: B
+--------------------------------------------------------------------------------
+
+Question #246
+You recently used BigQuery ML to train an AutoML regression model. You shared results with your team and received
+positive feedback. You need to deploy your model for online prediction as quickly as possible. What should you do?
+
+A. Retrain the model by using BigQuery ML, and specify Vertex AI as the model registry. Deploy the model from
+Vertex AI Model Registry to a Vertex AI endpoint,
+B. Retrain the model by using Vertex Al Deploy the model from Vertex AI Model. Registry to a Vertex AI endpoint.
+C. Alter the model by using BigQuery ML, and specify Vertex AI as the model registry. Deploy the model from Vertex
+AI Model Registry to a Vertex AI endpoint.
+D. Export the model from BigQuery ML to Cloud Storage. Import the model into Vertex AI Model Registry. Deploy the
+model to a Vertex AI endpoint.
+
+Correct Answer: C
+--------------------------------------------------------------------------------
+
+Question #250
+You work at an ecommerce startup. You need to create a customer churn prediction model. Your company’s recent
+sales records are stored in a BigQuery table. You want to understand how your initial model is making predictions. You
+also want to iterate on the model as quickly as possible while minimizing cost. How should you build your first model?
+
+A. Export the data to a Cloud Storage bucket. Load the data into a pandas DataFrame on Vertex AI Workbench and
+train a logistic regression model with scikit-learn.
+B. Create a tf.data.Dataset by using the TensorFlow BigQueryClient. Implement a deep neural network in
+TensorFlow.
+C. Prepare the data in BigQuery and associate the data with a Vertex AI dataset. Create an
+AutoMLTabularTrainingJob to tram a classification model.
+D. Export the data to a Cloud Storage bucket. Create a tf.data.Dataset to read the data from Cloud Storage.
+Implement a deep neural network in TensorFlow.
+
+Correct Answer: C
+--------------------------------------------------------------------------------
+
+Question #251
+You are developing a training pipeline for a new XGBoost classification model based on tabular data. The data is stored
+in a BigQuery table. You need to complete the following steps: 
+1. Randomly split the data into training and evaluation datasets in a 65/35 ratio 
+2. Conduct feature engineering 
+3. Obtain metrics for the evaluation dataset 
+4. Compare models trained in different pipeline executions 
+How should you execute these steps?
+
+A. 1. Using Vertex AI Pipelines, add a component to divide the data into training and evaluation sets, and add
+another component for feature engineering. 
+2. Enable autologging of metrics in the training component. 
+3. Compare pipeline runs in Vertex AI Experiments.
+B. 1. Using Vertex AI Pipelines, add a component to divide the data into training and evaluation sets, and add
+another component for feature engineering. 
+2. Enable autologging of metrics in the training component. 
+3. Compare models using the artifacts’ lineage in Vertex ML Metadata.
+C. 1. In BigQuery ML, use the CREATE MODEL statement with BOOSTED_TREE_CLASSIFIER as the model type
+and use BigQuery to handle the data splits. 
+2. Use a SQL view to apply feature engineering and train the model using the data in that view. 
+3. Compare the evaluation metrics of the models by using a SQL query with the ML.TRAINING_INFO statement.
+D. 1. In BigQuery ML, use the CREATE MODEL statement with BOOSTED_TREE_CLASSIFIER as the model type
+and use BigQuery to handle the data splits. 
+2. Use ML TRANSFORM to specify the feature engineering transformations and tram the model using the data in the
+table. 
+3. Compare the evaluation metrics of the models by using a SQL query with the ML.TRAINING_INFO statement.
+
+Correct Answer: A
+--------------------------------------------------------------------------------
+
+Question #252
+You work for a company that sells corporate electronic products to thousands of businesses worldwide. Your company
+stores historical customer data in BigQuery. You need to build a model that predicts customer lifetime value over the
+next three years. You want to use the simplest approach to build the model and you want to have access to visualization
+tools. What should you do?
+
+A. Create a Vertex AI Workbench notebook to perform exploratory data analysis. Use IPython magics to create a
+new BigQuery table with input features. Use the BigQuery console to run the CREATE MODEL statement. Validate
+the results by using the ML.EVALUATE and ML.PREDICT statements.
+B. Run the CREATE MODEL statement from the BigQuery console to create an AutoML model. Validate the results
+by using the ML.EVALUATE and ML.PREDICT statements.
+C. Create a Vertex AI Workbench notebook to perform exploratory data analysis and create input features. Save the
+features as a CSV file in Cloud Storage. Import the CSV file as a new BigQuery table. Use the BigQuery console to
+run the CREATE MODEL statement. Validate the results by using the ML.EVALUATE and ML.PREDICT
+statements.
+D. Create a Vertex AI Workbench notebook to perform exploratory data analysis. Use IPython magics to create a
+new BigQuery table with input features, create the model, and validate the results by using the CREATE MODEL,
+ML.EVALUATE, and ML.PREDICT statements.
+
+Correct Answer: D
+--------------------------------------------------------------------------------
+
+Question #255
+You have recently used TensorFlow to train a classification model on tabular data. You have created a Dataflow pipeline
+that can transform several terabytes of data into training or prediction datasets consisting of TFRecords. You now need
+to productionize the model, and you want the predictions to be automatically uploaded to a BigQuery table on a weekly
+schedule. What should you do?
+
+A. Import the model into Vertex AI and deploy it to a Vertex AI endpoint. On Vertex AI Pipelines, create a pipeline
+that uses the DataflowPythonJobOp and the ModelBacthPredictOp components.
+B. Import the model into Vertex AI and deploy it to a Vertex AI endpoint. Create a Dataflow pipeline that reuses the
+data processing logic sends requests to the endpoint, and then uploads predictions to a BigQuery table.
+C. Import the model into Vertex AI. On Vertex AI Pipelines, create a pipeline that uses the
+DataflowPvthonJobOp and the ModelBatchPredictOp components.
+D. Import the model into BigQuery. Implement the data processing logic in a SQL query. On Vertex AI Pipelines
+create a pipeline that uses the BigquervQueryJobOp and the BigqueryPredictModelJobOp components.
+
+Correct Answer: C
+--------------------------------------------------------------------------------
+
+Question #257
+You recently trained an XGBoost model on tabular data. You plan to expose the model for internal use as an HTTP
+microservice. After deployment, you expect a small number of incoming requests. You want to productionize the model
+with the least amount of effort and latency. What should you do?
+
+A. Deploy the model to BigQuery ML by using CREATE MODEL with the BOOSTED_TREE_REGRESSOR
+statement, and invoke the BigQuery API from the microservice.
+B. Build a Flask-based app. Package the app in a custom container on Vertex AI, and deploy it to Vertex AI
+Endpoints.
+C. Build a Flask-based app. Package the app in a Docker image, and deploy it to Google Kubernetes Engine in
+Autopilot mode.
+D. Use a prebuilt XGBoost Vertex container to create a model, and deploy it to Vertex AI Endpoints.
+
+Correct Answer: D
+--------------------------------------------------------------------------------
+
+Question #259
+You have developed an application that uses a chain of multiple scikit-learn models to predict the optimal price for your
+company’s products. The workflow logic is shown in the diagram. Members of your team use the individual models in
+other solution workflows. You want to deploy this workflow while ensuring version control for each individual model and
+the overall workflow. Your application needs to be able to scale down to zero. You want to minimize the compute
+resource utilization and the manual effort required to manage this solution. What should you do?
+
+A. Expose each individual model as an endpoint in Vertex AI Endpoints. Create a custom container endpoint to
+orchestrate the workflow.
+B. Create a custom container endpoint for the workflow that loads each model’s individual files Track the versions of
+each individual model in BigQuery.
+C. Expose each individual model as an endpoint in Vertex AI Endpoints. Use Cloud Run to orchestrate the workflow.
+D. Load each model’s individual files into Cloud Run. Use Cloud Run to orchestrate the workflow. Track the versions
+of each individual model in BigQuery.
+
+Correct Answer: C
+--------------------------------------------------------------------------------
+
+Question #261
+You are developing a recommendation engine for an online clothing store. The historical customer transaction data is
+stored in BigQuery and Cloud Storage. You need to perform exploratory data analysis (EDA), preprocessing and model
+training. You plan to rerun these EDA, preprocessing, and training steps as you experiment with different types of
+algorithms. You want to minimize the cost and development effort of running these steps as you experiment. How should
+you configure the environment?
+
+A. Create a Vertex AI Workbench user-managed notebook using the default VM instance, and use the %%bigquerv
+magic commands in Jupyter to query the tables.
+B. Create a Vertex AI Workbench managed notebook to browse and query the tables directly from the JupyterLab
+interface.
+C. Create a Vertex AI Workbench user-managed notebook on a Dataproc Hub, and use the %%bigquery magic
+commands in Jupyter to query the tables.
+D. Create a Vertex AI Workbench managed notebook on a Dataproc cluster, and use the spark-bigquery-connector
+to access the tables.
+
+Correct Answer: B
+--------------------------------------------------------------------------------
+
+Question #267
+You created a model that uses BigQuery ML to perform linear regression. You need to retrain the model on the
+cumulative data collected every week. You want to minimize the development effort and the scheduling cost. What
+should you do?
+
+A. Use BigQuery’s scheduling service to run the model retraining query periodically.
+B. Create a pipeline in Vertex AI Pipelines that executes the retraining query, and use the Cloud Scheduler API to
+run the query weekly.
+C. Use Cloud Scheduler to trigger a Cloud Function every week that runs the query for retraining the model.
+D. Use the BigQuery API Connector and Cloud Scheduler to trigger Workflows every week that retrains the model.
+
+Correct Answer: A
+--------------------------------------------------------------------------------
+
+Question #272
+You work for a semiconductor manufacturing company. You need to create a real-time application that automates the
+quality control process. High-definition images of each semiconductor are taken at the end of the assembly line in real
+time. The photos are uploaded to a Cloud Storage bucket along with tabular data that includes each semiconductor’s
+batch number, serial number, dimensions, and weight. You need to configure model training and serving while
+maximizing model accuracy. What should you do?
+
+A. Use Vertex AI Data Labeling Service to label the images, and tram an AutoML image classification model.
+Deploy the model, and configure Pub/Sub to publish a message when an image is categorized into the failing class.
+B. Use Vertex AI Data Labeling Service to label the images, and train an AutoML image classification model.
+Schedule a daily batch prediction job that publishes a Pub/Sub message when the job completes.
+C. Convert the images into an embedding representation. Import this data into BigQuery, and train a BigQuery ML
+K-means clustering model with two clusters. Deploy the model and configure Pub/Sub to publish a message when a
+semiconductor’s data is categorized into the failing cluster.
+D. Import the tabular data into BigQuery, use Vertex AI Data Labeling Service to label the data and train an AutoML
+tabular classification model. Deploy the model, and configure Pub/Sub to publish a message when a
+semiconductor’s data is categorized into the failing class.
+
+Correct Answer: A
+--------------------------------------------------------------------------------
+
+Question #273
+You work for a rapidly growing social media company. Your team builds TensorFlow recommender models in an on-
+premises CPU cluster. The data contains billions of historical user events and 100,000 categorical features. You notice
+that as the data increases, the model training time increases. You plan to move the models to Google Cloud. You want
+to use the most scalable approach that also minimizes training time. What should you do?
+
+A. Deploy the training jobs by using TPU VMs with TPUv3 Pod slices, and use the TPUEmbeading API
+B. Deploy the training jobs in an autoscaling Google Kubernetes Engine cluster with CPUs
+C. Deploy a matrix factorization model training job by using BigQuery ML
+D. Deploy the training jobs by using Compute Engine instances with A100 GPUs, and use the
+tf.nn.embedding_lookup API
+
+Correct Answer: A
+--------------------------------------------------------------------------------
+
+Question #276
+You work at a gaming startup that has several terabytes of structured data in Cloud Storage. This data includes
+gameplay time data, user metadata, and game metadata. You want to build a model that recommends new games to
+users that requires the least amount of coding. What should you do?
+
+A. Load the data in BigQuery. Use BigQuery ML to train an Autoencoder model.
+B. Load the data in BigQuery. Use BigQuery ML to train a matrix factorization model.
+C. Read data to a Vertex AI Workbench notebook. Use TensorFlow to train a two-tower model.
+D. Read data to a Vertex AI Workbench notebook. Use TensorFlow to train a matrix factorization model.
+
+Correct Answer: B
+--------------------------------------------------------------------------------
+
+Question #280
+You are using Kubeflow Pipelines to develop an end-to-end PyTorch-based MLOps pipeline. The pipeline reads data
+from BigQuery, processes the data, conducts feature engineering, model training, model evaluation, and deploys the
+model as a binary file to Cloud Storage. You are writing code for several different versions of the feature engineering
+and model training steps, and running each new version in Vertex AI Pipelines. Each pipeline run is taking over an hour
+to complete. You want to speed up the pipeline execution to reduce your development time, and you want to avoid
+additional costs. What should you do?
+
+A. Comment out the part of the pipeline that you are not currently updating.
+B. Enable caching in all the steps of the Kubeflow pipeline.
+C. Delegate feature engineering to BigQuery and remove it from the pipeline.
+D. Add a GPU to the model training step.
+
+Correct Answer: B
+--------------------------------------------------------------------------------
+
+Question #286
+You work for a company that builds bridges for cities around the world. To track the progress of projects at the
+construction sites, your company has set up cameras at each location. Each hour, the cameras take a picture that is
+sent to a Cloud Storage bucket. A team of specialists reviews the images, filters important ones, and then annotates
+specific objects in them. You want to propose using an ML solution that will help the company scale and reduce costs.
+You need the solution to have minimal up-front cost. What method should you propose?
+
+A. Train an AutoML object detection model to annotate the objects in the images to help specialists with the
+annotation task.
+B. Use the Cloud Vision API to automatically annotate objects in the images to help specialists with the annotation
+task.
+C. Create a BigQuery ML classification model to classify important images. Use the model to predict which new
+images are important to help specialists with the filtering task.
+D. Use Vertex AI to train an open source object detection to annotate the objects in the images to help specialists
+with the annotation task.
+
+Correct Answer: B
+--------------------------------------------------------------------------------
+
+Question #289
+You developed a BigQuery ML linear regressor model by using a training dataset stored in a BigQuery table. New data
+is added to the table every minute. You are using Cloud Scheduler and Vertex AI Pipelines to automate hourly model
+training, and use the model for direct inference. The feature preprocessing logic includes quantile bucketization and
+MinMax scaling on data received in the last hour. You want to minimize storage and computational overhead. What
+should you do?
+
+A. Preprocess and stage the data in BigQuery prior to feeding it to the model during training and inference.
+B. Use the TRANSFORM clause in the CREATE MODEL statement in the SQL query to calculate the required
+statistics.
+C. Create a component in the Vertex AI Pipelines directed acyclic graph (DAG) to calculate the required statistics,
+and pass the statistics on to subsequent components.
+D. Create SQL queries to calculate and store the required statistics in separate BigQuery tables that are referenced
+in the CREATE MODEL statement.
+
+Correct Answer: B
+--------------------------------------------------------------------------------
+
+Question #294
+You work for a company that sells corporate electronic products to thousands of businesses worldwide. Your company
+stores historical customer data in BigQuery. You need to build a model that predicts customer lifetime value over the
+next three years. You want to use the simplest approach to build the model. What should you do?
+
+A. Create a Vertex AI Workbench notebook. Use IPython magic to run the CREATE MODEL statement to create an
+ARIMA model.
+B. Access BigQuery Studio in the Google Cloud console. Run the CREATE MODEL statement in the SQL editor to
+create an AutoML regression model.
+C. Create a Vertex AI Workbench notebook. Use IPython magic to run the CREATE MODEL statement to create an
+AutoML regression model.
+D. Access BigQuery Studio in the Google Cloud console. Run the CREATE MODEL statement in the SQL editor to
+create an ARIMA model.
+
+Correct Answer: B
+--------------------------------------------------------------------------------
+
+Question #295
+You work at a retail company, and are tasked with developing an ML model to predict product sales. Your company’s
+historical sales data is stored in BigQuery and includes features such as date, store location, product category, and
+promotion details. You need to choose the most effective combination of a BigQuery ML model and feature engineering
+to maximize prediction accuracy. What should you do?
+
+A. Use a linear regression model. Perform one-hot encoding on categorical features, and create additional features
+based on the date, such as day of the week or month.
+B. Use a boosted tree model. Perform label encoding on categorical features, and transform the date column into
+numeric values.
+C. Use an autoencoder model. Perform label encoding on categorical features, and normalize the date column.
+D. Use a matrix factorization model. Perform one-hot encoding on categorical features, and create interaction
+features between the store location and product category variables.
+
+Correct Answer: A
+--------------------------------------------------------------------------------
+
+Question #306
+You work for a large retailer, and you need to build a model to predict customer chum. The company has a dataset of
+historical customer data, including customer demographics purchase history, and website activity. You need to create
+the model in BigQuery ML and thoroughly evaluate its performance. What should you do?
+
+A. Create a linear regression model in BigQuery ML, and register the model in Vertex AI Model Registry. Use Vertex
+AI to evaluate the model performance.
+B. Create a logistic regression model in BigQuery ML, and register the model in Vertex AI Model Registry. Use
+ML.ARIMA_EVALUATE function to evaluate the model performance.
+C. Create a linear regression model in BigQuery ML. Use the ML.EVALUATE function to evaluate the model
+performance.
+D. Create a logistic regression model in BigQuery ML. Use the ML.CONFUSION_MATRIX function to evaluate the
+model performance.
+
+Correct Answer: D
+--------------------------------------------------------------------------------
+
+Question #308
+You are an ML engineer at a bank. The bank's leadership team wants to reduce the number of loan defaults. The bank
+has labeled historic data about loan defaults stored in BigQuery. You have been asked to use AI to support the loan
+application process. For compliance reasons, you need to provide explanations for loan rejections. What should you
+do?
+
+A. Import the historic loan default data into AutoML. Train and deploy a linear regression model to predict default
+probability. Report the probability of default for each loan application.
+B. Create a custom application that uses the Gemini large language model (LLM). Provide the historic data as
+context to the model, and prompt the model to predict customer defaults. Report the prediction and explanation
+provided by the LLM for each loan application.
+C. Train and deploy a BigQuery ML classification model trained on historic loan default data. Enable feature-based
+explanations for each prediction. Report the prediction, probability of default, and feature attributions for each loan
+application.
+D. Load the historic loan default data into a Vertex AI Workbench instance. Train a deep learning classification
+model using TensorFlow to predict loan default. Run inference for each loan application, and report the predictions.
+
+Correct Answer: C
+--------------------------------------------------------------------------------
+
+Question #332
+You are an AI engineer with an apparel retail company. The sales team has observed seasonal sales patterns over the
+past 5-6 years. The sales team analyzes and visualizes the weekly sales data stored in CSV files. You have been asked
+to estimate weekly sales for future seasons to optimize inventory and personnel workloads. You want to use the most
+efficient approach. What should you do?
+
+A. Upload the files into Cloud Storage. Use Python to preprocess and load the tabular data into BigQuery. Use time
+series forecasting models to predict weekly sales.
+B. Upload the files into Cloud Storage. Use Python to preprocess and load the tabular data into BigQuery. Train a
+logistic regression model by using BigQuery ML to predict each product's weekly sales as one of three categories:
+high, medium, or low.
+C. Load the files into BigQuery. Preprocess data by using BigQuery SQL. Connect BigQuery to Looker. Create a
+Looker dashboard that shows weekly sales trends in real time and can slice and dice the data based on relevant
+filters.
+D. Create a custom conversational application using Vertex AI Agent Builder. Include code that enables file upload
+functionality, and upload the files. Use few-shot prompting and retrieval-augmented generation (RAG) to predict
+future sales trends by using the Gemini large language model (LLM).
+
+Correct Answer: A
+--------------------------------------------------------------------------------
+
+Question #339
+You are a SQL analyst. You need to utilize a TensorFlow customer segmentation model stored In Cloud Storage. You
+want to use the simplest and most efficient approach. What should you do?
+
+A. Import the model into Vertex AI Model Registry. Deploy the model to a Vertex AI endpoint, and use SQL for
+inference in BigQuery.
+B. Deploy the model by using TensorFlow Serving, and call for inference from BigQuery.
+C. Convert the model into a BigQuery ML model, and use SQL for inference.
+D. Import the model into BigQuery, and use SQL for inference.
+
+Correct Answer: D
+--------------------------------------------------------------------------------
+
