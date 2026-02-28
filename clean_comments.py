@@ -13,7 +13,6 @@ def clean_comments(file_path):
         text = re.sub(r'^Comments\s*', '', text)
         text = re.sub(r'[A-Za-z0-9_.-]+\s+(?:Highly Voted\s+|Most Recent\s+)?\d+\s+(?:years?|months?|weeks?|days?|hours?)(?:, \d+ (?:years?|months?|weeks?|days?|hours?))?\s+ago', '\\n- ', text)
         text = re.sub(r'upvoted \d+ times', '', text, flags=re.IGNORECASE)
-        text = re.sub(r'Selected Answer:\s*[A-Z, ]+', '', text, flags=re.IGNORECASE)
         text = re.sub(r'<br><br><b><u>Correct Answer:.*?<b>Community vote distribution</b>.*?(?:\\n|$)', '\\n', text, flags=re.IGNORECASE)
         text = re.sub(r'\\n+', '\\n', text)
         text = re.sub(r' +', ' ', text)
