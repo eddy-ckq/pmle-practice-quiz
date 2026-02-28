@@ -23,7 +23,6 @@ def extract_community_reasoning(discussion, correct_answers):
     ans_list = [a.strip() for a in correct_answers.split(',')]
     lines = [line.strip() for line in discussion.split('\n') if line.strip()]
     
-    # 1. Look for lines that explicitly mention "Answer is X", "Option X", or "X is correct"
     for ans in ans_list:
         pattern = r'(?i)(answer is\s*' + ans + r'|option\s*' + ans + r'|\b' + ans + r'\s*is correct|correct answer is\s*' + ans + r')'
         for line in lines:
@@ -31,7 +30,6 @@ def extract_community_reasoning(discussion, correct_answers):
                 clean_line = re.sub(r'^-?\s*(?:Selected Answer:\s*[A-Z, ]+)?\s*', '', line, flags=re.IGNORECASE)
                 return clean_line
 
-    # 2. Look for lines that mention the letter
     for ans in ans_list:
         pattern = r'\b' + ans + r'\b'
         for line in lines:
@@ -39,7 +37,6 @@ def extract_community_reasoning(discussion, correct_answers):
                 clean_line = re.sub(r'^-?\s*(?:Selected Answer:\s*[A-Z, ]+)?\s*', '', line, flags=re.IGNORECASE)
                 return clean_line
                 
-    # 3. Fallback to the first line that looks like a reasonable sentence
     for line in lines:
         clean_line = re.sub(r'^-?\s*(?:Selected Answer:\s*[A-Z, ]+)?\s*', '', line, flags=re.IGNORECASE)
         if len(clean_line.split()) > 10:
@@ -47,12 +44,30 @@ def extract_community_reasoning(discussion, correct_answers):
             
     return ""
 
+def extract_wrong_reasoning(discussion, target_letter):
+    if not discussion: return ''
+    lines = [line.strip() for line in re.split(r'\n|- ', discussion) if line.strip()]
+    
+    pattern1 = r'(?i)(\bnot\s*' + target_letter + r'\b|\b' + target_letter + r'\s*is wrong|\b' + target_letter + r'\s*is incorrect|\b' + target_letter + r'\s*is false|why not\s*' + target_letter + r'\b)'
+    for line in lines:
+        if re.search(pattern1, line) and len(line.split()) > 4:
+            clean_line = re.sub(r'^-?\s*(?:Selected Answer:\s*[A-Z, ]+)?\s*', '', line, flags=re.IGNORECASE)
+            return clean_line
+
+    pattern2 = r'(?i)(^|\s)' + target_letter + r'\s*:'
+    for line in lines:
+        if re.search(pattern2, line) and len(line.split()) > 4:
+            clean_line = re.sub(r'^-?\s*(?:Selected Answer:\s*[A-Z, ]+)?\s*', '', line, flags=re.IGNORECASE)
+            return clean_line
+
+    return ''
+
 def generate_explanation(q_text, correct_answer_text, correct_letter, discussion):
     q_lower = q_text.lower()
     c_lower = correct_answer_text.lower()
     
     community_insight = extract_community_reasoning(discussion, correct_letter)
-    community_html = f"<br><br><strong>Community Insight:</strong> <em>\"{community_insight}\"</em>" if community_insight else ""
+    community_html = f"<br><br><strong>Community Insight for Correct Answer:</strong> <em>\"{community_insight}\"</em>" if community_insight else ""
     
     for tech, data in correlations.items():
         tech_variants = [tech, tech.replace(' ', ''), tech.replace(' ', '/')]
@@ -68,7 +83,6 @@ def generate_explanation(q_text, correct_answer_text, correct_letter, discussion
                     ans_snippet = get_snippet(correct_answer_text, found_tech_str)
                     return f'💡 <b>AI Explanation:</b> The question highlights the phrase <b>"{kw["keyword"]}"</b>, which has a {kw["percentage"]}% correlation with <b>{tech}</b>. The correct answer maps to this via <b>"{ans_snippet}"</b>.' + community_html + f'<br><br><em>{data["explanation"]}</em>'
                     
-    # fallback to word overlap
     q_words = [w for w in normalize(q_text).split() if w not in stopwords and len(w) > 4]
     c_words = [w for w in normalize(correct_answer_text).split() if w not in stopwords and len(w) > 4]
     
@@ -88,12 +102,22 @@ def process(file_path):
         ans_letters = [a.strip() for a in q.get('correct_answer', '').split(',')]
         c_text = " ".join([str(q.get('options', {}).get(l, "")) for l in ans_letters])
         
+        disc = q.get('discussion_and_comments', '')
+        
         q['ai_explanation'] = generate_explanation(
             q.get('question_text', ''), 
             c_text, 
             q.get('correct_answer', ''), 
-            q.get('discussion_and_comments', '')
+            disc
         )
+        
+        wrong_insights = {}
+        for opt in q.get('options', {}).keys():
+            if opt not in ans_letters:
+                reason = extract_wrong_reasoning(disc, opt)
+                if reason:
+                    wrong_insights[opt] = reason
+        q['wrong_option_insights'] = wrong_insights
         
     with open(file_path, 'w', encoding='utf-8') as f:
         json.dump(data, f, indent=2, ensure_ascii=False)
@@ -101,4 +125,4 @@ def process(file_path):
 if __name__ == '__main__':
     process('qa_parsed.json')
     process('pde_parsed.json')
-    print("Successfully generated AI explanations for all questions.")
+    print("Successfully generated AI explanations and wrong option insights.")

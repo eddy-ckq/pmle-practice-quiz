@@ -433,8 +433,23 @@
             elements.feedbackContainer.innerHTML = `<strong>Correct!</strong> The answer is ${expectedAnswer}.` + aiInsight;
         } else {
             stats[q.question_id].wrong++;
+            
+            let wrongInsightHtml = '';
+            if (q.wrong_option_insights) {
+                let wrongInsights = [];
+                for (let sel of selectedElements) {
+                    let selValue = sel.value;
+                    if (!correctAnswers.includes(selValue) && q.wrong_option_insights[selValue]) {
+                        wrongInsights.push(`<strong>Option ${selValue}:</strong> <em>"${q.wrong_option_insights[selValue]}"</em>`);
+                    }
+                }
+                if (wrongInsights.length > 0) {
+                     wrongInsightHtml = `<div style="margin-top:15px; padding: 12px; background: #fff3cd; border-left: 4px solid #ffc107; border-radius: 4px; color: #856404;"><strong>Community Insight for Incorrect Answer:</strong><br>${wrongInsights.join('<br><br>')}</div>`;
+                }
+            }
+
             elements.feedbackContainer.className = 'feedback wrong';
-            elements.feedbackContainer.innerHTML = `<strong>Incorrect.</strong> Your answer: ${answer}. Correct answer: ${expectedAnswer}.` + aiInsight;
+            elements.feedbackContainer.innerHTML = `<strong>Incorrect.</strong> Your answer: ${answer}. Correct answer: ${expectedAnswer}.` + wrongInsightHtml + aiInsight;
         }
 
         if (q.discussion_and_comments && q.discussion_and_comments.trim() !== "") {
