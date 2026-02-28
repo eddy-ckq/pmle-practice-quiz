@@ -428,20 +428,8 @@
         saveStats();
 
         let aiInsight = '';
-        if (window.correlationsData) {
-            const qTextLower = q.question_text.toLowerCase();
-            for (const [tech, techData] of Object.entries(window.correlationsData)) {
-                let techName = tech.toLowerCase();
-                if (expectedAnswer.toLowerCase().includes(techName) || expectedAnswer.toLowerCase().includes(techName.replace(' ', ''))) {
-                    for (const kwObj of techData.keywords) {
-                        if (qTextLower.includes(kwObj.keyword.toLowerCase())) {
-                            aiInsight = `<div style="margin-top:15px; padding: 12px; background: #e8f4f8; border-left: 4px solid #3498db; border-radius: 4px; color: #2c3e50;"><strong>💡 AI Insight:</strong> The phrase <em>"${kwObj.keyword}"</em> in the question has a ${kwObj.percentage}% correlation with <strong>${tech}</strong> being the correct answer!<br><br><em>${techData.explanation}</em></div>`;
-                            break;
-                        }
-                    }
-                }
-                if (aiInsight) break;
-            }
+        if (q.ai_explanation) {
+            aiInsight = `<div style="margin-top:15px; padding: 12px; background: #e8f4f8; border-left: 4px solid #3498db; border-radius: 4px; color: #2c3e50;">${q.ai_explanation}</div>`;
         }
 
         if (q.discussion_and_comments && q.discussion_and_comments.trim() !== "") {
