@@ -90,8 +90,13 @@
             white-space: pre-wrap; 
             display: none; 
             color: #555;
-            max-height: 400px;
-            overflow-y: auto;
+        }
+        details summary {
+            cursor: pointer;
+            font-weight: bold;
+            color: #2c3e50;
+            margin-bottom: 10px;
+            outline: none;
         }
         #stats-bar { 
             display: flex;
@@ -434,7 +439,7 @@
 
         if (q.discussion_and_comments && q.discussion_and_comments.trim() !== "") {
             elements.commentsContainer.style.display = 'block';
-            elements.commentsContainer.innerHTML = `<strong>Discussion & Comments:</strong><br><br>${q.discussion_and_comments}` + aiInsight;
+            elements.commentsContainer.innerHTML = aiInsight + `<br><details><summary>View Community Discussion & Comments</summary>${q.discussion_and_comments}</details>`;
         } else if (aiInsight) {
             elements.commentsContainer.style.display = 'block';
             elements.commentsContainer.innerHTML = aiInsight;
