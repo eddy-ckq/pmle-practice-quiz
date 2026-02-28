@@ -1,0 +1,734 @@
+{
+  "BIGQUERY": {
+    "tech": "BIGQUERY",
+    "explanation": "BigQuery is Google Cloud's fully managed, serverless, highly scalable data warehouse. It is ideal for analyzing massive datasets (millions of records), structured data, and performing analytics.",
+    "keywords": [
+      {
+        "keyword": "millions records",
+        "percentage": 100,
+        "count": 4,
+        "total": 4
+      },
+      {
+        "keyword": "activity",
+        "percentage": 100,
+        "count": 4,
+        "total": 4
+      },
+      {
+        "keyword": "daily data",
+        "percentage": 100,
+        "count": 3,
+        "total": 3
+      },
+      {
+        "keyword": "analytics data",
+        "percentage": 100,
+        "count": 3,
+        "total": 3
+      },
+      {
+        "keyword": "large retailer",
+        "percentage": 100,
+        "count": 3,
+        "total": 3
+      },
+      {
+        "keyword": "chum",
+        "percentage": 100,
+        "count": 3,
+        "total": 3
+      },
+      {
+        "keyword": "customer chum",
+        "percentage": 100,
+        "count": 3,
+        "total": 3
+      },
+      {
+        "keyword": "batch inference",
+        "percentage": 100,
+        "count": 3,
+        "total": 3
+      },
+      {
+        "keyword": "transformations data",
+        "percentage": 100,
+        "count": 3,
+        "total": 3
+      },
+      {
+        "keyword": "storage processing",
+        "percentage": 100,
+        "count": 3,
+        "total": 3
+      },
+      {
+        "keyword": "perform analysis",
+        "percentage": 100,
+        "count": 3,
+        "total": 3
+      },
+      {
+        "keyword": "adopt",
+        "percentage": 100,
+        "count": 3,
+        "total": 3
+      },
+      {
+        "keyword": "storage solution",
+        "percentage": 100,
+        "count": 3,
+        "total": 3
+      },
+      {
+        "keyword": "data assets",
+        "percentage": 100,
+        "count": 3,
+        "total": 3
+      },
+      {
+        "keyword": "structured data",
+        "percentage": 83,
+        "count": 5,
+        "total": 6
+      }
+    ]
+  },
+  "VERTEX": {
+    "tech": "VERTEX",
+    "explanation": "Vertex AI is Google Cloud's unified ML platform. It handles the entire ML lifecycle including model training, serving, deployment, and tracking lineage/artifacts to productionize ML pipelines.",
+    "keywords": [
+      {
+        "keyword": "productionize",
+        "percentage": 100,
+        "count": 4,
+        "total": 4
+      },
+      {
+        "keyword": "model deployment",
+        "percentage": 100,
+        "count": 4,
+        "total": 4
+      },
+      {
+        "keyword": "recently used",
+        "percentage": 100,
+        "count": 3,
+        "total": 3
+      },
+      {
+        "keyword": "model serving",
+        "percentage": 100,
+        "count": 3,
+        "total": 3
+      },
+      {
+        "keyword": "automates",
+        "percentage": 100,
+        "count": 3,
+        "total": 3
+      },
+      {
+        "keyword": "frequency",
+        "percentage": 100,
+        "count": 3,
+        "total": 3
+      },
+      {
+        "keyword": "lineage model",
+        "percentage": 100,
+        "count": 3,
+        "total": 3
+      },
+      {
+        "keyword": "compare performance",
+        "percentage": 100,
+        "count": 3,
+        "total": 3
+      },
+      {
+        "keyword": "trains model",
+        "percentage": 100,
+        "count": 3,
+        "total": 3
+      },
+      {
+        "keyword": "splits",
+        "percentage": 100,
+        "count": 3,
+        "total": 3
+      },
+      {
+        "keyword": "trained xgboost",
+        "percentage": 100,
+        "count": 3,
+        "total": 3
+      },
+      {
+        "keyword": "preprocessing model",
+        "percentage": 100,
+        "count": 3,
+        "total": 3
+      },
+      {
+        "keyword": "compare models",
+        "percentage": 100,
+        "count": 3,
+        "total": 3
+      },
+      {
+        "keyword": "model tabular",
+        "percentage": 100,
+        "count": 3,
+        "total": 3
+      },
+      {
+        "keyword": "track artifacts",
+        "percentage": 100,
+        "count": 3,
+        "total": 3
+      }
+    ]
+  },
+  "CLOUD STORAGE": {
+    "tech": "CLOUD STORAGE",
+    "explanation": "Cloud Storage is an object storage service often used as a data lake, a target for on-premises Hadoop/HDFS migrations, and for storing unstructured files or disaster recovery (RPO).",
+    "keywords": [
+      {
+        "keyword": "gcp products",
+        "percentage": 100,
+        "count": 3,
+        "total": 3
+      },
+      {
+        "keyword": "premises hadoop",
+        "percentage": 100,
+        "count": 3,
+        "total": 3
+      },
+      {
+        "keyword": "case regional",
+        "percentage": 100,
+        "count": 3,
+        "total": 3
+      },
+      {
+        "keyword": "premises apache",
+        "percentage": 83,
+        "count": 5,
+        "total": 6
+      },
+      {
+        "keyword": "hdfs",
+        "percentage": 80,
+        "count": 4,
+        "total": 5
+      },
+      {
+        "keyword": "ansi sql",
+        "percentage": 75,
+        "count": 3,
+        "total": 4
+      },
+      {
+        "keyword": "text files",
+        "percentage": 75,
+        "count": 3,
+        "total": 4
+      },
+      {
+        "keyword": "keeping costs",
+        "percentage": 75,
+        "count": 3,
+        "total": 4
+      },
+      {
+        "keyword": "system hdfs",
+        "percentage": 75,
+        "count": 3,
+        "total": 4
+      },
+      {
+        "keyword": "hadoop distributed",
+        "percentage": 75,
+        "count": 3,
+        "total": 4
+      },
+      {
+        "keyword": "distributed file",
+        "percentage": 75,
+        "count": 3,
+        "total": 4
+      },
+      {
+        "keyword": "file system",
+        "percentage": 75,
+        "count": 3,
+        "total": 4
+      },
+      {
+        "keyword": "objective rpo",
+        "percentage": 75,
+        "count": 3,
+        "total": 4
+      },
+      {
+        "keyword": "point objective",
+        "percentage": 75,
+        "count": 3,
+        "total": 4
+      },
+      {
+        "keyword": "recovery point",
+        "percentage": 75,
+        "count": 3,
+        "total": 4
+      }
+    ]
+  },
+  "DATAFLOW": {
+    "tech": "DATAFLOW",
+    "explanation": "Dataflow is a fully managed streaming and batch data processing service. It is highly associated with building data pipelines to ingest and process high volumes of data globally.",
+    "keywords": [
+      {
+        "keyword": "ingest data",
+        "percentage": 100,
+        "count": 4,
+        "total": 4
+      },
+      {
+        "keyword": "data volume",
+        "percentage": 80,
+        "count": 4,
+        "total": 5
+      },
+      {
+        "keyword": "pipeline ingest",
+        "percentage": 75,
+        "count": 3,
+        "total": 4
+      },
+      {
+        "keyword": "configure pipeline",
+        "percentage": 60,
+        "count": 3,
+        "total": 5
+      },
+      {
+        "keyword": "kafka cluster",
+        "percentage": 60,
+        "count": 3,
+        "total": 5
+      },
+      {
+        "keyword": "iot",
+        "percentage": 60,
+        "count": 3,
+        "total": 5
+      },
+      {
+        "keyword": "processing pipeline",
+        "percentage": 60,
+        "count": 3,
+        "total": 5
+      },
+      {
+        "keyword": "apache kafka",
+        "percentage": 50,
+        "count": 5,
+        "total": 10
+      },
+      {
+        "keyword": "aggregation",
+        "percentage": 50,
+        "count": 4,
+        "total": 8
+      },
+      {
+        "keyword": "sub topic",
+        "percentage": 50,
+        "count": 4,
+        "total": 8
+      },
+      {
+        "keyword": "receives",
+        "percentage": 50,
+        "count": 3,
+        "total": 6
+      },
+      {
+        "keyword": "results bigquery",
+        "percentage": 50,
+        "count": 3,
+        "total": 6
+      },
+      {
+        "keyword": "hosts",
+        "percentage": 50,
+        "count": 3,
+        "total": 6
+      },
+      {
+        "keyword": "globally",
+        "percentage": 50,
+        "count": 3,
+        "total": 6
+      },
+      {
+        "keyword": "supply",
+        "percentage": 50,
+        "count": 3,
+        "total": 6
+      }
+    ]
+  },
+  "PUB SUB": {
+    "tech": "PUB SUB",
+    "explanation": "Pub/Sub is a messaging service for decoupling systems. It is commonly used for ingesting event streams from devices, application servers, or tracking shipments in logistics.",
+    "keywords": [
+      {
+        "keyword": "application servers",
+        "percentage": 67,
+        "count": 4,
+        "total": 6
+      },
+      {
+        "keyword": "devices",
+        "percentage": 60,
+        "count": 3,
+        "total": 5
+      },
+      {
+        "keyword": "invested",
+        "percentage": 60,
+        "count": 3,
+        "total": 5
+      },
+      {
+        "keyword": "storage area",
+        "percentage": 60,
+        "count": 3,
+        "total": 5
+      },
+      {
+        "keyword": "logistics market",
+        "percentage": 60,
+        "count": 3,
+        "total": 5
+      },
+      {
+        "keyword": "company started",
+        "percentage": 60,
+        "count": 3,
+        "total": 5
+      },
+      {
+        "keyword": "knowing shipments",
+        "percentage": 60,
+        "count": 3,
+        "total": 5
+      },
+      {
+        "keyword": "logs contain",
+        "percentage": 60,
+        "count": 3,
+        "total": 5
+      },
+      {
+        "keyword": "business agility",
+        "percentage": 60,
+        "count": 3,
+        "total": 5
+      },
+      {
+        "keyword": "resources markets",
+        "percentage": 60,
+        "count": 3,
+        "total": 5
+      },
+      {
+        "keyword": "resources transport",
+        "percentage": 60,
+        "count": 3,
+        "total": 5
+      },
+      {
+        "keyword": "businesses throughout",
+        "percentage": 60,
+        "count": 3,
+        "total": 5
+      },
+      {
+        "keyword": "track every",
+        "percentage": 60,
+        "count": 3,
+        "total": 5
+      },
+      {
+        "keyword": "existing hadoop",
+        "percentage": 60,
+        "count": 3,
+        "total": 5
+      },
+      {
+        "keyword": "deliveries",
+        "percentage": 60,
+        "count": 3,
+        "total": 5
+      }
+    ]
+  },
+  "AUTOML": {
+    "tech": "AUTOML",
+    "explanation": "AutoML allows users to train high-quality machine learning models with minimal effort, often without writing any code, automating feature selection and hyperparameter tuning.",
+    "keywords": [
+      {
+        "keyword": "without writing",
+        "percentage": 100,
+        "count": 4,
+        "total": 4
+      },
+      {
+        "keyword": "several times",
+        "percentage": 100,
+        "count": 3,
+        "total": 3
+      },
+      {
+        "keyword": "structured datasets",
+        "percentage": 100,
+        "count": 3,
+        "total": 3
+      },
+      {
+        "keyword": "steps without",
+        "percentage": 100,
+        "count": 3,
+        "total": 3
+      },
+      {
+        "keyword": "tuning serving",
+        "percentage": 100,
+        "count": 3,
+        "total": 3
+      },
+      {
+        "keyword": "selection",
+        "percentage": 100,
+        "count": 3,
+        "total": 3
+      },
+      {
+        "keyword": "workflows several",
+        "percentage": 100,
+        "count": 3,
+        "total": 3
+      },
+      {
+        "keyword": "code exploratory",
+        "percentage": 100,
+        "count": 3,
+        "total": 3
+      },
+      {
+        "keyword": "analysis feature",
+        "percentage": 100,
+        "count": 3,
+        "total": 3
+      },
+      {
+        "keyword": "datasets currently",
+        "percentage": 100,
+        "count": 3,
+        "total": 3
+      },
+      {
+        "keyword": "selection model",
+        "percentage": 100,
+        "count": 3,
+        "total": 3
+      },
+      {
+        "keyword": "classification several",
+        "percentage": 100,
+        "count": 3,
+        "total": 3
+      },
+      {
+        "keyword": "building training",
+        "percentage": 100,
+        "count": 3,
+        "total": 3
+      },
+      {
+        "keyword": "times complete",
+        "percentage": 100,
+        "count": 3,
+        "total": 3
+      },
+      {
+        "keyword": "build classification",
+        "percentage": 100,
+        "count": 3,
+        "total": 3
+      }
+    ]
+  },
+  "DATAPROC": {
+    "tech": "DATAPROC",
+    "explanation": "Dataproc is a managed Spark and Hadoop service. It is the direct answer for migrating on-premises Apache Spark, PySpark, Hive, and Hadoop clusters to Google Cloud.",
+    "keywords": [
+      {
+        "keyword": "pyspark",
+        "percentage": 67,
+        "count": 4,
+        "total": 6
+      },
+      {
+        "keyword": "hadoop cluster",
+        "percentage": 60,
+        "count": 3,
+        "total": 5
+      },
+      {
+        "keyword": "jobs run",
+        "percentage": 60,
+        "count": 3,
+        "total": 5
+      },
+      {
+        "keyword": "apache spark",
+        "percentage": 57,
+        "count": 4,
+        "total": 7
+      },
+      {
+        "keyword": "hive",
+        "percentage": 50,
+        "count": 3,
+        "total": 6
+      },
+      {
+        "keyword": "parquet",
+        "percentage": 50,
+        "count": 3,
+        "total": 6
+      },
+      {
+        "keyword": "premises apache",
+        "percentage": 50,
+        "count": 3,
+        "total": 6
+      }
+    ]
+  },
+  "AI PLATFORM": {
+    "tech": "AI PLATFORM",
+    "explanation": "AI Platform is the legacy suite (now Vertex AI) for training and deploying ML models, sometimes featured in older exam questions relating to advertising or generic model deployments.",
+    "keywords": [
+      {
+        "keyword": "advertising",
+        "percentage": 50,
+        "count": 3,
+        "total": 6
+      }
+    ]
+  },
+  "GPU": {
+    "tech": "GPU",
+    "explanation": "GPUs (like NVIDIA) provide the necessary hardware acceleration for training deep learning and custom TensorFlow/PyTorch models efficiently.",
+    "keywords": [
+      {
+        "keyword": "nvidia",
+        "percentage": 75,
+        "count": 3,
+        "total": 4
+      },
+      {
+        "keyword": "custom tensorflow",
+        "percentage": 43,
+        "count": 3,
+        "total": 7
+      }
+    ]
+  },
+  "BIGTABLE": {
+    "tech": "BIGTABLE",
+    "explanation": "Cloud Bigtable is a fully managed, scalable NoSQL database service for large analytical and operational workloads, particularly excelling at high-throughput time-series data.",
+    "keywords": [
+      {
+        "keyword": "time series",
+        "percentage": 50,
+        "count": 4,
+        "total": 8
+      }
+    ]
+  },
+  "COMPOSER": {
+    "tech": "COMPOSER",
+    "explanation": "Cloud Composer is a fully managed workflow orchestration service built on Apache Airflow. It is the go-to tool for scheduling and managing complex pipelines.",
+    "keywords": [
+      {
+        "keyword": "schedule",
+        "percentage": 56,
+        "count": 5,
+        "total": 9
+      }
+    ]
+  },
+  "CLOUD SQL": {
+    "tech": "CLOUD SQL",
+    "explanation": "Cloud SQL is a fully managed relational database service for MySQL, PostgreSQL, and SQL Server.",
+    "keywords": [
+      {
+        "keyword": "mysql",
+        "percentage": 60,
+        "count": 3,
+        "total": 5
+      }
+    ]
+  },
+  "KUBEFLOW": {
+    "tech": "KUBEFLOW",
+    "explanation": "Kubeflow is an open-source ML platform dedicated to making deployments of ML workflows on Kubernetes simple, portable and scalable, providing end-to-end architectures.",
+    "keywords": [
+      {
+        "keyword": "end end",
+        "percentage": 43,
+        "count": 3,
+        "total": 7
+      }
+    ]
+  },
+  "DATAPREP": {
+    "tech": "DATAPREP",
+    "explanation": "Dataprep by Trifacta is an intelligent data service for visually exploring, cleaning, and preparing data for analysis and machine learning.",
+    "keywords": [
+      {
+        "keyword": "prepare data",
+        "percentage": 43,
+        "count": 3,
+        "total": 7
+      }
+    ]
+  },
+  "DATAPLEX": {
+    "tech": "DATAPLEX",
+    "explanation": "Dataplex is an intelligent data fabric that enables organizations to centrally discover, manage, monitor, and govern their data across data lakes, data warehouses, and data marts, often associated with a 'data mesh' architecture.",
+    "keywords": [
+      {
+        "keyword": "data mesh",
+        "percentage": 60,
+        "count": 3,
+        "total": 5
+      },
+      {
+        "keyword": "mesh",
+        "percentage": 60,
+        "count": 3,
+        "total": 5
+      }
+    ]
+  }
+}

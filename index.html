@@ -293,6 +293,15 @@
             const response = await fetch(jsonFile);
             allQuestions = await response.json();
             
+            try {
+                const corrResponse = await fetch('correlations.json');
+                if (corrResponse.ok) {
+                    window.correlationsData = await corrResponse.json();
+                }
+            } catch (e) {
+                console.warn('Could not load correlations data');
+            }
+
             loadStats();
             updateOverallStats();
             
@@ -418,9 +427,29 @@
 
         saveStats();
 
+        let aiInsight = '';
+        if (window.correlationsData) {
+            const qTextLower = q.question_text.toLowerCase();
+            for (const [tech, techData] of Object.entries(window.correlationsData)) {
+                let techName = tech.toLowerCase();
+                if (expectedAnswer.toLowerCase().includes(techName) || expectedAnswer.toLowerCase().includes(techName.replace(' ', ''))) {
+                    for (const kwObj of techData.keywords) {
+                        if (qTextLower.includes(kwObj.keyword.toLowerCase())) {
+                            aiInsight = `<div style="margin-top:15px; padding: 12px; background: #e8f4f8; border-left: 4px solid #3498db; border-radius: 4px; color: #2c3e50;"><strong>💡 AI Insight:</strong> The phrase <em>"${kwObj.keyword}"</em> in the question has a ${kwObj.percentage}% correlation with <strong>${tech}</strong> being the correct answer!<br><br><em>${techData.explanation}</em></div>`;
+                            break;
+                        }
+                    }
+                }
+                if (aiInsight) break;
+            }
+        }
+
         if (q.discussion_and_comments && q.discussion_and_comments.trim() !== "") {
             elements.commentsContainer.style.display = 'block';
-            elements.commentsContainer.innerHTML = `<strong>Discussion & Comments:</strong><br><br>${q.discussion_and_comments}`;
+            elements.commentsContainer.innerHTML = `<strong>Discussion & Comments:</strong><br><br>${q.discussion_and_comments}` + aiInsight;
+        } else if (aiInsight) {
+            elements.commentsContainer.style.display = 'block';
+            elements.commentsContainer.innerHTML = aiInsight;
         }
 
         elements.submitBtn.classList.add('hidden');
@@ -479,18 +508,21 @@
 
     viewCorrelationsBtn.addEventListener('click', async () => {
         correlationsModal.style.display = 'block';
-        try {
-            const response = await fetch('correlations.txt');
-            if (response.ok) {
-                const text = await response.text();
-                // Remove the first few lines of description since we have a title
-                const cleanText = text.replace(/^---.*?---\n\n.*?\n\n/, '');
-                correlationsContent.textContent = cleanText || text;
-            } else {
-                correlationsContent.textContent = 'Failed to load correlations data. Please ensure correlations.txt is available on the server.';
+        if (window.correlationsData) {
+            let html = '<p>This shows how specific words/phrases in a question strongly correlate with a specific technology/service being the correct answer.</p>';
+            for (const [tech, techData] of Object.entries(window.correlationsData)) {
+                html += `<div style="margin-bottom: 20px; padding: 15px; background: #f8f9fa; border-radius: 6px; border: 1px solid #e0e0e0;">`;
+                html += `<h3 style="margin-top: 0; color: #2c3e50;">${tech}</h3>`;
+                html += `<p style="font-size: 0.9em; color: #555; font-style: italic; background: #eef2f5; padding: 10px; border-radius: 4px;"><strong>AI Explanation:</strong> ${techData.explanation}</p>`;
+                html += `<ul style="margin-bottom: 0;">`;
+                for (const kwObj of techData.keywords) {
+                    html += `<li><strong>"${kwObj.keyword}"</strong>: ${kwObj.percentage}% correlation (In ${kwObj.count} out of ${kwObj.total} questions)</li>`;
+                }
+                html += `</ul></div>`;
             }
-        } catch (e) {
-            correlationsContent.textContent = 'Error loading correlations data.';
+            correlationsContent.innerHTML = html;
+        } else {
+            correlationsContent.innerHTML = 'Correlations data is still loading or failed to load. Please refresh the page.';
         }
     });
 
