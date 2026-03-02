@@ -55,48 +55,42 @@ def extract_community_reasoning(discussion, correct_answers):
     return ""
 
 def generate_explanation(q_text, correct_answer_text, correct_letter, discussion):
+    """
+    Generates a technical explanation by prioritizing architectural patterns over simple keywords.
+    """
     q_lower = q_text.lower()
     c_lower = correct_answer_text.lower()
     
     community_insight = extract_community_reasoning(discussion, correct_letter)
-    community_html = f"<br><br><strong>Key Insight:</strong> <em>\"{community_insight}\"</em>" if community_insight else ""
+    community_html = f"<br><br><strong>Key Community Insight:</strong> <em>\"{community_insight}\"</em>" if community_insight else ""
     
-    # 1. Look for technical patterns FIRST
+    # 1. Primary Strategy: Match architectural keywords from the question to a technology in the answer.
+    # This is the most reliable way to generate a high-quality explanation.
     for tech, data in correlations.items():
-        tech_variants = [tech, tech.lower(), tech.replace(' ', '').lower()]
-        found_tech = False
-        for tv in tech_variants:
-            if tv in c_lower:
-                found_tech = True
-                break
+        # Check if the technology (e.g., "BigQuery", "Vertex AI") is mentioned in the correct answer text.
+        tech_variants = [tech.lower(), tech.replace(' ', '').lower()]
+        found_tech_in_answer = any(tv in c_lower for tv in tech_variants)
         
-        if found_tech:
+        if found_tech_in_answer:
+            # Now, check if any of the associated keywords (e.g., "serverless", "end-to-end ML") are in the question.
             for kw_obj in data['keywords']:
                 kw = kw_obj['keyword'].lower()
-                if kw in q_lower:
+                if f'"{kw}"' in q_lower or f" {kw} " in q_lower:
                     reason = tech_reasoning.get(tech, data['explanation'])
-                    return f"💡 <b>AI Reasoning:</b> The question specifically asks about <b>\"{kw}\"</b>. In Google Cloud, this requirement strongly points toward using <b>{tech}</b>. {reason}" + community_html
-                    
-    # 2. Extract meaningful word overlap as secondary fallback (exclude generic words)
-    q_words = [w for w in normalize(q_text).split() if w not in stopwords and len(w) > 4]
-    c_words = [w for w in normalize(correct_answer_text).split() if w not in stopwords and len(w) > 4]
-    
-    overlap = set(q_words).intersection(set(c_words))
-    # Filter out generic exam jargon
-    generic_exam_words = {'data', 'model', 'cloud', 'google', 'using', 'service', 'which', 'process', 'project', 'training', 'learning', 'machine', 'models', 'dataset', 'datasets'}
-    overlap = overlap - generic_exam_words
-    
-    if overlap:
-        # Sort by length to get more specific architectural terms
-        best_words = sorted(list(overlap), key=len, reverse=True)[:2]
-        kw_str = '", "'.join(best_words)
-        return f"💡 <b>AI Reasoning:</b> The correct answer aligns with the architectural needs described in the question, specifically addressing the requirements for <b>\"{kw_str}\"</b>." + community_html
+                    # This creates a strong, direct link: Question asks for X, Answer provides Y, which is the GCP tool for X.
+                    return (f"💡 <b>Architectural Fit:</b> The question highlights a need for <b>`{kw}`</b>. "
+                            f"The correct answer proposes using <b>{tech}</b>, which is Google Cloud's primary service for this exact purpose. "
+                            f"{reason}{community_html}")
 
-    # 3. Generic fallback
+    # 2. Fallback Strategy: If no direct architectural link is found, rely on the community insight.
+    # This is often more valuable than a weakly-guessed AI explanation.
     if community_insight:
-        return f"💡 <b>AI Reasoning:</b> The correct answer follows Google Cloud best practices for this specific use case. Refer to the community insight for detailed analysis." + community_html
+        return (f"💡 <b>Community-Driven Answer:</b> While a direct keyword match wasn't found, the community discussion provides the clearest reasoning for selecting this answer. "
+                f"It follows established Google Cloud best practices for the scenario described.{community_html}")
         
-    return "💡 <b>AI Reasoning:</b> This solution is the most architecturally sound choice for the constraints described in the question."
+    # 3. Final Fallback: A generic but safe explanation if no other signals are found.
+    return ("💡 <b>General Best Practice:</b> This solution represents the most direct and effective architectural approach "
+            "for the requirements outlined in the question, adhering to Google Cloud's recommended best practices.")
 
 def process(file_path):
     with open(file_path, 'r', encoding='utf-8') as f:

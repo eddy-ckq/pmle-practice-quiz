@@ -191,6 +191,7 @@
     <div id="quiz-screen" class="hidden">
         <div id="stats-bar">
             <span id="question-number">Question 1 / 50</span>
+            <span id="review-badge" class="hidden" style="background: #f39c12; color: white; padding: 3px 8px; border-radius: 4px; font-size: 0.8em; font-weight: bold;">Needs Review</span>
             <span id="q-stats">Past Performance: Correct 0 | Wrong 0</span>
         </div>
         
@@ -295,6 +296,8 @@
         elements.mainTitle.textContent = titleText;
         
         try {
+            // Clear previous questions and load the new set
+            allQuestions = []; 
             const response = await fetch(jsonFile);
             allQuestions = await response.json();
             
@@ -311,7 +314,7 @@
             updateOverallStats();
             
             elements.startBtn.disabled = false;
-            elements.startBtn.textContent = 'Start 50-Question Quiz';
+            elements.startBtn.textContent = `Start ${allQuestions.length}-Question Quiz`;
         } catch (error) {
             console.error('Error loading questions:', error);
             elements.startBtn.textContent = 'Error loading data.';
@@ -364,6 +367,14 @@
     function showQuestion() {
         const q = currentQuizQuestions[currentQuestionIndex];
         let qStats = stats[q.question_id] || { correct: 0, wrong: 0 };
+
+        // Handle review badge
+        const reviewBadge = document.getElementById('review-badge');
+        if (q.needs_review) {
+            reviewBadge.classList.remove('hidden');
+        } else {
+            reviewBadge.classList.add('hidden');
+        }
 
         elements.questionNumber.textContent = `Question ${currentQuestionIndex + 1} / ${currentQuizQuestions.length}`;
         elements.qStats.innerHTML = `<strong>History for this Q:</strong> Correct <span style="color:#27ae60">${qStats.correct}</span> | Wrong <span style="color:#c0392b">${qStats.wrong}</span>`;
