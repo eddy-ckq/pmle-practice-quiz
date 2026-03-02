@@ -80,6 +80,17 @@
             border: 1px solid #f5c6cb; 
             display: block; 
         }
+        .ai-explanation-box {
+            margin-top: 15px;
+            padding: 12px;
+            background: #e8f4f8;
+            border-left: 4px solid #3498db;
+            border-radius: 4px;
+            color: #2c3e50;
+            max-height: 250px; /* <--- This is the crucial part */
+            overflow-y: auto; /* <--- This enables the scrollbar */
+            font-size: 0.9em; /* A slightly smaller font for the dense text */
+        }
         .comments { 
             margin-top: 20px; 
             background: #fdfbf7; 
@@ -438,7 +449,7 @@
 
         let aiInsight = '';
         if (q.ai_explanation) {
-            aiInsight = `<div style="margin-top:15px; padding: 12px; background: #e8f4f8; border-left: 4px solid #3498db; border-radius: 4px; color: #2c3e50;">${q.ai_explanation}</div>`;
+            aiInsight = `<div class="ai-explanation-box">${q.ai_explanation}</div>`;
         }
 
         if (isCorrect) {
