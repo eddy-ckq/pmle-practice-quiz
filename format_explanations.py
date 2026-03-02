@@ -1,56 +1,44 @@
 import json
-import re
 import argparse
 import os
+import markdown
+import re
 
-def markdown_to_html(text):
+def convert_explanation_to_html(explanation_text):
     """
-    Converts basic Markdown syntax (###, **) to corresponding HTML tags.
+    Takes the raw explanation text, preserves the custom header,
+    and converts the body from Markdown to HTML using a robust two-pass method.
     """
-    if not isinstance(text, str):
-        return text
+    if not isinstance(explanation_text, str):
+        return explanation_text
 
-    # Handle ### headers
-    text = re.sub(r'^###\s*(.*)', r'<h3>\1</h3>', text, flags=re.MULTILINE)
-    
-    # Handle **bold** text
-    text = re.sub(r'\*\*(.*?)\*\*', r'<strong>\1</strong>', text)
-    
-    # Handle numbered lists (e.g., 1. item)
-    # This is a bit more complex to handle correctly with just regex.
-    # We will find all list-like lines and wrap them.
-    lines = text.split('\n')
-    in_list = False
-    new_lines = []
-    for line in lines:
-        match = re.match(r'^\s*\d+\.\s*(.*)', line)
-        if match:
-            if not in_list:
-                in_list = True
-                new_lines.append('<ul style="list-style-type: decimal; margin-left: 20px;">')
-            new_lines.append(f'<li>{match.group(1)}</li>')
-        else:
-            if in_list:
-                in_list = False
-                new_lines.append('</ul>')
-            new_lines.append(line)
-    
-    if in_list:
-        new_lines.append('</ul>')
+    # Check if formatting is likely needed
+    if '###' not in explanation_text and '**' not in explanation_text:
+        return explanation_text
 
-    text = '\n'.join(new_lines)
+    # 1. Split the custom header from the markdown body
+    parts = explanation_text.split('\n', 1)
+    header = parts[0]
+    markdown_body = parts[1] if len(parts) > 1 else ''
 
-    # Convert remaining newlines to <br> for proper HTML display
-    text = text.replace('\n', '<br>')
+    # 2. First Pass: Use the markdown library for primary conversion
+    # This correctly handles headers, lists, etc.
+    html_body = markdown.markdown(markdown_body)
+
+    # 3. Second Pass: Use a targeted regex to forcefully convert any remaining **bold** tags
+    # that the library might have missed. This is a common issue with nested or
+    # oddly-spaced markdown.
+    html_body = re.sub(r'\*\*(.*?)\*\*', r'<strong>\1</strong>', html_body)
     
-    return text
+    # 4. Reassemble
+    return header + "<br>" + html_body
 
 def process_file(file_path):
     """
-    Reads a JSON file, formats the ai_explanation field from Markdown to HTML,
+    Reads a JSON file, formats the ai_explanation field,
     and overwrites the file with the formatted content.
     """
-    print(f"--- Formatting explanations in {file_path} ---")
+    print(f"--- Running 2-Pass Formatting on {file_path} ---")
     
     try:
         with open(file_path, 'r', encoding='utf-8') as f:
@@ -61,30 +49,27 @@ def process_file(file_path):
 
     questions_changed = 0
     for q in data:
-        explanation = q.get('ai_explanation')
-        if explanation and '###' in explanation: # Only process if it looks like Markdown
-            parts = explanation.split('\n', 1)
-            header = parts[0]
-            markdown_content = parts[1] if len(parts) > 1 else ''
-            
-            html_content = markdown_to_html(markdown_content)
-            q['ai_explanation'] = header + "<br>" + html_content
-            questions_changed += 1
+        original_explanation = q.get('ai_explanation')
+        if original_explanation:
+            formatted_explanation = convert_explanation_to_html(original_explanation)
+            if original_explanation != formatted_explanation:
+                q['ai_explanation'] = formatted_explanation
+                questions_changed += 1
 
     if questions_changed > 0:
-        print(f"  Found and converted explanations for {questions_changed} questions.")
+        print(f"  Found and correctly formatted explanations for {questions_changed} questions.")
         
         with open(file_path, 'w', encoding='utf-8') as f:
             json.dump(data, f, indent=4, ensure_ascii=False)
         
-        print(f"  Successfully saved formatted explanations to {file_path}")
+        print(f"  Successfully saved final formatting to {file_path}")
     else:
-        print("  No Markdown explanations found that needed formatting.")
+        print("  No explanations needed additional formatting.")
 
     print(f"--- Finished processing {file_path} ---")
 
 def main():
-    parser = argparse.ArgumentParser(description="Convert Markdown in AI explanations to HTML.")
+    parser = argparse.ArgumentParser(description="Convert Markdown in AI explanations to HTML using a robust two-pass method.")
     parser.add_argument('file', help='The JSON file to process (e.g., qa_parsed.json).')
     
     args = parser.parse_args()
