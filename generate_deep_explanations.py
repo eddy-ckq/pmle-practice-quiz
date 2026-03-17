@@ -36,11 +36,21 @@ def generate_explanation_for_question(model, question_obj):
     correct_answers_text = [f"{key}: {options[key]}" for key in correct_answers_keys if key in options]
 
     prompt_parts = [
-        "You are an expert Google Cloud trainer. Your task is to provide a deep and educational analysis of a practice exam question.",
+        "You are an expert Google Cloud trainer. Your task is to provide a deep and educational analysis of a practice exam question."
+    ]
+    
+    if question_obj.get('case_study'):
+        # For context, we don't have the full text, but we can mention the case study
+        # Actually, wait, the case study text is no longer in the JSON (except title).
+        # We need the full case study text.
+        # It's better to just give the question text, the user is taking the exam and should know the case study.
+        prompt_parts.append(f"**Case Study Context:** This question is part of the {question_obj['case_study']}. Please consider the general architectural constraints and goals of this case study if you know them.")
+
+    prompt_parts.extend([
         "**Question:**",
         q_text,
         "**Options:**"
-    ]
+    ])
     for key, value in options.items():
         prompt_parts.append(f"- **{key}:** {value}")
 
