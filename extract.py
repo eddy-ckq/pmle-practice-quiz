@@ -11,4 +11,7 @@ def extract_text(pdf_path, txt_path):
         f.write(text)
 
 if __name__ == "__main__":
-    extract_text("Professional Machine Learning Engineer_with_discussion.pdf", "extracted.txt")
+    if len(sys.argv) == 3:
+        extract_text(sys.argv[1], sys.argv[2])
+    else:
+        extract_text("Professional Machine Learning Engineer_with_discussion.pdf", "extracted.txt")

@@ -186,8 +186,15 @@
         <div class="quiz-selector">
             <label for="quiz-type"><strong>Select Certification:</strong></label>
             <select id="quiz-type">
-                <option value="pmle">Professional Machine Learning Engineer (PMLE)</option>
-                <option value="pde">Professional Data Engineer (PDE)</option>
+                <!-- <option value="pmle">Professional Machine Learning Engineer (PMLE)</option> -->
+                <option value="pde" selected>Professional Data Engineer (PDE)</option>
+            </select>
+        </div>
+        
+        <div class="quiz-selector" style="margin-top: -10px;">
+            <label for="question-set"><strong>Select Question Set:</strong></label>
+            <select id="question-set">
+                <option value="all">All Questions (Random)</option>
             </select>
         </div>
 
@@ -242,7 +249,7 @@
     let currentQuizQuestions = [];
     let currentQuestionIndex = 0;
     let score = 0;
-    let currentQuizType = 'pmle';
+    let currentQuizType = 'pde';
     let stats = {};
 
     const elements = {
@@ -264,6 +271,7 @@
         totalStats: document.getElementById('total-stats'),
         endMessage: document.getElementById('end-message'),
         quizTypeSelect: document.getElementById('quiz-type'),
+        questionSetSelect: document.getElementById('question-set'),
         mainTitle: document.getElementById('main-title')
     };
 
@@ -316,6 +324,16 @@
             const response = await fetch(jsonFile);
             allQuestions = await response.json();
             
+            // Populate question set dropdown
+            const uniqueCaseStudies = [...new Set(allQuestions.map(q => q.case_study).filter(cs => cs))];
+            let optionsHtml = '<option value="all">All Questions (Random)</option>';
+            optionsHtml += '<option value="no_case_study">Questions without Case Study</option>';
+            uniqueCaseStudies.forEach(cs => {
+                let csClean = cs.replace(/ -$/, '');
+                optionsHtml += `<option value="${cs}">${csClean}</option>`;
+            });
+            elements.questionSetSelect.innerHTML = optionsHtml;
+            
             try {
                 const corrResponse = await fetch('correlations.json');
                 if (corrResponse.ok) {
@@ -339,7 +357,15 @@
     elements.quizTypeSelect.addEventListener('change', loadData);
 
     function selectQuestions() {
-        let weightedQuestions = allQuestions.map(q => {
+        let filteredQuestions = allQuestions;
+        const selectedSet = elements.questionSetSelect.value;
+        if (selectedSet === 'no_case_study') {
+            filteredQuestions = allQuestions.filter(q => !q.case_study);
+        } else if (selectedSet !== 'all') {
+            filteredQuestions = allQuestions.filter(q => q.case_study === selectedSet);
+        }
+
+        let weightedQuestions = filteredQuestions.map(q => {
             let qStats = stats[q.question_id] || { correct: 0, wrong: 0 };
             let weight = (1.0 + (qStats.wrong * 2)) / (qStats.correct + 1);
             return { question: q, weight: weight };
@@ -393,7 +419,12 @@
 
         elements.questionNumber.textContent = `Question ${currentQuestionIndex + 1} / ${currentQuizQuestions.length}`;
         elements.qStats.innerHTML = `<strong>History for this Q:</strong> Correct <span style="color:#27ae60">${qStats.correct}</span> | Wrong <span style="color:#c0392b">${qStats.wrong}</span>`;
-        elements.questionText.textContent = q.question_text;
+        
+        if (q.case_study) {
+            elements.questionText.innerHTML = `<div style="margin-bottom: 15px; padding: 15px; background: #eef2f5; border-left: 4px solid #3498db; border-radius: 4px;"><strong>${q.case_study}</strong></div>${q.question_text}`;
+        } else {
+            elements.questionText.textContent = q.question_text;
+        }
         
         const correctAnswersList = q.correct_answer.split(',').map(s => s.trim());
         const isMulti = correctAnswersList.length > 1;
